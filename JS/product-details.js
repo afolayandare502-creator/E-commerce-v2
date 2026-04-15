@@ -394,7 +394,7 @@ async function loadProductDetails() {
 async function findProductById(productId, requestedCategory) {
     try {
         // Fetch from new Express backend API
-        const response = await fetch(`http://localhost:5001/api/products/${productId}`);
+        const response = await fetch(`https://e-commerce-backend-4rnw.onrender.com/api/products/${productId}`);
         if (response.ok) {
             const product = await response.json();
             product._listingCategory = requestedCategory || product.category;
@@ -713,7 +713,7 @@ async function loadRelatedProducts(product) {
     try {
         const gender = product.gender || 'women';
         const category = product.category || 'general';
-        const res = await fetch(`http://localhost:5001/api/products?gender=${encodeURIComponent(gender)}&category=${encodeURIComponent(category)}`);
+        const res = await fetch(`https://e-commerce-backend-4rnw.onrender.com/api/products?gender=${encodeURIComponent(gender)}&category=${encodeURIComponent(category)}`);
         
         if (!res.ok) return;
 

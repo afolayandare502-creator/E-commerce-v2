@@ -1,3 +1,21 @@
+// 🔥 ADD THIS AT THE TOP OF products.js
+async function fetchWithRetry(url, retries = 3) {
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error('API error');
+    return res;
+  } catch (err) {
+    if (retries > 0) {
+      console.log('Retrying...', retries);
+      await new Promise(r => setTimeout(r, 2000));
+      return fetchWithRetry(url, retries - 1);
+    }
+    throw err;
+  }
+}
+
+
+
 // Fetch and display products on the products page
 document.addEventListener('DOMContentLoaded', () => {
     fetchProducts();
@@ -675,8 +693,10 @@ async function fetchProducts() {
         ];
         const isMacro = macroCategories.includes(searchCatLower);
 
+
+
         // FETCH FROM NEW BACKEND API
-        let apiUrl = `http://127.0.0.1:5001/api/products?gender=${gender}`;
+        let apiUrl = `https://e-commerce-backend-4rnw.onrender.com/api/products?gender=${gender}`;
         if (query) {
             apiUrl += `&query=${encodeURIComponent(query)}`;
         }
@@ -707,9 +727,10 @@ async function fetchProducts() {
                 return htmlAlias && htmlAlias !== fileName ? `${htmlAlias},${fileName}` : fileName;
             }).filter(Boolean).join(',');
             
-            if (validCategories) {
-                apiUrl += `&category=${encodeURIComponent(validCategories)}`;
-            }
+             // Map the macro category to the exact arrays of files that belong to it 
+           
+
+        
             
         } else {
             // Specific subcategory: Send both the HTML route and the database filename fallback
@@ -724,7 +745,7 @@ async function fetchProducts() {
         let products = [];
         
         try {
-            const apiResponse = await fetch(apiUrl);
+            const apiResponse = await fetchWithRetry(apiUrl);
             
             if (apiResponse.ok) {
                 const apiData = await apiResponse.json();

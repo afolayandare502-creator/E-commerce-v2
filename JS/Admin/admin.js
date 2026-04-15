@@ -1,5 +1,5 @@
 const ADMIN_ALL_ORDERS_KEY = 'orders';
-const API_BASE_URL = 'http://localhost:5001/api';
+const API_BASE_URL = 'https://e-commerce-backend-4rnw.onrender.com/api';
 const ORDER_STATUS_OPTIONS = [
     'Order Placed',
     'Packing',

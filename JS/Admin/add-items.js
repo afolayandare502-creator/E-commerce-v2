@@ -402,11 +402,11 @@ function initializeAddItemsForm() {
         }
 
         try {
-            const API_BASE_URL = 'http://localhost:5001/api';
+            const API_BASE_URL = 'https://e-commerce-backend-4rnw.onrender.com/api';
             const requestBody = JSON.stringify(product);
-            
+
             feedback.textContent = 'Adding product...';
-            
+
             const response = await fetch(`${API_BASE_URL}/products`, {
                 method: 'POST',
                 headers: {
@@ -424,10 +424,10 @@ function initializeAddItemsForm() {
             resetSizeSelector();
             resetUploadedImages();
             resetUploadBoxes();
-            
+
             feedback.textContent = `Product successuflly added!`;
             showSuccessToast();
-            
+
         } catch (error) {
             console.error('Error submitting product:', error);
             feedback.textContent = 'Error adding product: ' + error.message;

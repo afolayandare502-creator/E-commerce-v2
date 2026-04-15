@@ -15,11 +15,11 @@ async function fetchProduct() {
         }
         
         // Fetch product data
-        const response = await fetch('../Data/women-products.json');
+        const response = await fetch('https://e-commerce-backend-4rnw.onrender.com/api/products');
         const products = await response.json();
         
         // Find product that matches the ID
-        const product = products.find(p => p.id === parseInt(productId));
+        const product = products.find(p => p._id === productId);
         
         if (!product) {
             console.error('Product not found');
