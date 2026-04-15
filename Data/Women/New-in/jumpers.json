@@ -1,0 +1,290 @@
+[
+    {
+        "id": 49,
+        "name": "Women's Wool Jumper",
+        "price": 65,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM1.avif",
+            "../images/product/women/Jumpers/WJIM2.avif",
+            "../images/product/women/Jumpers/WJIM3.avif",
+            "../images/product/women/Jumpers/WJIM4.avif"
+        ]
+    },
+    {
+        "id": 50,
+        "name": "Cashmere Sweater",
+        "price": 120,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM5.avif",
+            "../images/product/women/Jumpers/WJIM6.avif",
+            "../images/product/women/Jumpers/WJIM7.avif",
+            "../images/product/women/Jumpers/WJIM8.avif"
+        ]
+    },
+    {
+        "id": 51,
+        "name": "Crew Neck Jumper",
+        "price": 55,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM9.avif",
+            "../images/product/women/Jumpers/WJIM10.avif",
+            "../images/product/women/Jumpers/WJIM11.avif",
+            "../images/product/women/Jumpers/WJIM12.avif"
+        ]
+    },
+    {
+        "id": 52,
+        "name": "V-Neck Sweater",
+        "price": 60,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM13.avif",
+            "../images/product/women/Jumpers/WJIM14.avif",
+            "../images/product/women/Jumpers/WJIM15.avif",
+            "../images/product/women/Jumpers/WJIM16.avif"
+        ]
+    },
+    {
+        "id": 53,
+        "name": "Turtleneck Jumper",
+        "price": 70,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM17.avif",
+            "../images/product/women/Jumpers/WJIM18.avif",
+            "../images/product/women/Jumpers/WJIM19.avif",
+            "../images/product/women/Jumpers/WJIM20.avif"
+        ]
+    },
+    {
+        "id": 54,
+        "name": "Cardigan",
+        "price": 75,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM21.avif",
+            "../images/product/women/Jumpers/WJIM22.avif",
+            "../images/product/women/Jumpers/WJIM23.avif",
+            "../images/product/women/Jumpers/WJIM24.avif"
+        ]
+    },
+    {
+        "id": 55,
+        "name": "Oversized Sweater",
+        "price": 80,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM25.avif",
+            "../images/product/women/Jumpers/WJIM26.avif",
+            "../images/product/women/Jumpers/WJIM27.avif",
+            "../images/product/women/Jumpers/WJIM28.avif"
+        ]
+    },
+    {
+        "id": 56,
+        "name": "Knit Jumper",
+        "price": 58,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM29.avif",
+            "../images/product/women/Jumpers/WJIM30.avif",
+            "../images/product/women/Jumpers/WJIM31.avif",
+            "../images/product/women/Jumpers/WJIM32.avif"
+        ]
+    },
+    {
+        "id": 57,
+        "name": "Cropped Jumper",
+        "price": 45,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM33.avif",
+            "../images/product/women/Jumpers/WJIM34.avif",
+            "../images/product/women/Jumpers/WJIM35.avif",
+            "../images/product/women/Jumpers/WJIM36.avif"
+        ]
+    },
+    {
+        "id": 58,
+        "name": "Striped Sweater",
+        "price": 52,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM37.avif",
+            "../images/product/women/Jumpers/WJIM38.avif",
+            "../images/product/women/Jumpers/WJIM39.avif",
+            "../images/product/women/Jumpers/WJIM40.avif"
+        ]
+    },
+    {
+        "id": 59,
+        "name": "Cable Knit Jumper",
+        "price": 85,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM41.avif",
+            "../images/product/women/Jumpers/WJIM42.avif",
+            "../images/product/women/Jumpers/WJIM43.avif",
+            "../images/product/women/Jumpers/WJIM44.avif"
+        ]
+    },
+    {
+        "id": 60,
+        "name": "Hooded Jumper",
+        "price": 68,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM45.avif",
+            "../images/product/women/Jumpers/WJIM46.avif",
+            "../images/product/women/Jumpers/WJIM47.avif",
+            "../images/product/women/Jumpers/WJIM48.avif"
+        ]
+    },
+    {
+        "id": 61,
+        "name": "Mock Neck Sweater",
+        "price": 62,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM49.avif",
+            "../images/product/women/Jumpers/WJIM50.avif",
+            "../images/product/women/Jumpers/WJIM51.avif",
+            "../images/product/women/Jumpers/WJIM52.avif"
+        ]
+    },
+    {
+        "id": 62,
+        "name": "Boat Neck Jumper",
+        "price": 58,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM53.avif",
+            "../images/product/women/Jumpers/WJIM54.avif",
+            "../images/product/women/Jumpers/WJIM55.avif",
+            "../images/product/women/Jumpers/WJIM56.avif"
+        ]
+    },
+    {
+        "id": 63,
+        "name": "Fair Isle Sweater",
+        "price": 78,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM57.avif",
+            "../images/product/women/Jumpers/WJIM58.avif",
+            "../images/product/women/Jumpers/WJIM59.avif",
+            "../images/product/women/Jumpers/WJIM60.avif"
+        ]
+    },
+    {
+        "id": 64,
+        "name": "Merino Wool Jumper",
+        "price": 95,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM61.avif",
+            "../images/product/women/Jumpers/WJIM62.avif",
+            "../images/product/women/Jumpers/WJIM63.avif",
+            "../images/product/women/Jumpers/WJIM64.avif"
+        ]
+    },
+    {
+        "id": 65,
+        "name": "Lightweight Sweater",
+        "price": 48,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM65.avif",
+            "../images/product/women/Jumpers/WJIM66.avif",
+            "../images/product/women/Jumpers/WJIM67.avif",
+            "../images/product/women/Jumpers/WJIM68.avif"
+        ]
+    },
+    {
+        "id": 66,
+        "name": "Chunky Knit Jumper",
+        "price": 88,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM69.avif",
+            "../images/product/women/Jumpers/WJIM70.avif",
+            "../images/product/women/Jumpers/WJIM71.avif",
+            "../images/product/women/Jumpers/WJIM72.avif"
+        ]
+    },
+    {
+        "id": 67,
+        "name": "Longline Cardigan",
+        "price": 92,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM73.avif",
+            "../images/product/women/Jumpers/WJIM74.avif",
+            "../images/product/women/Jumpers/WJIM75.avif",
+            "../images/product/women/Jumpers/WJIM76.avif"
+        ]
+    },
+    {
+        "id": 68,
+        "name": "Ribbed Jumper",
+        "price": 55,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM77.avif",
+            "../images/product/women/Jumpers/WJIM78.avif",
+            "../images/product/women/Jumpers/WJIM79.avif",
+            "../images/product/women/Jumpers/WJIM80.avif"
+        ]
+    },
+    {
+        "id": 69,
+        "name": "Open Front Cardigan",
+        "price": 72,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM81.avif",
+            "../images/product/women/Jumpers/WJIM82.avif",
+            "../images/product/women/Jumpers/WJIM83.avif",
+            "../images/product/women/Jumpers/WJIM84.avif"
+        ]
+    },
+    {
+        "id": 70,
+        "name": "Bomber Style Jumper",
+        "price": 65,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM85.avif",
+            "../images/product/women/Jumpers/WJIM86.avif",
+            "../images/product/women/Jumpers/WJIM87.avif",
+            "../images/product/women/Jumpers/WJIM88.avif"
+        ]
+    },
+    {
+        "id": 71,
+        "name": "Tie Front Cardigan",
+        "price": 68,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM89.avif",
+            "../images/product/women/Jumpers/WJIM90.avif",
+            "../images/product/women/Jumpers/WJIM91.avif",
+            "../images/product/women/Jumpers/WJIM92.avif"
+        ]
+    },
+    {
+        "id": 72,
+        "name": "Wool Blend Jumper",
+        "price": 75,
+        "category": "jumpers",
+        "images": [
+            "../images/product/women/Jumpers/WJIM93.avif",
+            "../images/product/women/Jumpers/WJIM94.avif",
+            "../images/product/women/Jumpers/WJIM95.avif",
+            "../images/product/women/Jumpers/WJIM96.avif"
+        ]
+    }
+]

@@ -1,0 +1,82 @@
+[
+    {
+        "id": 4145,
+        "name": "Tote Bag Pro",
+        "price": 75,
+        "category": "accessories-tote-bags",
+        "images": [
+            "../images/product/women/tote bags/Wtote1.avif",
+            "../images/product/women/tote bags/Wtote2.avif"
+        ]
+    },
+    {
+        "id": 4146,
+        "name": "Designer Tote Pro",
+        "price": 95,
+        "category": "accessories-tote-bags",
+        "images": [
+            "../images/product/women/tote bags/Wtote3.avif",
+            "../images/product/women/tote bags/Wtote4.avif"
+        ]
+    },
+    {
+        "id": 4147,
+        "name": "Leather Tote Pro",
+        "price": 115,
+        "category": "accessories-tote-bags",
+        "images": [
+            "../images/product/women/tote bags/Wtote5.avif",
+            "../images/product/women/tote bags/Wtote6.avif"
+        ]
+    },
+    {
+        "id": 4148,
+        "name": "Canvas Tote Pro",
+        "price": 65,
+        "category": "accessories-tote-bags",
+        "images": [
+            "../images/product/women/tote bags/Wtote7.avif",
+            "../images/product/women/tote bags/Wtote8.avif"
+        ]
+    },
+    {
+        "id": 4149,
+        "name": "Fashion Tote Pro",
+        "price": 85,
+        "category": "accessories-tote-bags",
+        "images": [
+            "../images/product/women/tote bags/Wtote9.avif",
+            "../images/product/women/tote bags/Wtote10.avif"
+        ]
+    },
+    {
+        "id": 4150,
+        "name": "Casual Tote Pro",
+        "price": 58,
+        "category": "accessories-tote-bags",
+        "images": [
+            "../images/product/women/tote bags/Wtote11.avif",
+            "../images/product/women/tote bags/Wtote12.avif"
+        ]
+    },
+    {
+        "id": 4151,
+        "name": "Work Tote Pro",
+        "price": 72,
+        "category": "accessories-tote-bags",
+        "images": [
+            "../images/product/women/tote bags/Wtote13.avif",
+            "../images/product/women/tote bags/Wtote14.avif"
+        ]
+    },
+    {
+        "id": 4152,
+        "name": "Beach Tote Pro",
+        "price": 48,
+        "category": "accessories-tote-bags",
+        "images": [
+            "../images/product/women/tote bags/Wtote15.avif",
+            "../images/product/women/tote bags/Wtote16.avif"
+        ]
+    }
+]

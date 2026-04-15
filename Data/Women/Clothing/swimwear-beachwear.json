@@ -1,0 +1,98 @@
+[
+    {
+        "id": 361,
+        "name": "Triangle Bikini Set",
+        "price": 42,
+        "category": "swimwear-beachwear",
+        "images": [
+            "../images/product/women/Swimwear & Beachwear/WSWIM1.avif",
+            "../images/product/women/Swimwear & Beachwear/WSWIM2.avif",
+            "../images/product/women/Swimwear & Beachwear/WSWIM3.avif",
+            "../images/product/women/Swimwear & Beachwear/WSWIM4.avif"
+        ]
+    },
+    {
+        "id": 362,
+        "name": "High Waist Bikini Bottom Set",
+        "price": 46,
+        "category": "swimwear-beachwear",
+        "images": [
+            "../images/product/women/Swimwear & Beachwear/WSWIM5.avif",
+            "../images/product/women/Swimwear & Beachwear/WSWIM6.avif",
+            "../images/product/women/Swimwear & Beachwear/WSWIM7.avif",
+            "../images/product/women/Swimwear & Beachwear/WSWIM8.avif"
+        ]
+    },
+    {
+        "id": 363,
+        "name": "Tie Side Bikini Set",
+        "price": 39,
+        "category": "swimwear-beachwear",
+        "images": [
+            "../images/product/women/Swimwear & Beachwear/WSWIM9.avif",
+            "../images/product/women/Swimwear & Beachwear/WSWIM10.avif",
+            "../images/product/women/Swimwear & Beachwear/WSWIM11.avif",
+            "../images/product/women/Swimwear & Beachwear/WSWIM12.avif"
+        ]
+    },
+    {
+        "id": 364,
+        "name": "Cut Out Swimsuit",
+        "price": 51,
+        "category": "swimwear-beachwear",
+        "images": [
+            "../images/product/women/Swimwear & Beachwear/WSWIM13.avif",
+            "../images/product/women/Swimwear & Beachwear/WSWIM14.avif",
+            "../images/product/women/Swimwear & Beachwear/WSWIM15.avif",
+            "../images/product/women/Swimwear & Beachwear/WSWIM16.avif"
+        ]
+    },
+    {
+        "id": 365,
+        "name": "Ribbed Bandeau Bikini",
+        "price": 44,
+        "category": "swimwear-beachwear",
+        "images": [
+            "../images/product/women/Swimwear & Beachwear/WNWIM45.avif",
+            "../images/product/women/Swimwear & Beachwear/WNWIM46.avif",
+            "../images/product/women/Swimwear & Beachwear/WNWIM47.avif",
+            "../images/product/women/Swimwear & Beachwear/WNWIM48.avif"
+        ]
+    },
+    {
+        "id": 366,
+        "name": "Beach Sarong Co Ord",
+        "price": 48,
+        "category": "swimwear-beachwear",
+        "images": [
+            "../images/product/women/Swimwear & Beachwear/WNWIM49.avif",
+            "../images/product/women/Swimwear & Beachwear/WNWIM50.avif",
+            "../images/product/women/Swimwear & Beachwear/WNWIM51.avif",
+            "../images/product/women/Swimwear & Beachwear/WNWIM52.avif"
+        ]
+    },
+    {
+        "id": 367,
+        "name": "Linen Beach Shirt",
+        "price": 45,
+        "category": "swimwear-beachwear",
+        "images": [
+            "../images/product/women/Swimwear & Beachwear/WSWIM17.avif",
+            "../images/product/women/Swimwear & Beachwear/WSWIM18.avif",
+            "../images/product/women/Swimwear & Beachwear/WSWIM19.avif",
+            "../images/product/women/Swimwear & Beachwear/WSWIM20.avif"
+        ]
+    },
+    {
+        "id": 368,
+        "name": "Crochet Beach Dress",
+        "price": 58,
+        "category": "swimwear-beachwear",
+        "images": [
+            "../images/product/women/Swimwear & Beachwear/WSWIM24.avif",
+            "../images/product/women/Swimwear & Beachwear/WSWIM22.avif",
+            "../images/product/women/Swimwear & Beachwear/WSWIM23.avif",
+            "../images/product/women/Swimwear & Beachwear/WSWIM24.avif"
+        ]
+    }
+]

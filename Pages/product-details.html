@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="../CSS/search.css">
+    <link rel="stylesheet" href="../CSS/product-details.css">
+</head>
+
+<body class="product-details-page">
+
+    <div id="main-content">
+        <!-- STICKY HEADER WRAPPER -->
+        <header id="sticky-header-container">
+            <!-- Utility Bar -->
+            <div id="utility-bar">
+                <div class="utility-content">
+                    <a href="return-policy.html" class="utility-link">Help & FAQs</a>
+                </div>
+            </div>
+
+            <!-- NAVBAR -->
+            <section id="header">
+                <!-- Mobile hamburger menu -->
+                <div id="mobile">
+                    <i id="bar" class="fas fa-bars"></i>
+                </div>
+
+                <div class="header-left">
+                    <a href="../index.html" class="logo-link">
+                        <img src="../images/Rlogo1.jpeg" class="logo-placeholder" alt="Logo">
+                    </a>
+                    <div class="gender-toggle">
+                        <a href="women.html" class="gender-btn active">WOMEN</a>
+                    </div>
+                </div>
+
+                <!-- CENTER: Search -->
+                <div class="nav-center">
+                    <div class="search-box">
+                        <input type="text" id="search-input" placeholder="Search for items and brands">
+                        <button type="submit" class="search-button" aria-label="Search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <div class="search-discovery">
+                            <div class="discovery-section">
+                                <h4>Search Discovery</h4>
+                                <div class="discovery-tags">
+                                    <span class="tag">Sheglam</span>
+                                    <span class="tag">Dress</span>
+                                    <span class="tag">Jeans</span>
+                                    <span class="tag">Tops</span>
+                                    <span class="tag">Shoes</span>
+                                    <span class="tag">Nails</span>
+                                    <span class="tag">Harry Potter</span>
+                                    <span class="tag">Phone Case</span>
+                                    <span class="tag">Motf</span>
+                                    <span class="tag">Skirt</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-right">
+                    <div class="icon-group">
+                        <button type="button" class="nav-icon mobile-search-trigger" aria-label="Open search">
+                            <i class="fas fa-search"></i>
+                        </button>
+
+                        <div class="nav-hover-item login-menu">
+                            <a href="login.html" class="nav-icon user-icon">
+                                <i class="far fa-user"></i>
+                            </a>
+                            <div class="icon-dropdown login-dropdown">
+                                <div class="login-dropdown-header">personal center</div>
+                                <a href="login.html" class="sign-in-register-btn">Sign In / Register</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="my-orders.html" class="dropdown-link">My Orders</a>
+                                <a href="return-policy.html" class="dropdown-link">Customer Services</a>
+                            </div>
+                        </div>
+
+                        <div class="nav-hover-item cart-menu">
+                            <a href="cart.html" class="nav-icon cart-icon" id="cart-btn">
+                                <i class="far fa-shopping-bag"></i>
+                                <span class="cart-count">0</span>
+                            </a>
+                            <div class="icon-dropdown cart-dropdown">
+                                <h4>My Cart</h4>
+                                <div class="hover-cart-items" id="hover-cart-items">
+                                    <p class="hover-cart-empty">Shopping cart is empty.</p>
+                                </div>
+                                <a href="cart.html" class="view-cart-btn">View My Cart</a>
+                            </div>
+                        </div>
+
+                        <a href="saved-items.html" class="nav-icon heart-icon">
+                            <i class="far fa-heart"></i>
+                        </a>
+
+                        <div class="nav-hover-item customer-care-menu">
+                            <a href="return-policy.html" class="nav-icon customer-care-icon">
+                                <i class="fas fa-headset"></i>
+                            </a>
+                            <div class="icon-dropdown customer-care-dropdown">
+                                <h4>Customer Service</h4>
+                                <p>What can we do for you?</p>
+                                <a href="return-policy.html" class="dropdown-link">Return Policy</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Mobile cart icon -->
+                <div id="mobile-cart" class="mobile-cart">
+                    <a href="cart.html" class="nav-icon cart-icon">
+                        <i class="far fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </section>
+
+            <section id="category-slider">
+                <button class="scroll-arrow left"></button>
+                <div class="category-list">
+                    <div class="nav-item mega-trigger" data-category="newin">
+                        <a href="products.html?gender=women&category=clothing" class="category-item">New in</a>
+                    </div>
+                    <div class="nav-item mega-trigger" data-category="clothing">
+                        <a href="products.html?gender=women&category=clothing" class="category-item">Clothing</a>
+                    </div>
+                    <div class="nav-item mega-trigger" data-category="shoes">
+                        <a href="products.html?gender=women&category=shoes" class="category-item">Shoes</a>
+                    </div>
+                    <div class="nav-item mega-trigger" data-category="facebody">
+                        <a href="products.html?gender=women&category=facebody" class="category-item">Face + Body</a>
+                    </div>
+                    <div class="nav-item mega-trigger" data-category="accessories">
+                        <a href="products.html?gender=women&category=accessories" class="category-item">Accessories</a>
+                    </div>
+                    <div class="nav-item mega-trigger" data-category="activewear">
+                        <a href="products.html?gender=women&category=activewear" class="category-item">Activewear</a>
+                    </div>
+                </div>
+                <button class="scroll-arrow right"></button>
+            </section>
+            <div id="new-in-mega-menu" class="mega-menu" role="navigation" aria-label="New In mega menu" style="width: min(1680px, calc(100% - 64px)); padding: 32px 38px; gap: 32px;">
+                <div class="clothing-products-section" style="flex: 1 1 auto; padding-right: 10%;">
+                    <div class="clothing-links-grid" style="display: grid; grid-template-columns: repeat(2, minmax(170px, 1fr)); gap: 0 40px; align-items: start;">
+                        <!-- Column 1: NEW PRODUCTS -->
+                        <div class="clothing-links-col">
+                            <p class="clothing-section-title" style="margin-bottom: 24px;">NEW PRODUCTS</p>
+                            <ul class="clothing-links">
+                                <li><a href="products.html?category=newin" class="clothing-main-link">View all</a></li>
+                                <li><a href="#" class="clothing-main-link">New in: Selling Fast</a></li>
+                                <li><a href="products.html?category=dresses">Dresses</a></li>
+                                <li><a href="products.html?category=tops">Tops</a></li>
+                                <li><a href="products.html?category=jumpers">Jumpers</a></li>
+                                <li><a href="products.html?category=jeans-trousers">Jeans &amp; Trousers</a></li>
+                                <li><a href="products.html?category=hoodies">Hoodies</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 2: YOUR MOST HYPED -->
+                        <div class="clothing-links-col">
+                            <p class="clothing-section-title" style="margin-bottom: 24px; text-transform: uppercase;">YOUR MOST HYPED</p>
+                            <div class="mega-hyped-list" style="display: flex; flex-direction: column; gap: 14px;">
+                                <div class="mega-hyped-item" style="display: flex; align-items: center; gap: 16px;">
+                                    <div class="mega-hyped-icon" style="width: 40px; height: 40px; border-radius: 50%; overflow: hidden;"><img src="../images/KITE.avif" alt="View all" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                                    <a href="products.html?gender=women&category=clothing" class="mega-hyped-link" style="font-size: 14px; text-decoration: none; color: #333;">View all</a>
+                                </div>
+                                <div class="mega-hyped-item" style="display: flex; align-items: center; gap: 16px;">
+                                    <div class="mega-hyped-icon" style="width: 40px; height: 40px; border-radius: 50%; overflow: hidden;"><img src="../images/KITE2.avif" alt="Dresses" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                                    <a href="products.html?category=dresses" class="mega-hyped-link" style="font-size: 14px; text-decoration: none; color: #333;">Dresses</a>
+                                </div>
+                                <div class="mega-hyped-item" style="display: flex; align-items: center; gap: 16px;">
+                                    <div class="mega-hyped-icon" style="width: 40px; height: 40px; border-radius: 50%; overflow: hidden;"><img src="../images/style1.jpeg" alt="Tops" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                                    <a href="products.html?category=tops" class="mega-hyped-link" style="font-size: 14px; text-decoration: none; color: #333;">Tops</a>
+                                </div>
+                                <div class="mega-hyped-item" style="display: flex; align-items: center; gap: 16px;">
+                                    <div class="mega-hyped-icon" style="width: 40px; height: 40px; border-radius: 50%; overflow: hidden;"><img src="../images/style2.png" alt="Jeans &amp; Trousers" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                                    <a href="products.html?category=jeans-trousers" class="mega-hyped-link" style="font-size: 14px; text-decoration: none; color: #333;">Jeans &amp; Trousers</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clothing-feature-grid" aria-label="Featured new collections" style="flex: 0 0 600px;">
+                    <a href="products.html?gender=women&category=dresses" class="clothing-feature-card">
+                        <img src="../images/new4.avif" alt="Trending new in">
+                        <span>TRENDING CLOTHING</span>
+                    </a>
+                    <a href="products.html?gender=women&category=tops" class="clothing-feature-card">
+                        <img src="../images/new6.avif" alt="Trending new in">
+                        <span>TRENDING CLOTHING</span>
+                    </a>
+                </div>
+
+                <div id="grid-layout" class="mega-cards" style="display: none;">
+                    <div class="mega-card" id="mega-card-0"><img src="" alt="" class="mega-card-img"><span
+                            class="mega-card-label"></span></div>
+                    <div class="mega-card" id="mega-card-1"><img src="" alt="" class="mega-card-img"><span
+                            class="mega-card-label"></span></div>
+                    <div class="mega-card" id="mega-card-2"><img src="" alt="" class="mega-card-img"><span
+                            class="mega-card-label"></span></div>
+                </div>
+
+                <div id="women-layout" class="women-layout" style="display: none;">
+                    <div class="women-grid">
+                        <div class="women-grid-item"><img src="../images/KITE.avif" alt="VIEW ALL" class="women-grid-img"><span
+                                class="women-grid-label">VIEW ALL</span></div>
+                        <div class="women-grid-item"><img src="../images/KITE2.avif" alt="TODAY'S DROP"
+                                class="women-grid-img"><span class="women-grid-label">TODAY'S DROP</span></div>
+                        <div class="women-grid-item"><img src="../images/style1.jpeg" alt="DRESSES" class="women-grid-img"><span
+                                class="women-grid-label">DRESSES</span></div>
+                        <div class="women-grid-item"><img src="../images/style2.png" alt="TOPS" class="women-grid-img"><span
+                                class="women-grid-label">TOPS</span></div>
+                        <div class="women-grid-item"><img src="../images/KIT6.jpeg" alt="SHOES" class="women-grid-img"><span
+                                class="women-grid-label">SHOES</span></div>
+                        <div class="women-grid-item"><img src="../images/style4.jpeg" alt="ACCESSORIES"
+                                class="women-grid-img"><span class="women-grid-label">ACCESSORIES</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CLOTHING Mega Menu -->
+            <div id="clothing-mega-menu" class="mega-menu" role="navigation" aria-label="Clothing mega menu">
+                <div class="clothing-products-section">
+                    <p class="clothing-section-title">SHOP BY PRODUCTS</p>
+                    <div class="clothing-links-grid">
+                        <ul class="clothing-links">
+                            <li><a href="products.html?gender=women&category=shorts-clothing"
+                                    class="clothing-main-link">Shorts</a></li>
+                            <li><a href="products.html?gender=women&category=jumpers-cardigans">Jumpers &amp; Cardigans</a>
+                            </li>
+                            <li><a href="products.html?gender=women&category=jeans">Jeans</a></li>
+                            <li><a href="products.html?gender=women&category=blouses">Blouses</a></li>
+                            <li><a href="products.html?gender=women&category=suits-tailoring">Suits &amp; Tailoring</a></li>
+                            <li><a href="products.html?gender=women&category=wedding-dresses">Wedding Dresses</a></li>
+                        </ul>
+                        <ul class="clothing-links">
+                            <li><a href="products.html?gender=women&category=nightwear">Nightwear</a></li>
+                            <li><a href="products.html?gender=women&category=occasion-dresses">Occasion Dresses</a></li>
+                            <li><a href="products.html?gender=women&category=coats-jackets">Coats &amp; Jackets</a></li>
+                            <li><a href="products.html?gender=women&category=swimwear-beachwear">Swimwear &amp;
+                                    Beachwear</a></li>
+                            <li><a href="products.html?gender=women&category=trousers">Trousers</a></li>
+                            <li><a href="products.html?gender=women&category=skirts">Skirts</a></li>
+                        </ul>
+                        <ul class="clothing-links">
+                            <li><a href="products.html?gender=women&category=shirts">Shirts</a></li>
+                            <li><a href="products.html?gender=women&category=tops-clothing">Tops</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clothing-feature-grid" aria-label="Featured clothing collections">
+                    <a href="products.html?gender=women&category=jeans" class="clothing-feature-card">
+                        <img src="../images/cloth1.avif" alt="Trending clothing feature">
+                        <span>TRENDING CLOTHING</span>
+                    </a>
+                    <a href="products.html?gender=women&category=tops-clothing" class="clothing-feature-card">
+                        <img src="../images/cloth2.avif" alt="Trending clothing feature">
+                        <span>TRENDING CLOTHING</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- SHOES Mega Menu -->
+            <div id="shoes-mega-menu" class="mega-menu" role="navigation" aria-label="Shoes mega menu">
+                <div class="shoes-menu-grid">
+                    <div class="shoes-menu-col">
+                        <p class="clothing-section-title">SHOP BY PRODUCT</p>
+                        <div class="shoes-links">
+                            <li><a href="products.html?gender=women&category=shoes" class="mega-sidebar-main">View all</a>
+                            </li>
+                            <li><a href="products.html?gender=women&category=boots">Boots</a></li>
+                            <li><a href="products.html?gender=women&category=ballet-pumps">Ballet Pumps</a></li>
+                            <li><a href="products.html?gender=women&category=heels">Heels</a></li>
+                            <li><a href="products.html?gender=women&category=adidas">Adidas</a></li>
+                            <li><a href="products.html?gender=women&category=balenciaga">Balenciaga</a></li>
+                            <li><a href="products.html?gender=women&category=puma">Puma</a></li>
+                        </div>
+                    </div>
+                    <a href="#" class="shoes-feature-card"><img src="../images/shoe1.avif" alt="Trending shoes"><span>TRENDING
+                            SHOES</span></a>
+                    <a href="#" class="shoes-feature-card"><img src="../images/shoe2.avif" alt="Trending shoes"><span>TRENDING
+                            SHOES</span></a>
+                    <a href="#" class="shoes-feature-card"><img src="../images/shoe3.avif" alt="Trending shoes"><span>TRENDING
+                            SHOES</span></a>
+                </div>
+            </div>
+
+            <!-- FACE + BODY Mega Menu -->
+            <div id="facebody-mega-menu" class="mega-menu" role="navigation" aria-label="Face and Body mega menu">
+                <div class="facebody-menu-grid">
+                    <div class="facebody-menu-col">
+                        <p class="clothing-section-title">SHOP BY PRODUCT</p>
+                        <ul class="facebody-links">
+                            <li><a href="products.html?gender=women&category=facebody-up-to-40-off"
+                                    class="facebody-accent-link">Up to 40% off</a></li>
+                            <li><a href="products.html?gender=women&category=facebody">View all</a></li>
+                            <li><a href="products.html?gender=women&category=facebody-hottest-drop"
+                                    class="facebody-main-link">Hottest Drop</a></li>
+                            <li><a href="products.html?gender=women&category=facebody-makeup">Makeup</a></li>
+                            <li><a href="products.html?gender=women&category=facebody-skin-care">Skin care</a></li>
+                            <li><a href="products.html?gender=women&category=facebody-hair-care">Hair care</a></li>
+                            <li><a href="products.html?gender=women&category=facebody-body-care">Body care</a></li>
+                            <li><a href="products.html?gender=women&category=facebody-tools-accessories">Tools &amp;
+                                    Accessories</a></li>
+                        </ul>
+                    </div>
+                    <div class="facebody-menu-col">
+                        <p class="clothing-section-title">SHOP BY BRAND</p>
+                        <ul class="facebody-links">
+                            <li><a href="#">Caudalie</a></li>
+                            <li><a href="#">e.l.f.</a></li>
+                            <li><a href="#">Huda Beauty</a></li>
+                            <li><a href="#">Kitsch</a></li>
+                            <li><a href="#">LANEIGE</a></li>
+                            <li><a href="#">NYX Professional Makeup</a></li>
+                            <li><a href="#">Olaplex</a></li>
+                            <li><a href="#">Revolution</a></li>
+                            <li><a href="#">Sculpted by Aimee</a></li>
+                            <li><a href="#">The Ordinary</a></li>
+                            <li><a href="#" class="facebody-main-link">A-Z of brands</a></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="facebody-feature-card"><img src="../images/make1.avif"
+                            alt="Discover face and body"><span>DISCOVER FACE + BODY</span></a>
+                    <a href="#" class="facebody-feature-card"><img src="../images/make2.avif"
+                            alt="Discover face and body"><span>DISCOVER FACE + BODY</span></a>
+                </div>
+            </div>
+
+            <!-- ACCESSORIES Mega Menu -->
+            <div id="accessories-mega-menu" class="mega-menu" role="navigation" aria-label="Accessories mega menu">
+                <div class="accessories-menu-grid">
+                    <div class="accessories-menu-col">
+                        <p class="clothing-section-title">SHOP BY PRODUCT</p>
+                        <ul class="accessories-links">
+                            <li><a href="products.html?gender=women&category=accessories-product">View all</a></li>
+                            <li><a href="products.html?gender=women&category=accessories-new-in">New in</a></li>
+                            <li><a href="products.html?gender=women&category=accessories-sunglasses">Sunglasses</a></li>
+                            <li><a href="products.html?gender=women&category=accessories-belts">Belts</a></li>
+                            <li><a href="products.html?gender=women&category=accessories-caps">Caps</a></li>
+                            <li><a href="products.html?gender=women&category=accessories-gloves">Gloves</a></li>
+                            <li><a href="products.html?gender=women&category=accessories-hair-accessories">Hair
+                                    Accessories</a></li>
+                        </ul>
+                    </div>
+                    <div class="accessories-menu-col">
+                        <p class="clothing-section-title">SHOP BY BAGS</p>
+                        <ul class="accessories-edit-list">
+                            <li><a href="products.html?gender=women&category=accessories-bags"
+                                    class="accessories-edit-link"><img src="../images/Wtote6.avif"
+                                        alt="View all bags"><span>View all</span></a></li>
+                            <li><a href="products.html?gender=women&category=accessories-cross-body-bags"
+                                    class="accessories-edit-link"><img src="../images/Mega1.avif"
+                                        alt="Cross Body Bags"><span>Cross Body Bags</span></a></li>
+                            <li><a href="products.html?gender=women&category=accessories-tote-bags"
+                                    class="accessories-edit-link"><img src="../images/Mega2.avif" alt="Tote Bags"><span>Tote
+                                        Bags</span></a></li>
+                            <li><a href="products.html?gender=women&category=accessories-travel-bags"
+                                    class="accessories-edit-link"><img src="../images/Mega3.avif"
+                                        alt="Travel Bags"><span>Travel Bags</span></a></li>
+                            <li><a href="products.html?gender=women&category=accessories-shoulder-bags"
+                                    class="accessories-edit-link"><img src="../images/WSHOLB10.avif"
+                                        alt="Shoulder Bags"><span>Shoulder Bags</span></a></li>
+                            <li><a href="products.html?gender=women&category=accessories-clutches"
+                                    class="accessories-edit-link"><img src="../images/WCLUT13.avif"
+                                        alt="Clutches"><span>Clutches</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="accessories-menu-col">
+                        <p class="clothing-section-title">SHOP BY JEWELLERY</p>
+                        <ul class="accessories-edit-list">
+                            <li><a href="products.html?gender=women&category=accessories-jewellery"
+                                    class="accessories-edit-link"><img src="../images/WEARS3.avif"
+                                        alt="View all jewellery"><span>View all</span></a></li>
+                            <li><a href="products.html?gender=women&category=accessories-earrings"
+                                    class="accessories-edit-link"><img src="../images/WEARS6.avif"
+                                        alt="Earrings"><span>Earrings</span></a></li>
+                            <li><a href="products.html?gender=women&category=accessories-necklaces"
+                                    class="accessories-edit-link"><img src="../images/Wbraclet11.avif"
+                                        alt="Necklaces"><span>Necklaces</span></a></li>
+                            <li><a href="products.html?gender=women&category=accessories-rings"
+                                    class="accessories-edit-link"><img src="../images/Wring5.avif"
+                                        alt="Rings"><span>Rings</span></a></li>
+                            <li><a href="products.html?gender=women&category=accessories-bracelets"
+                                    class="accessories-edit-link"><img src="../images/Wbraclet7.avif"
+                                        alt="Bracelets"><span>Bracelets</span></a></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="accessories-feature-card"><img src="../images/KIT7.jpeg"
+                            alt="Winter accessories"><span>WINTER ACCESSORIES</span></a>
+                </div>
+            </div>
+
+            <!-- ACTIVEWEAR Mega Menu -->
+            <div id="activewear-mega-menu" class="mega-menu" role="navigation" aria-label="Activewear mega menu">
+                <div class="activewear-menu-grid">
+                    <div class="activewear-menu-col">
+                        <p class="clothing-section-title">SHOP BY PRODUCT</p>
+                        <ul class="activewear-links">
+                            <li><a href="products.html?gender=women&category=activewear">View all</a></li>
+                            <li><a href="products.html?gender=women&category=activewear-tops">Tops</a></li>
+                            <li><a href="products.html?gender=women&category=activewear-sports-bras">Sports bras</a></li>
+                            <li><a href="products.html?gender=women&category=activewear-shorts">Shorts</a></li>
+                            <li><a href="products.html?gender=women&category=activewear-hoodies-sweatshirts">Hoodies &amp;
+                                    Sweatshirts</a></li>
+                            <li><a href="products.html?gender=women&category=activewear-addidas">Addidas</a></li>
+                            <li><a href="products.html?gender=women&category=activewear-jackets">Jackets</a></li>
+                        </ul>
+                    </div>
+                    <div class="activewear-menu-col">
+                        <p class="clothing-section-title">SHOP BY ACTIVITY</p>
+                        <div class="activewear-activity-grid">
+                            <a href="products.html?gender=women&category=activewear-tops"
+                                class="activewear-activity-item"><img src="../images/WactiveT1.avif"
+                                    alt="Trainers"><span>Tops</span></a>
+                            <a href="products.html?gender=women&category=activewear-hoodies-sweatshirts"
+                                class="activewear-activity-item activewear-activity-highlight"><img
+                                    src="../images/WactiveT5.avif" alt="Gym"><span>Hoodies &amp; Sweatshirts</span></a>
+                            <a href="products.html?gender=women&category=activewear-shorts"
+                                class="activewear-activity-item"><img src="../images/WactiveT8.avif"
+                                    alt="Shorts"><span>Shorts</span></a>
+                            <a href="products.html?gender=women&category=activewear-jackets"
+                                class="activewear-activity-item"><img src="../images/WactiveT6.avif"
+                                    alt="Jackets"><span>Jackets</span></a>
+                        </div>
+                    </div>
+                    <div class="activewear-menu-col">
+                        <p class="clothing-section-title">SHOP BY EDIT</p>
+                        <div class="activewear-tile-stack">
+                            <a href="#" class="activewear-tile-card"><img src="../images/check1.avif"
+                                    alt="Run ready"><span>RUN READY</span></a>
+                            <a href="#" class="activewear-tile-card"><img src="../images/check2.avif"
+                                    alt="Match day fits"><span>MATCH DAY 'FITS</span></a>
+                        </div>
+                    </div>
+                    <div class="activewear-menu-col activewear-brand-col">
+                        <p class="clothing-section-title">SHOP BY BRAND</p>
+                        <div class="activewear-tile-stack">
+                            <a href="#" class="activewear-tile-card"><img src="../images/check3.avif"
+                                    alt="4505"><span>4505</span></a>
+                            <a href="#" class="activewear-tile-card"><img src="../images/check4.avif"
+                                    alt="Adidas performance"><span>ADIDAS PERFORMANCE</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="mega-blur-overlay"></div>
+
+        <div id="mobile-nav-overlay" class="mobile-nav-overlay" aria-hidden="true">
+            <aside id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Mobile navigation">
+                <div class="mobile-nav-panel mobile-nav-main is-active" data-panel="main">
+                    <div class="mobile-nav-header">
+                        <div class="mobile-nav-tabs">
+                            <button type="button" class="mobile-nav-tab active">WOMEN</button>
+                        </div>
+                        <button type="button" class="mobile-nav-close" aria-label="Close menu">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+
+                    <div class="mobile-nav-list">
+                        <a href="../index.html" class="mobile-nav-link">Home</a>
+                        <button type="button" class="mobile-nav-link mobile-nav-parent" data-mobile-category="newin">New
+                            in</button>
+                        <button type="button" class="mobile-nav-link mobile-nav-parent"
+                            data-mobile-category="clothing">Clothing</button>
+                        <button type="button" class="mobile-nav-link mobile-nav-parent"
+                            data-mobile-category="shoes">Shoes</button>
+                        <button type="button" class="mobile-nav-link mobile-nav-parent"
+                            data-mobile-category="facebody">Face + Body</button>
+                        <button type="button" class="mobile-nav-link mobile-nav-parent"
+                            data-mobile-category="accessories">Accessories</button>
+                        <button type="button" class="mobile-nav-link mobile-nav-parent"
+                            data-mobile-category="activewear">Activewear</button>
+                    </div>
+                </div>
+
+                <div class="mobile-nav-panel mobile-nav-subpanel" data-panel="submenu">
+                    <div class="mobile-nav-subheader">
+                        <button type="button" class="mobile-nav-back" aria-label="Go back">
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                        <h3 id="mobile-submenu-title">New in</h3>
+                        <button type="button" class="mobile-nav-close" aria-label="Close menu">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="mobile-nav-subcontent">
+                        <p class="mobile-nav-subtitle" id="mobile-submenu-subtitle">New products</p>
+                        <div id="mobile-submenu-links" class="mobile-nav-submenu-links"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb-nav">
+            <a href="../index.html">Home</a>
+            <span class="separator">›</span>
+            <a href="women.html">Women</a>
+            <span class="separator">›</span>
+            <a href="products.html?category=newin" id="breadcrumb-category-link">New In</a>
+            <span class="separator">›</span>
+            <span class="current" id="breadcrumb-product">Product Details</span>
+        </nav>
+
+
+        <!-- ============================================================
+         PRODUCT DETAIL SECTION
+         ============================================================ -->
+        <main class="product-details-container">
+            <div class="product-detail-wrapper" id="product-detail-wrapper" style="display:none;">
+
+                <!-- LEFT: Gallery -->
+                <div class="product-gallery">
+                    <!-- Thumbnails -->
+                    <div class="thumbnail-container" id="thumbnail-container"></div>
+
+                    <!-- Main Image -->
+                    <div class="main-image-container">
+                        <img id="main-product-image" src="" alt="" class="main-product-image">
+                    </div>
+                </div>
+
+                <!-- RIGHT: Info -->
+                <div class="product-info-section">
+
+                    <!-- Star Rating -->
+                    <div class="product-rating">
+                        <div class="stars" id="product-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-count" id="rating-count">(122)</span>
+                    </div>
+
+                    <h1 class="product-name" id="product-name">Product Name</h1>
+                    <p class="product-price" id="product-price">$0.00</p>
+
+                    <div class="product-description" id="product-description">
+                        <p>A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and
+                            short sleeves, worn as an undershirt or outer garment.</p>
+                    </div>
+
+                    <!-- Size Selection -->
+                    <div class="size-selection">
+                        <h3>Select Size</h3>
+                        <div class="size-options">
+                            <button class="size-btn" data-size="S">S</button>
+                            <button class="size-btn" data-size="M">M</button>
+                            <button class="size-btn" data-size="L">L</button>
+                            <button class="size-btn" data-size="XL">XL</button>
+                            <button class="size-btn" data-size="XXL">XXL</button>
+                        </div>
+                        <div class="quantity-control" aria-label="Quantity selector">
+                            <button class="quantity-btn" id="quantity-decrease" aria-label="Decrease quantity">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <span class="quantity-value" id="quantity-value">1</span>
+                            <button class="quantity-btn" id="quantity-increase" aria-label="Increase quantity">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Add to Cart -->
+                    <div class="add-to-cart-section">
+                        <button class="add-to-cart-btn" id="add-to-cart-btn">
+                            ADD TO CART
+                        </button>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="product-features">
+                        <div class="feature-item">100% Original product.</div>
+                        <div class="feature-item">Cash on delivery is available on this product.</div>
+                        <div class="feature-item">Easy return and exchange policy within 7 days.</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Loading / Error state -->
+            <div id="product-details-status"></div>
+        </main>
+
+        <!-- ============================================================
+         YOU MIGHT ALSO LIKE
+         ============================================================ -->
+        <section class="you-might-like" id="you-might-like" style="display:none;">
+            <h2>You Might Also Like</h2>
+            <div class="related-products-grid" id="related-products-grid">
+                <!-- Filled by JS -->
+            </div>
+        </section>
+
+    
+
+    <!-- Footer -->
+    <footer class="section-p1">
+            <div class="col">
+                <img class="logo" src="../images/logo.png" alt="">
+                <h4>Contact</h4>
+                <p><strong>Address : </strong> 565 Wellington Road, Street 32, San Francisco</p>
+                <p><strong>Phone : </strong> (+234) 090 4033 7380</p>
+                <p><strong>Hours : </strong> 8:00 - 8:00, Mon - Sat</p>
+                <div class="follow">
+                    <h4>Follow us</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </footer>
+    </div><!-- end #main-content -->
+
+
+    <script src="../JS/script.js"></script>
+    <script src="../JS/wishlist.js"></script>
+    <script src="../JS/user-storage.js"></script>
+    <script src="../JS/account-menu.js"></script>
+    <script src="../JS/product-details.js"></script>
+    <script src="../JS/navbar.js"></script>
+    <script src="../JS/women.js"></script>
+    <script src="../JS/search.js"></script>
+</body>
+
+</html>

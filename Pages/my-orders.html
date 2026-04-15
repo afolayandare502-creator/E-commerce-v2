@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="../CSS/search.css">
+    <link rel="stylesheet" href="../CSS/orders.css">
+</head>
+<body class="orders-page">
+<div id="main-content">
+    <!-- STICKY HEADER WRAPPER -->
+    <header id="sticky-header-container">
+        <div id="utility-bar">
+            <div class="utility-content">
+                <a href="return-policy.html" class="utility-link">Help & FAQs</a>
+            </div>
+        </div>
+
+        <section id="header">
+            <div class="header-left">
+                <a href="../index.html" class="logo-link">
+                    <img src="../images/Rlogo1.jpeg" class="logo-placeholder" alt="Logo">
+                </a>
+                <div class="gender-toggle">
+                    <a href="women.html" class="gender-btn active">WOMEN</a>
+                </div>
+            </div>
+
+            <div class="nav-center">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search for items and brands">
+                    <button type="submit" class="search-button" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="search-discovery">
+                        <div class="discovery-section">
+                            <h4>Search Discovery</h4>
+                            <div class="discovery-tags">
+                                <span class="tag">Dress</span>
+                                <span class="tag">Jeans</span>
+                                <span class="tag">Tops</span>
+                                <span class="tag">Shoes</span>
+                                <span class="tag">Activewear</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <div class="icon-group">
+                    <button type="button" class="nav-icon mobile-search-trigger" aria-label="Open search">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                    <div class="nav-hover-item login-menu">
+                        <a href="login.html" class="nav-icon user-icon">
+                            <i class="far fa-user"></i>
+                        </a>
+                        <div class="icon-dropdown login-dropdown">
+                            <div class="login-dropdown-header">personal center</div>
+                            <a href="login.html" class="sign-in-register-btn">Sign In / Register</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="my-orders.html" class="dropdown-link">My Orders</a>
+                            <a href="#" class="dropdown-link">My Message</a>
+                            <a href="#" class="dropdown-link">My Coupons</a>
+                            <a href="#" class="dropdown-link">My Points</a>
+                            <a href="#" class="dropdown-link">Recently Viewed</a>
+                            <a href="#" class="dropdown-link">More Services</a>
+                        </div>
+                    </div>
+
+                    <a href="cart.html" class="nav-icon cart-icon">
+                        <i class="far fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+
+                    <a href="saved-items.html" class="nav-icon heart-icon">
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main class="orders-main">
+        <section class="orders-shell">
+            <div class="orders-heading">
+                <h1>MY ORDERS</h1>
+                <span class="orders-heading-line"></span>
+            </div>
+
+            <div id="orders-list" class="orders-list"></div>
+
+            <section id="orders-empty" class="orders-empty" hidden>
+                <div class="orders-empty-icon"><i class="far fa-shopping-bag"></i></div>
+                <h2>No orders yet</h2>
+                <p>Place an order from your cart and it will show up here.</p>
+                <a href="products.html?gender=women&category=clothing" class="orders-shop-btn">Start Shopping</a>
+            </section>
+        </section>
+    </main>
+
+    <footer class="section-p1">
+            <div class="col">
+                <img class="logo" src="../images/logo.png" alt="">
+                <h4>Contact</h4>
+                <p><strong>Address : </strong> 565 Wellington Road, Street 32, San Francisco</p>
+                <p><strong>Phone : </strong> (+234) 090 4033 7380</p>
+                <p><strong>Hours : </strong> 8:00 - 8:00, Mon - Sat</p>
+                <div class="follow">
+                    <h4>Follow us</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </footer>
+</div>
+
+<script src="../JS/user-storage.js"></script>
+<script src="../JS/account-menu.js"></script>
+<script src="../JS/orders.js"></script>
+<script src="../JS/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+/* ============================================================
+   WOMEN.CSS — Women page specific styles
+   Used by: Pages/women.html
+   ============================================================ */
+
+/* Women's New In Mega Menu layout */
+.women-layout { flex: 1; padding: 0 32px; }
+
+.women-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.women-grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.women-grid-item:hover { transform: scale(1.02); }
+
+.women-grid-img {
+    width: 100%; height: 180px;
+    object-fit: cover; display: block;
+    transition: transform 0.3s ease;
+}
+.women-grid-item:hover .women-grid-img { transform: scale(1.05); }
+
+.women-grid-label {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 12px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+    color: #fff; font-size: 13px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 1px; text-align: center;
+}

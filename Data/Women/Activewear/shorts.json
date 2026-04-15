@@ -1,0 +1,82 @@
+[
+    {
+        "id": 3073,
+        "name": "Activewear Shorts Pro",
+        "price": 38,
+        "category": "activewear-shorts",
+        "images": [
+            "../images/product/women/Shorts/WSshort1.avif",
+            "../images/product/women/Shorts/WSshort2.avif"
+        ]
+    },
+    {
+        "id": 3074,
+        "name": "Gym Shorts Pro",
+        "price": 35,
+        "category": "activewear-shorts",
+        "images": [
+            "../images/product/women/Shorts/WSshort3.avif",
+            "../images/product/women/Shorts/WSshort4.avif"
+        ]
+    },
+    {
+        "id": 3075,
+        "name": "Workout Shorts Pro",
+        "price": 42,
+        "category": "activewear-shorts",
+        "images": [
+            "../images/product/women/Shorts/WSshort5.avif",
+            "../images/product/women/Shorts/WSshort6.avif"
+        ]
+    },
+    {
+        "id": 3076,
+        "name": "Training Shorts Pro",
+        "price": 45,
+        "category": "activewear-shorts",
+        "images": [
+            "../images/product/women/Shorts/WSshort7.avif",
+            "../images/product/women/Shorts/WSshort8.avif"
+        ]
+    },
+    {
+        "id": 3077,
+        "name": "Sport Shorts Pro",
+        "price": 32,
+        "category": "activewear-shorts",
+        "images": [
+            "../images/product/women/Shorts/WSshort9.avif",
+            "../images/product/women/Shorts/WSshort10.avif"
+        ]
+    },
+    {
+        "id": 3078,
+        "name": "Athletic Shorts Pro",
+        "price": 48,
+        "category": "activewear-shorts",
+        "images": [
+            "../images/product/women/Shorts/WSshort11.avif",
+            "../images/product/women/Shorts/WSshort12.avif"
+        ]
+    },
+    {
+        "id": 3079,
+        "name": "Performance Shorts Pro",
+        "price": 52,
+        "category": "activewear-shorts",
+        "images": [
+            "../images/product/women/Shorts/WSshort13.avif",
+            "../images/product/women/Shorts/WSshort14.avif"
+        ]
+    },
+    {
+        "id": 3080,
+        "name": "Fitness Shorts Pro",
+        "price": 36,
+        "category": "activewear-shorts",
+        "images": [
+            "../images/product/women/Shorts/WSshort15.avif",
+            "../images/product/women/Shorts/WSshort16.avif"
+        ]
+    }
+]

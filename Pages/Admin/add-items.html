@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        if (localStorage.getItem('isAdmin') !== 'true') {
+            window.location.replace('admin-login.html');
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Items</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="../../CSS/admin.css">
+    <link rel="stylesheet" href="../../CSS/add-items.css">
+</head>
+<body>
+    <div class="admin-shell add-items-shell">
+        <aside class="admin-sidebar">
+            <div class="admin-brand">
+                <div class="admin-brand-icon"><i class="fas fa-gem"></i></div>
+                <div>
+                    <h1>Admin Panel</h1>
+                </div>
+            </div>
+
+            <nav class="admin-nav">
+                <div class="admin-nav-group">
+                    <p class="admin-nav-label">Navigation</p>
+                    <a href="admin.html" class="admin-nav-link" data-admin-view-link="dashboard">
+                        <span><i class="fas fa-th-large"></i> Dashboard</span>
+                    </a>
+                    <a href="admin.html?view=orders" class="admin-nav-link" data-admin-view-link="orders">
+                        <span><i class="fas fa-shopping-bag"></i> Orders</span>
+                    </a>
+                    <a href="admin.html?view=customers" class="admin-nav-link" data-admin-view-link="customers">
+                        <span><i class="fas fa-users"></i> Customers</span>
+                    </a>
+                    <a href="add-items.html" class="admin-nav-link is-active">
+                        <span><i class="fas fa-plus-square"></i> Add Items</span>
+                    </a>
+                </div>
+
+                <div class="admin-nav-group">
+                    <p class="admin-nav-label">General</p>
+                    <a href="#" class="admin-nav-link">
+                        <span><i class="fas fa-bell"></i> Notifications</span>
+                    </a>
+                    <a href="#" class="admin-nav-link">
+                        <span><i class="fas fa-life-ring"></i> Help</span>
+                    </a>
+                    <a href="#" class="admin-nav-link">
+                        <span><i class="fas fa-cog"></i> Settings</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="admin-sidebar-footer">
+                <button id="admin-logout-btn" class="admin-logout-btn" data-admin-logout>
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Log Out</span>
+                </button>
+            </div>
+        </aside>
+
+        <main class="admin-main add-items-main">
+            <header class="add-items-header">
+                <div class="add-items-header-copy">
+                    <p class="admin-eyebrow">Forever Admin Panel</p>
+                    <h2>Add Items</h2>
+                </div>
+                <button type="button" class="add-items-header-logout" data-admin-logout>Logout</button>
+            </header>
+
+            <section class="add-items-content">
+                <form id="add-item-form" class="add-item-form">
+                    <div class="add-item-section">
+                        <label class="add-item-label">Upload Image</label>
+                        <div class="image-upload-row">
+                            <label class="image-upload-box" data-upload-box>
+                                <input type="file" class="image-upload-input" accept="image/*" data-image-input="0">
+                                <span class="image-upload-placeholder">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Upload</span>
+                                </span>
+                                <img class="image-upload-preview" alt="Preview 1">
+                            </label>
+
+                            <label class="image-upload-box" data-upload-box>
+                                <input type="file" class="image-upload-input" accept="image/*" data-image-input="1">
+                                <span class="image-upload-placeholder">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Upload</span>
+                                </span>
+                                <img class="image-upload-preview" alt="Preview 2">
+                            </label>
+
+                            <label class="image-upload-box" data-upload-box>
+                                <input type="file" class="image-upload-input" accept="image/*" data-image-input="2">
+                                <span class="image-upload-placeholder">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Upload</span>
+                                </span>
+                                <img class="image-upload-preview" alt="Preview 3">
+                            </label>
+
+                            <label class="image-upload-box" data-upload-box>
+                                <input type="file" class="image-upload-input" accept="image/*" data-image-input="3">
+                                <span class="image-upload-placeholder">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Upload</span>
+                                </span>
+                                <img class="image-upload-preview" alt="Preview 4">
+                            </label>
+                        </div>
+                    </div>
+
+                    <label class="add-item-field add-item-field-wide">
+                        <span class="add-item-label">Product Name</span>
+                        <input type="text" id="product-name" name="productName" placeholder="Type here" required>
+                    </label>
+
+                    <label class="add-item-field add-item-field-wide">
+                        <span class="add-item-label">Product Description</span>
+                        <textarea id="product-description" name="productDescription" rows="5" placeholder="Write content here" required></textarea>
+                    </label>
+
+                    <div class="add-item-meta-row">
+                        <label class="add-item-field">
+                            <span class="add-item-label">Product Category</span>
+                            <select id="product-category" name="productCategory" required>
+                                <option value="newin">New in</option>
+                                <option value="clothing">Clothing</option>
+                                <option value="shoes">Shoes</option>
+                                <option value="facebody">Face + Body</option>
+                                <option value="accessories">Accessories</option>
+                                <option value="activewear">Activewear</option>
+                            </select>
+                        </label>
+
+                        <label class="add-item-field">
+                            <span class="add-item-label">Subcategory</span>
+                            <select id="product-subcategory" name="productSubcategory" required>
+                            </select>
+                        </label>
+
+                        <label class="add-item-field add-item-field-price">
+                            <span class="add-item-label">Product Price</span>
+                            <input type="number" id="product-price" name="productPrice" min="0" step="0.01" placeholder="25" required>
+                        </label>
+                    </div>
+
+                    <div class="add-item-section">
+                        <span class="add-item-label">Product Sizes</span>
+                        <div class="size-selector" id="size-selector">
+                            <button type="button" class="size-chip size-chip-all" data-size="ALL">All Sizes</button>
+                            <button type="button" class="size-chip" data-size="S">S</button>
+                            <button type="button" class="size-chip" data-size="M">M</button>
+                            <button type="button" class="size-chip" data-size="L">L</button>
+                            <button type="button" class="size-chip" data-size="XL">XL</button>
+                            <button type="button" class="size-chip" data-size="XXL">XXL</button>
+                        </div>
+                    </div>
+
+                    <label class="bestseller-toggle">
+                        <input type="checkbox" id="product-bestseller" name="bestseller">
+                        <span>Add to bestseller</span>
+                    </label>
+
+                    <p id="add-item-feedback" class="add-item-feedback" aria-live="polite"></p>
+
+                    <button type="submit" class="add-item-submit">ADD</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="../../JS/Admin/add-items.js"></script>
+</body>
+</html>

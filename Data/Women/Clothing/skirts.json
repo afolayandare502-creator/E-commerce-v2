@@ -1,0 +1,98 @@
+[
+    {
+        "id": 385,
+        "name": "Pleated Midi Skirt",
+        "price": 54,
+        "category": "skirts",
+        "images": [
+            "../images/product/women/Skirts/WSKIRT1.avif",
+            "../images/product/women/Skirts/WSKIRT2.avif",
+            "../images/product/women/Skirts/WSKIRT3.avif",
+            "../images/product/women/Skirts/WSKIRT4.avif"
+        ]
+    },
+    {
+        "id": 386,
+        "name": "Satin Bias Cut Skirt",
+        "price": 58,
+        "category": "skirts",
+        "images": [
+            "../images/product/women/Skirts/WSKIRT5.avif",
+            "../images/product/women/Skirts/WSKIRT6.avif",
+            "../images/product/women/Skirts/WSKIRT7.avif",
+            "../images/product/women/Skirts/WSKIRT8.avif"
+        ]
+    },
+    {
+        "id": 387,
+        "name": "Tailored Mini Skirt",
+        "price": 48,
+        "category": "skirts",
+        "images": [
+            "../images/product/women/Skirts/WSKIRT9.avif",
+            "../images/product/women/Skirts/WSKIRT10.avif",
+            "../images/product/women/Skirts/WSKIRT11.avif",
+            "../images/product/women/Skirts/WSKIRT12.avif"
+        ]
+    },
+    {
+        "id": 388,
+        "name": "Denim A Line Skirt",
+        "price": 45,
+        "category": "skirts",
+        "images": [
+            "../images/product/women/Skirts/WSKIRT13.avif",
+            "../images/product/women/Skirts/WSKIRT14.avif",
+            "../images/product/women/Skirts/WSKIRT15.avif",
+            "../images/product/women/Skirts/WSKIRT16.avif"
+        ]
+    },
+    {
+        "id": 389,
+        "name": "Column Knit Midi Skirt",
+        "price": 52,
+        "category": "skirts",
+        "images": [
+            "../images/product/women/Skirts/WSKIRT17.avif",
+            "../images/product/women/Skirts/WSKIRT18.avif",
+            "../images/product/women/Skirts/WSKIRT19.avif",
+            "../images/product/women/Skirts/WSKIRT20.avif"
+        ]
+    },
+    {
+        "id": 390,
+        "name": "Wrap Front Printed Skirt",
+        "price": 49,
+        "category": "skirts",
+        "images": [
+            "../images/product/women/Skirts/WSKIRT21.avif",
+            "../images/product/women/Skirts/WSKIRT22.avif",
+            "../images/product/women/Skirts/WSKIRT23.avif",
+            "../images/product/women/Skirts/WSKIRT24.avif"
+        ]
+    },
+    {
+        "id": 391,
+        "name": "Tulle Occasion Skirt",
+        "price": 68,
+        "category": "skirts",
+        "images": [
+            "../images/product/women/Skirts/WSKIRT25.avif",
+            "../images/product/women/Skirts/WSKIRT26.avif",
+            "../images/product/women/Skirts/WSKIRT27.avif",
+            "../images/product/women/Skirts/WSKIRT28.avif"
+        ]
+    },
+    {
+        "id": 392,
+        "name": "High Waist Pencil Skirt",
+        "price": 56,
+        "category": "skirts",
+        "images": [
+            "../images/product/women/Skirts/WSKIRT29.avif",
+            "../images/product/women/Skirts/WSKIRT30.avif",
+            "../images/product/women/Skirts/WSKIRT31.avif",
+            "../images/product/women/Skirts/WSKIRT32.avif"
+        ]
+    }
+]

@@ -1,0 +1,290 @@
+[
+    {
+        "id": 121,
+        "name": "Classic Skinny Jeans",
+        "price": 65,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM1.avif",
+            "../images/product/women/Jeans/WJTIM2.avif",
+            "../images/product/women/Jeans/WJTIM3.avif",
+            "../images/product/women/Jeans/WJTIM4.avif"
+        ]
+    },
+    {
+        "id": 122,
+        "name": "High Waisted Jeans",
+        "price": 75,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM5.avif",
+            "../images/product/women/Jeans/WJTIM6.avif",
+            "../images/product/women/Jeans/WJTIM7.avif",
+            "../images/product/women/Jeans/WJTIM8.avif"
+        ]
+    },
+    {
+        "id": 123,
+        "name": "Ripped Jeans",
+        "price": 80,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM9.avif",
+            "../images/product/women/Jeans/WJTIM10.avif",
+            "../images/product/women/Jeans/WJTIM11.avif",
+            "../images/product/women/Jeans/WJTIM12.avif"
+        ]
+    },
+    {
+        "id": 124,
+        "name": "Bootcut Jeans",
+        "price": 70,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM13.avif",
+            "../images/product/women/Jeans/WJTIM14.avif",
+            "../images/product/women/Jeans/WJTIM15.avif",
+            "../images/product/women/Jeans/WJTIM16.avif"
+        ]
+    },
+    {
+        "id": 125,
+        "name": "Flare Jeans",
+        "price": 85,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM17.avif",
+            "../images/product/women/Jeans/WJTIM18.avif",
+            "../images/product/women/Jeans/WJTIM19.avif",
+            "../images/product/women/Jeans/WJTIM20.avif"
+        ]
+    },
+    {
+        "id": 126,
+        "name": "Mom Jeans",
+        "price": 72,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM21.avif",
+            "../images/product/women/Jeans/WJTIM22.avif",
+            "../images/product/women/Jeans/WJTIM23.avif",
+            "../images/product/women/Jeans/WJTIM24.avif"
+        ]
+    },
+    {
+        "id": 127,
+        "name": "Boyfriend Jeans",
+        "price": 78,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM25.avif",
+            "../images/product/women/Jeans/WJTIM26.avif",
+            "../images/product/women/Jeans/WJTIM27.avif",
+            "../images/product/women/Jeans/WJTIM28.avif"
+        ]
+    },
+    {
+        "id": 128,
+        "name": "Straight Leg Jeans",
+        "price": 68,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM29.avif",
+            "../images/product/women/Jeans/WJTIM30.avif",
+            "../images/product/women/Jeans/WJTIM31.avif",
+            "../images/product/women/Jeans/WJTIM32.avif"
+        ]
+    },
+    {
+        "id": 129,
+        "name": "Slim Fit Jeans",
+        "price": 75,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM33.avif",
+            "../images/product/women/Jeans/WJTIM34.avif",
+            "../images/product/women/Jeans/WJTIM35.avif",
+            "../images/product/women/Jeans/WJTIM36.avif"
+        ]
+    },
+    {
+        "id": 130,
+        "name": "Relaxed Fit Jeans",
+        "price": 82,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM37.avif",
+            "../images/product/women/Jeans/WJTIM38.avif",
+            "../images/product/women/Jeans//WJTIM39.jpeg",
+            "../images/product/women/Jeans//WJTIM40.jpeg"
+        ]
+    },
+    {
+        "id": 131,
+        "name": "Low Rise Jeans",
+        "price": 65,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM41.avif",
+            "../images/product/women/Jeans/WJTIM42.avif",
+            "../images/product/women/Jeans/WJTIM43.avif",
+            "../images/product/women/Jeans/WJTIM44.avif"
+        ]
+    },
+    {
+        "id": 132,
+        "name": "Distressed Jeans",
+        "price": 88,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM45.avif",
+            "../images/product/women/Jeans/WJTIM46.avif",
+            "../images/product/women/Jeans/WJTIM47.avif",
+            "../images/product/women/Jeans/WJTIM48.avif"
+        ]
+    },
+    {
+        "id": 133,
+        "name": "Cropped Jeans",
+        "price": 70,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM49.avif",
+            "../images/product/women/Jeans/WJTIM50.avif",
+            "../images/product/women/Jeans/WJTIM51.avif",
+            "../images/product/women/Jeans/WJTIM52.avif"
+        ]
+    },
+    {
+        "id": 134,
+        "name": "Wide Leg Jeans",
+        "price": 85,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM53.avif",
+            "../images/product/women/Jeans/WJTIM54.avif",
+            "../images/product/women/Jeans/WJTIM55.avif",
+            "../images/product/women/Jeans/WJTIM56.avif"
+        ]
+    },
+    {
+        "id": 135,
+        "name": "Jeggings",
+        "price": 55,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM57.avif",
+            "../images/product/women/Jeans/WJTIM58.avif",
+            "../images/product/women/Jeans/WJTIM59.avif",
+            "../images/product/women/Jeans/WJTIM60.avif"
+        ]
+    },
+    {
+        "id": 136,
+        "name": "Corduroy Jeans",
+        "price": 90,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM61.avif",
+            "../images/product/women/Jeans/WJTIM62.avif",
+            "../images/product/women/Jeans/WJTIM63.avif",
+            "../images/product/women/Jeans/WJTIM64.avif"
+        ]
+    },
+    {
+        "id": 137,
+        "name": "Denim Shorts",
+        "price": 45,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM65.avif",
+            "../images/product/women/Jeans/WJTIM66.avif",
+            "../images/product/women/Jeans/WJTIM67.avif",
+            "../images/product/women/Jeans/WJTIM68.avif"
+        ]
+    },
+    {
+        "id": 138,
+        "name": "Cargo Jeans",
+        "price": 95,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM69.avif",
+            "../images/product/women/Jeans/WJTIM70.avif",
+            "../images/product/women/Jeans/WJTIM71.avif",
+            "../images/product/women/Jeans/WJTIM72.avif"
+        ]
+    },
+    {
+        "id": 139,
+        "name": "Paperbag Jeans",
+        "price": 78,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM73.avif",
+            "../images/product/women/Jeans/WJTIM74.avif",
+            "../images/product/women/Jeans/WJTIM75.avif",
+            "../images/product/women/Jeans/WJTIM76.avif"
+        ]
+    },
+    {
+        "id": 140,
+        "name": "Embroidered Jeans",
+        "price": 110,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM77.avif",
+            "../images/product/women/Jeans/WJTIM78.avif",
+            "../images/product/women/Jeans/WJTIM79.avif",
+            "../images/product/women/Jeans/WJTIM80.avif"
+        ]
+    },
+    {
+        "id": 141,
+        "name": "Patchwork Jeans",
+        "price": 92,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM81.avif",
+            "../images/product/women/Jeans/WJTIM82.avif",
+            "../images/product/women/Jeans/WJTIM83.avif",
+            "../images/product/women/Jeans/WJTIM84.avif"
+        ]
+    },
+    {
+        "id": 142,
+        "name": "Frayed Hem Jeans",
+        "price": 73,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM85.avif",
+            "../images/product/women/Jeans/WJTIM86.avif",
+            "../images/product/women/Jeans/WJTIM87.avif",
+            "../images/product/women/Jeans/WJTIM88.avif"
+        ]
+    },
+    {
+        "id": 143,
+        "name": "Button Fly Jeans",
+        "price": 80,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM89.avif",
+            "../images/product/women/Jeans/WJTIM90.avif",
+            "../images/product/women/Jeans/WJTIM91.avif",
+            "../images/product/women/Jeans/WJTIM92.avif"
+        ]
+    },
+    {
+        "id": 144,
+        "name": "Colored Jeans",
+        "price": 68,
+        "category": "jeans",
+        "images": [
+            "../images/product/women/Jeans/WJTIM93.avif",
+            "../images/product/women/Jeans/WJTIM94.avif",
+            "../images/product/women/Jeans/WJTIM95.avif",
+            "../images/product/women/Jeans/WJTIM96.avif"
+        ]
+    }
+]

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        if (localStorage.getItem('isAdmin') !== 'true') {
+            window.location.replace('admin-login.html');
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New-Ecommerce Admin Panel</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="../../CSS/admin.css">
+</head>
+<body>
+    <div class="admin-shell">
+        <aside class="admin-sidebar">
+            <div class="admin-brand">
+                <div class="admin-brand-icon"><i class="fas fa-gem"></i></div>
+                <div>
+                    <h1>Admin Panel</h1>
+                </div>
+            </div>
+
+            <nav class="admin-nav">
+                <div class="admin-nav-group">
+                    <p class="admin-nav-label">Navigation</p>
+                    <a href="#" class="admin-nav-link is-active" data-admin-view-link="dashboard">
+                        <span><i class="fas fa-th-large"></i> Dashboard</span>
+                    </a>
+                    <a href="#" class="admin-nav-link" data-admin-view-link="orders">
+                        <span><i class="fas fa-shopping-bag"></i> Orders</span>
+                    </a>
+                    <a href="#" class="admin-nav-link" data-admin-view-link="customers">
+                        <span><i class="fas fa-users"></i> Customers</span>
+                    </a>
+                    <a href="#" class="admin-nav-link" data-admin-view-link="products">
+                        <span><i class="fas fa-box-open"></i> Products</span>
+                    </a>
+                    <a href="add-items.html" class="admin-nav-link">
+                        <span><i class="fas fa-plus-square"></i> Add Items</span>
+                    </a>
+                </div>
+
+                <div class="admin-nav-group">
+                    <p class="admin-nav-label">General</p>
+                    <a href="#" class="admin-nav-link">
+                        <span><i class="fas fa-bell"></i> Notifications</span>
+                    </a>
+                    <a href="#" class="admin-nav-link">
+                        <span><i class="fas fa-life-ring"></i> Help</span>
+                    </a>
+                    <a href="#" class="admin-nav-link">
+                        <span><i class="fas fa-cog"></i> Settings</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="admin-sidebar-footer">
+                <button id="admin-logout-btn" class="admin-logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Log Out</span>
+                </button>
+            </div>
+        </aside>
+
+        <main class="admin-main">
+            <header class="admin-topbar">
+                <div>
+                    <p class="admin-eyebrow" id="admin-topbar-kicker">Overview</p>
+                    <h2 id="admin-topbar-title">Dashboard</h2>
+                </div>
+            </header>
+
+            <section class="admin-view is-active" data-admin-view="dashboard">
+                <section class="admin-metrics">
+                    <article class="metric-card">
+                        <span class="metric-icon icon-revenue"><i class="fas fa-dollar-sign"></i></span>
+                        <div class="metric-copy">
+                            <p>Total Sales</p>
+                            <h3 id="dashboard-revenue-total">$0.00</h3>
+                        </div>
+                    </article>
+                    <article class="metric-card">
+                        <span class="metric-icon icon-orders"><i class="fas fa-shopping-cart"></i></span>
+                        <div class="metric-copy">
+                            <p>Orders</p>
+                            <h3 id="dashboard-orders-total">0</h3>
+                        </div>
+                    </article>
+                    <article class="metric-card">
+                        <span class="metric-icon icon-customers"><i class="fas fa-users"></i></span>
+                        <div class="metric-copy">
+                            <p>Customers</p>
+                            <h3 id="dashboard-customers-total">0</h3>
+                        </div>
+                    </article>
+                    <article class="metric-card">
+                        <span class="metric-icon icon-aov"><i class="fas fa-bullseye"></i></span>
+                        <div class="metric-copy">
+                            <p>Average Order Value</p>
+                            <h3 id="dashboard-aov-total">$0.00</h3>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="dashboard-row">
+                    <article class="admin-panel sales-trends-panel">
+                        <div class="panel-head">
+                            <div>
+                                <p class="panel-kicker">Sales Trends</p>
+                                <h3 id="sales-trends-total">$0.00</h3>
+                            </div>
+                            <select class="filter-select period-select">
+                                <option>Week</option>
+                                <option>Month</option>
+                                <option>Year</option>
+                            </select>
+                        </div>
+                        <div class="chart-container">
+                            <div class="chart-bars" id="sales-trends-chart"></div>
+                            <div class="chart-labels">
+                                <span>May</span>
+                                <span>Jun</span>
+                                <span>Jul</span>
+                                <span>Aug</span>
+                                <span>Sep</span>
+                                <span>Oct</span>
+                                <span>Nov</span>
+                                <span>Dec</span>
+                                <span>Jan</span>
+                                <span>Feb</span>
+                                <span>Mar</span>
+                                <span>Apr</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="admin-panel top-products-panel">
+                        <div class="panel-head">
+                            <h3>Top Products</h3>
+                        </div>
+                        <div class="top-products-list" id="top-products-list"></div>
+                    </article>
+                </section>
+
+                <section class="dashboard-row full-width">
+                    <article class="admin-panel recent-orders-panel">
+                        <div class="panel-head">
+                            <div>
+                                <p class="panel-kicker">Recent Order</p>
+                                <h3 id="recent-orders-count">0</h3>
+                            </div>
+                        </div>
+                        <div class="recent-orders-table-wrap">
+                            <table class="recent-orders-table">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Customer</th>
+                                        <th>Date</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="recent-orders-tbody"></tbody>
+                            </table>
+                        </div>
+                    </article>
+                </section>
+            </section>
+
+            <section class="admin-view" data-admin-view="orders">
+                <section class="admin-panel orders-workspace">
+                    <div class="orders-toolbar">
+                        <div class="orders-filter-bar">
+                            <select id="orders-filter-type" class="filter-select">
+                                <option value="all">Type</option>
+                                <option value="shipping">Shipping</option>
+                                <option value="pickup">Pickup</option>
+                            </select>
+                            <select id="orders-filter-status" class="filter-select"></select>
+                            <select id="orders-filter-date" class="filter-select">
+                                <option value="all">Order Date</option>
+                                <option value="today">Today</option>
+                                <option value="7">Last 7 days</option>
+                                <option value="30">Last 30 days</option>
+                                <option value="year">This year</option>
+                            </select>
+                        </div>
+                        <label class="admin-search section-search">
+                            <i class="far fa-search"></i>
+                            <input id="orders-search" type="search" placeholder="Search anything">
+                        </label>
+                    </div>
+
+                    <div class="bulk-action-bar" id="orders-bulk-bar" hidden>
+                        <div class="bulk-selected-copy">
+                            <strong id="orders-selected-count">0</strong>
+                            <span>selected</span>
+                        </div>
+                        <div class="bulk-action-buttons">
+                            <button type="button" class="bulk-btn" data-bulk-status="Packing">Mark Packing</button>
+                            <button type="button" class="bulk-btn" data-bulk-status="Shipped">Mark Shipped</button>
+                            <button type="button" class="bulk-btn bulk-btn-dark" data-bulk-status="Delivered">Mark Delivered</button>
+                        </div>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table class="orders-table">
+                            <thead>
+                                <tr>
+                                    <th class="checkbox-col">
+                                        <input id="orders-select-all" type="checkbox" aria-label="Select all orders">
+                                    </th>
+                                    <th>Order</th>
+                                    <th>Customer</th>
+                                    <th>Type</th>
+                                    <th>Status</th>
+                                    <th>Product</th>
+                                    <th>Total</th>
+                                    <th>Date</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-orders-tbody"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+
+            <section class="admin-view" data-admin-view="customers">
+                <section class="admin-panel customers-workspace">
+                    <div class="panel-head panel-head-tight">
+                        <div>
+                            <p class="panel-kicker">Customers</p>
+                            <h3>Customer Management</h3>
+                        </div>
+                        <label class="admin-search section-search">
+                            <i class="far fa-search"></i>
+                            <input id="customers-search" type="search" placeholder="Search anything">
+                        </label>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table class="customers-table">
+                            <thead>
+                                <tr>
+                                    <th>Username</th>
+                                    <th>Email</th>
+                                    <th>Orders</th>
+                                    <th>Spent</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-customers-tbody"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+
+            <section class="admin-view" data-admin-view="products">
+                <section class="admin-panel products-workspace">
+                    <div class="panel-head panel-head-tight">
+                        <div>
+                            <p class="panel-kicker">Inventory</p>
+                            <h3>Product Management</h3>
+                        </div>
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <label class="admin-search section-search">
+                                <i class="far fa-search"></i>
+                                <input id="products-search" type="search" placeholder="Search products">
+                            </label>
+                            <a href="add-items.html" style="background:#111; color:#fff; border-radius:12px; padding:10px 18px; text-decoration:none; font-size:14px; font-weight:bold; white-space:nowrap;"><i class="fas fa-plus"></i> Add Product</a>
+                        </div>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table class="customers-table"> <!-- using same styling for now -->
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Category</th>
+                                    <th>Price</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-products-tbody"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+        </main>
+
+        <div class="customer-drawer-backdrop" id="customer-drawer-backdrop" hidden></div>
+        <aside class="customer-drawer" id="customer-drawer" aria-hidden="true">
+            <div class="drawer-header">
+                <div>
+                    <p class="panel-kicker">Customer Detail</p>
+                    <h3 id="drawer-order-label">Profile</h3>
+                </div>
+                <button class="drawer-close" id="customer-drawer-close" type="button" aria-label="Close customer detail">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="drawer-profile">
+                <div class="drawer-avatar" id="drawer-avatar"></div>
+                <h4 id="drawer-name">Customer Name</h4>
+                <p id="drawer-email">customer@email.com</p>
+                <span class="drawer-phone" id="drawer-phone">No phone number</span>
+            </div>
+
+            <div class="drawer-section">
+                <div class="drawer-section-head">
+                    <h5>Current Cart</h5>
+                    <span id="drawer-cart-count">0 items</span>
+                </div>
+                <div class="drawer-cart-list" id="drawer-cart-list"></div>
+            </div>
+
+            <div class="drawer-total">
+                <span>Total</span>
+                <strong id="drawer-total-price">$0.00</strong>
+            </div>
+
+            <div class="drawer-actions">
+                <button class="drawer-action drawer-track" id="drawer-track-btn" type="button">Track</button>
+                <button class="drawer-action drawer-refund" id="drawer-refund-btn" type="button">Refund</button>
+            </div>
+        </aside>
+    </div>
+
+    <script src="../../JS/Admin/admin.js"></script>
+</body>
+</html>

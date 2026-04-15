@@ -1,0 +1,82 @@
+[
+    {
+        "id": 4193,
+        "name": "Shoulder Bag Pro",
+        "price": 85,
+        "category": "accessories-shoulder-bags",
+        "images": [
+            "../images/product/women/shoulder bag/WSHOLB1.avif",
+            "../images/product/women/shoulder bag/WSHOLB2.avif"
+        ]
+    },
+    {
+        "id": 4194,
+        "name": "Designer Shoulder Pro",
+        "price": 105,
+        "category": "accessories-shoulder-bags",
+        "images": [
+            "../images/product/women/shoulder bag/WSHOLB3.avif",
+            "../images/product/women/shoulder bag/WSHOLB4.avif"
+        ]
+    },
+    {
+        "id": 4195,
+        "name": "Leather Shoulder Pro",
+        "price": 125,
+        "category": "accessories-shoulder-bags",
+        "images": [
+            "../images/product/women/shoulder bag/WSHOLB5.avif",
+            "../images/product/women/shoulder bag/WSHOLB6.avif"
+        ]
+    },
+    {
+        "id": 4196,
+        "name": "Canvas Shoulder Pro",
+        "price": 75,
+        "category": "accessories-shoulder-bags",
+        "images": [
+            "../images/product/women/shoulder bag/WSHOLB7.avif",
+            "../images/product/women/shoulder bag/WSHOLB8.avif"
+        ]
+    },
+    {
+        "id": 4197,
+        "name": "Fashion Shoulder Pro",
+        "price": 95,
+        "category": "accessories-shoulder-bags",
+        "images": [
+            "../images/product/women/shoulder bag/WSHOLB9.avif",
+            "../images/product/women/shoulder bag/WSHOLB10.avif"
+        ]
+    },
+    {
+        "id": 4198,
+        "name": "Casual Shoulder Pro",
+        "price": 68,
+        "category": "accessories-shoulder-bags",
+        "images": [
+            "../images/product/women/shoulder bag/WSHOLB11.avif",
+            "../images/product/women/shoulder bag/WSHOLB12.avif"
+        ]
+    },
+    {
+        "id": 4199,
+        "name": "Sport Shoulder Pro",
+        "price": 78,
+        "category": "accessories-shoulder-bags",
+        "images": [
+            "../images/product/women/shoulder bag/WSHOLB13.avif",
+            "../images/product/women/shoulder bag/WSHOLB14.avif"
+        ]
+    },
+    {
+        "id": 4200,
+        "name": "Modern Shoulder Pro",
+        "price": 98,
+        "category": "accessories-shoulder-bags",
+        "images": [
+            "../images/product/women/shoulder bag/WSHOLB15.avif",
+            "../images/product/women/shoulder bag/WSHOLB16.avif"
+        ]
+    }
+]

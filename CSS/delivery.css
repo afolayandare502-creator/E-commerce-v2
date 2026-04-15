@@ -1,0 +1,422 @@
+* {
+    box-sizing: border-box;
+}
+
+.delivery-page {
+    margin: 0;
+    background: #ffffff;
+    color: #232323;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* ── Main ── */
+.delivery-main {
+    background: #ffffff;
+    min-height: 70vh;
+    padding-top: 64px;
+    padding-bottom: 40px;
+}
+
+/* ── Layout grid (matches CASA .checkout-container) ── */
+.delivery-layout {
+    display: grid;
+    grid-template-columns: minmax(500px, 1.3fr) minmax(370px, 1fr);
+    gap: 110px;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 40px;
+    align-items: start;
+}
+
+/* ── Section headings ── */
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2d2d2d;
+    margin: 0 0 24px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+}
+
+.section-heading::after {
+    content: "";
+    display: inline-block;
+    width: 56px;
+    height: 2px;
+    background: #4c4c4c;
+    flex-shrink: 0;
+}
+
+/* ── Delivery form column ── */
+.delivery-form-column {
+    background: #fff;
+    padding: 0;
+    max-width: 720px;
+}
+
+/* ── Form ── */
+.delivery-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.form-row.two-up {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.delivery-form input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.18s ease;
+    background: #fff;
+    color: #2e2e2e;
+}
+
+.delivery-form input:focus {
+    outline: none;
+    border-color: #111111;
+    box-shadow: 0 0 0 2px rgba(17, 17, 17, 0.08);
+}
+
+.delivery-form input::placeholder {
+    color: #9f9f9f;
+    font-size: 12px;
+}
+
+/* ── Summary column ── */
+.delivery-summary-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 36px;
+}
+
+.summary-block {
+    background: transparent;
+    padding: 0;
+}
+
+.summary-block + .summary-block {
+    margin-top: 0;
+}
+
+.summary-rows {
+    width: 100%;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #ececec;
+    color: #1c1c1c;
+}
+
+.summary-row strong {
+    font-weight: 500;
+}
+
+.summary-total {
+    font-size: 15px;
+    font-weight: 700;
+    padding: 14px 0;
+    border-bottom: none;
+}
+
+.summary-total span,
+.summary-total strong {
+    font-weight: 700;
+}
+
+/* ── Payment options ── */
+.payment-options {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.payment-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    min-width: 110px;
+    justify-content: center;
+    background: #ffffff;
+    color: #343434;
+}
+
+.payment-option:hover {
+    border-color: #cfcfcf;
+    background: #fdfdfd;
+}
+
+.payment-option:has(.payment-input:checked) {
+    border-color: #111111;
+    background: #ffffff;
+}
+
+.payment-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.payment-radio {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #c5c5c5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.payment-option:has(.payment-input:checked) .payment-radio {
+    border-color: #2eb872;
+}
+
+.payment-option:has(.payment-input:checked) .payment-radio::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #2eb872;
+    display: block;
+}
+
+.payment-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #4a4a4a;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.payment-option:has(.payment-input:checked) .payment-label {
+    color: #1f1f1f;
+    font-weight: 600;
+}
+
+/* ── Place order button — narrow, right-aligned like CASA ── */
+.place-order-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 0;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    min-width: 180px;
+    margin-left: auto;
+    display: block;
+}
+
+.place-order-btn:hover {
+    background: #1b1b1b;
+    transform: translateY(-1px);
+}
+
+.delivery-orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.delivery-order-item {
+    display: grid;
+    grid-template-columns: 50px minmax(0, 1fr);
+    gap: 12px;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #ececec;
+}
+
+.delivery-order-thumb {
+    width: 50px;
+    height: 62px;
+    object-fit: cover;
+    background: #f4f4f4;
+}
+
+.delivery-order-copy h3,
+.delivery-order-copy p {
+    margin: 0;
+}
+
+.delivery-order-copy h3 {
+    font-size: 14px;
+    color: #232323;
+    margin-bottom: 3px;
+}
+
+.delivery-order-copy p {
+    font-size: 12px;
+    color: #6f6f6f;
+}
+
+.delivery-orders-empty {
+    margin: 0;
+    color: #6f6f6f;
+    font-size: 14px;
+}
+
+.delivery-feedback {
+    margin: 14px 0 0;
+    font-size: 13px;
+    color: #188f88;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+}
+
+/* ── Footer ── */
+.delivery-page footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.delivery-page footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.delivery-page footer .logo {
+    margin-bottom: 30px;
+}
+
+.delivery-page footer h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+.delivery-page footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+.delivery-page footer a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.delivery-page footer a:hover {
+    color: #088178;
+}
+
+.delivery-page footer .install .row img {
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+
+.delivery-page footer .install img {
+    margin: 10px 0 15px 0;
+}
+
+.delivery-page footer .copyright {
+    width: 100%;
+    text-align: center;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    .delivery-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .delivery-summary-column {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .delivery-main {
+        padding-top: 32px;
+    }
+
+    .delivery-layout {
+        padding: 0 24px;
+    }
+
+    .section-heading {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    .form-row.two-up {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-options {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .payment-option {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .place-order-btn {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .delivery-page footer {
+        padding: 40px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .delivery-layout {
+        gap: 20px;
+    }
+
+    .section-heading {
+        font-size: 20px;
+        margin-bottom: 14px;
+    }
+
+    .place-order-btn {
+        min-width: 0;
+    }
+}

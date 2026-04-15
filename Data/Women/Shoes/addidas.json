@@ -1,0 +1,99 @@
+[
+    {
+        "id": 1097,
+        "name": "Classic Adidas Sneakers",
+        "price": 89,
+        "category": "adidas",
+        "images": [
+            "../images/product/women/Addidas/WADDIS1.avif",
+            "../images/product/women/Addidas/WADDIS2.avif",
+            "../images/product/women/Addidas/WADDIS3.avif",
+            "../images/product/women/Addidas/WADDIS4.avif"
+        ]
+    },
+    {
+        "id": 1098,
+        "name": "Adidas Running Shoes",
+        "price": 95,
+        "category": "adidas",
+        "images": [
+            "../images/product/women/Addidas/WADDIS5.avif",
+            "../images/product/women/Addidas/WADDIS6.avif",
+            "../images/product/women/Addidas/WADDIS7.avif",
+            "../images/product/women/Addidas/WADDIS8.avif"
+        ]
+    },
+    {
+        "id": 1099,
+        "name": "Adidas Originals",
+        "price": 105,
+        "category": "adidas",
+        "images": [
+            "../images/product/women/Addidas/WADDIS9.avif",
+            "../images/product/women/Addidas/WADDIS10.avif",
+            "../images/product/women/Addidas/WADDIS11.avif",
+            "../images/product/women/Addidas/WADDIS12.avif"
+        ]
+    },
+    {
+        "id": 1100,
+        "name": "Adidas Stan Smith",
+        "price": 85,
+        "category": "adidas",
+        "images": [
+            "../images/product/women/Addidas/WADDIS13.avif",
+            "../images/product/women/Addidas/WADDIS14.avif",
+            "../images/product/women/Addidas/WADDIS15.avif",
+            "../images/product/women/Addidas/WADDIS16.avif"
+        ]
+    },
+    {
+        "id": 1101,
+        "name": "Adidas Superstar",
+        "price": 92,
+        "category": "adidas",
+        "images": [
+            "../images/product/women/Addidas/WADDIS17.avif",
+            "../images/product/women/Addidas/WADDIS18.avif",
+            "../images/product/women/Addidas/WADDIS19.avif",
+            "../images/product/women/Addidas/WADDIS20.avif"
+        ]
+    },
+    {
+        "id": 1102,
+        "name": "Adidas Gazelle",
+        "price": 88,
+        "category": "adidas",
+        "images": [
+            "../images/product/women/Addidas/WADDIS21.avif",
+            "../images/product/women/Addidas/WADDIS22.avif",
+            "../images/product/women/Addidas/WADDIS23.avif",
+            "../images/product/women/Addidas/WADDIS24.avif"
+        ]
+    },
+    {
+        "id": 1103,
+        "name": "Adidas Forum",
+        "price": 98,
+        "category": "adidas",
+        "images": [
+            "../images/product/women/Addidas/WADDIS25.avif",
+            "../images/product/women/Addidas/WADDIS26.avif",
+            "../images/product/women/Addidas/WADDIS27.avif",
+            "../images/product/women/Addidas/WADDIS28.avif"
+        ]
+    },
+    {
+        "id": 1104,
+        "name": "Adidas NMD",
+        "price": 120,
+        "category": "adidas",
+        "images": [
+            "../images/product/women/Addidas/WADDIS29.avif",
+            "../images/product/women/Addidas/WADDIS30.avif",
+            "../images/product/women/Addidas/WADDIS31.avif",
+            "../images/product/women/Addidas/WADDIS32.avif"
+        ]
+    }
+    
+]

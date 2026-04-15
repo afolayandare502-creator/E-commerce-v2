@@ -1,0 +1,82 @@
+[
+    {
+        "id": 4169,
+        "name": "Travel Bag Pro",
+        "price": 85,
+        "category": "accessories-travel-bags",
+        "images": [
+            "../images/product/women/travel bag/WtravB1.avif",
+            "../images/product/women/travel bag/WtravB2.avif"
+        ]
+    },
+    {
+        "id": 4170,
+        "name": "Designer Travel Pro",
+        "price": 105,
+        "category": "accessories-travel-bags",
+        "images": [
+            "../images/product/women/travel bag/WtravB3.avif",
+            "../images/product/women/travel bag/WtravB4.avif"
+        ]
+    },
+    {
+        "id": 4171,
+        "name": "Luggage Travel Pro",
+        "price": 125,
+        "category": "accessories-travel-bags",
+        "images": [
+            "../images/product/women/travel bag/WtravB5.avif",
+            "../images/product/women/travel bag/WtravB6.avif"
+        ]
+    },
+    {
+        "id": 4172,
+        "name": "Weekender Travel Pro",
+        "price": 95,
+        "category": "accessories-travel-bags",
+        "images": [
+            "../images/product/women/travel bag/WtravB7.avif",
+            "../images/product/women/travel bag/WtravB8.avif"
+        ]
+    },
+    {
+        "id": 4173,
+        "name": "Carry On Travel Pro",
+        "price": 115,
+        "category": "accessories-travel-bags",
+        "images": [
+            "../images/product/women/travel bag/WtravB9.avif",
+            "../images/product/women/travel bag/WtravB10.avif"
+        ]
+    },
+    {
+        "id": 4174,
+        "name": "Duffel Travel Pro",
+        "price": 75,
+        "category": "accessories-travel-bags",
+        "images": [
+            "../images/product/women/travel bag/WtravB11.avif",
+            "../images/product/women/travel bag/WtravB12.avif"
+        ]
+    },
+    {
+        "id": 4175,
+        "name": "Sport Travel Pro",
+        "price": 88,
+        "category": "accessories-travel-bags",
+        "images": [
+            "../images/product/women/travel bag/WtravB13.avif",
+            "../images/product/women/travel bag/WtravB14.avif"
+        ]
+    },
+    {
+        "id": 4176,
+        "name": "Business Travel Pro",
+        "price": 135,
+        "category": "accessories-travel-bags",
+        "images": [
+            "../images/product/women/travel bag/WtravB15.avif",
+            "../images/product/women/travel bag/WtravB16.avif"
+        ]
+    }
+]

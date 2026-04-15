@@ -1,0 +1,82 @@
+[
+    {
+        "id": 4241,
+        "name": "Stud Earrings Pro",
+        "price": 45,
+        "category": "accessories-earrings",
+        "images": [
+            "../images/product/women/earings/WEARS1.avif",
+            "../images/product/women/earings/WEARS2.avif"
+        ]
+    },
+    {
+        "id": 4242,
+        "name": "Hoop Earrings Pro",
+        "price": 55,
+        "category": "accessories-earrings",
+        "images": [
+            "../images/product/women/earings/WEARS3.avif",
+            "../images/product/women/earings/WEARS4.avif"
+        ]
+    },
+    {
+        "id": 4243,
+        "name": "Drop Earrings Pro",
+        "price": 65,
+        "category": "accessories-earrings",
+        "images": [
+            "../images/product/women/earings/WEARS5.avif",
+            "../images/product/women/earings/WEARS6.avif"
+        ]
+    },
+    {
+        "id": 4244,
+        "name": "Dangle Earrings Pro",
+        "price": 75,
+        "category": "accessories-earrings",
+        "images": [
+            "../images/product/women/earings/WEARS7.avif",
+            "../images/product/women/earings/WEARS8.avif"
+        ]
+    },
+    {
+        "id": 4245,
+        "name": "Chandelier Earrings Pro",
+        "price": 85,
+        "category": "accessories-earrings",
+        "images": [
+            "../images/product/women/earings/WEARS9.avif",
+            "../images/product/women/earings/WEARS10.avif"
+        ]
+    },
+    {
+        "id": 4246,
+        "name": "Designer Earrings Pro",
+        "price": 95,
+        "category": "accessories-earrings",
+        "images": [
+            "../images/product/women/earings/WEARS11.avif",
+            "../images/product/women/earings/WEARS12.avif"
+        ]
+    },
+    {
+        "id": 4247,
+        "name": "Luxury Earrings Pro",
+        "price": 125,
+        "category": "accessories-earrings",
+        "images": [
+            "../images/product/women/earings/WEARS13.avif",
+            "../images/product/women/earings/WEARS14.avif"
+        ]
+    },
+    {
+        "id": 4248,
+        "name": "Diamond Earrings Pro",
+        "price": 185,
+        "category": "accessories-earrings",
+        "images": [
+            "../images/product/women/earings/WEARS15.avif",
+            "../images/product/women/earings/WEARS16.avif"
+        ]
+    }
+]

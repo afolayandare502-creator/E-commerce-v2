@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="../CSS/search.css">
+    <link rel="stylesheet" href="../CSS/account.css">
+</head>
+<body class="account-page">
+<div id="main-content">
+    <!-- STICKY HEADER WRAPPER -->
+    <header id="sticky-header-container">
+        <div id="utility-bar">
+            <div class="utility-content">
+                <a href="return-policy.html" class="utility-link">Help & FAQs</a>
+            </div>
+        </div>
+
+        <section id="header">
+            <div class="header-left">
+                <a href="../index.html" class="logo-link">
+                    <img src="../images/Rlogo1.jpeg" class="logo-placeholder" alt="Logo">
+                </a>
+                <div class="gender-toggle">
+                    <a href="women.html" class="gender-btn active">WOMEN</a>
+                </div>
+            </div>
+
+            <div class="nav-center">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search for items and brands">
+                    <button type="submit" class="search-button" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="search-discovery">
+                        <div class="discovery-section">
+                            <h4>Search Discovery</h4>
+                            <div class="discovery-tags">
+                                <span class="tag">Dress</span>
+                                <span class="tag">Jeans</span>
+                                <span class="tag">Tops</span>
+                                <span class="tag">Shoes</span>
+                                <span class="tag">Activewear</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <div class="icon-group">
+                    <button type="button" class="nav-icon mobile-search-trigger" aria-label="Open search">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                    <div class="nav-hover-item login-menu">
+                        <a href="login.html" class="nav-icon user-icon">
+                            <i class="far fa-user"></i>
+                        </a>
+                        <div class="icon-dropdown login-dropdown">
+                            <div class="login-dropdown-header">personal center</div>
+                            <a href="login.html" class="sign-in-register-btn">Sign In / Register</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="my-orders.html" class="dropdown-link">My Orders</a>
+                        </div>
+                    </div>
+
+                    <a href="cart.html" class="nav-icon cart-icon">
+                        <i class="far fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+
+                    <a href="saved-items.html" class="nav-icon heart-icon">
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main class="account-main">
+        <h1 class="account-page-title">My Account</h1>
+
+        <section class="account-layout">
+            <aside class="account-sidebar">
+                <section class="account-profile-card">
+                    <div class="account-avatar" id="account-avatar">DA</div>
+                    <div class="account-profile-text">
+                        <p>Hi,</p>
+                        <h2 id="account-greeting">Dare Afolayan</h2>
+                    </div>
+                </section>
+
+                <nav class="account-nav" aria-label="Account navigation">
+                    <button type="button" class="account-nav-link active" data-account-view-trigger="orders">
+                        <i class="fal fa-box"></i>
+                        <span>My orders</span>
+                    </button>
+                    <button type="button" class="account-nav-link">
+                        <i class="fal fa-undo"></i>
+                        <span>Create return</span>
+                    </button>
+                    <a href="return-policy.html" class="account-nav-link">
+                        <i class="fal fa-question-circle"></i>
+                        <span>Need help?</span>
+                    </a>
+                    <button type="button" class="account-nav-link" data-account-view-trigger="gifts">
+                        <i class="fal fa-gift"></i>
+                        <span>Gift cards & vouchers</span>
+                    </button>
+                    <button type="button" class="account-nav-link" data-account-view-trigger="details">
+                        <i class="fal fa-address-card"></i>
+                        <span>My details</span>
+                    </button>
+                    <button type="button" class="account-nav-link" data-account-view-trigger="address">
+                        <i class="fal fa-home"></i>
+                        <span>Address book</span>
+                    </button>
+                    <button type="button" class="account-nav-link" data-account-view-trigger="payment">
+                        <i class="fal fa-credit-card"></i>
+                        <span>Payment methods</span>
+                    </button>
+                    <button type="button" class="account-nav-link" data-account-view-trigger="contact">
+                        <i class="fal fa-comment-alt"></i>
+                        <span>Contact preferences</span>
+                    </button>
+                    <button type="button" class="account-nav-link" data-account-view-trigger="social">
+                        <i class="fal fa-users"></i>
+                        <span>Social accounts</span>
+                    </button>
+                    <button type="button" id="account-signout-button" class="account-signout-link-button">
+                        <i class="fal fa-sign-out"></i>
+                        <span>Sign out</span>
+                    </button>
+                </nav>
+            </aside>
+
+            <section class="account-content">
+                <section class="account-view is-active" data-account-view="orders">
+                    <div class="account-panel">
+                        <div class="account-panel-header">
+                            <i class="fal fa-box"></i>
+                            <h2 class="account-panel-title">MY ORDERS</h2>
+                        </div>
+                    </div>
+
+                    <div id="account-orders-empty" class="account-empty-state">
+                        <div class="account-empty-icon">
+                            <i class="fal fa-hanger"></i>
+                        </div>
+                        <h2>YOU CURRENTLY HAVE NO ORDERS</h2>
+                        <p>Best get shopping ASOS pronto...</p>
+                        <a href="women.html" class="account-cta">START SHOPPING</a>
+                    </div>
+
+                    <div id="account-orders-list" class="account-orders-list" hidden></div>
+                </section>
+
+                <section class="account-view" data-account-view="gifts" hidden>
+                    <div class="account-panel">
+                        <div class="account-panel-header">
+                            <i class="fal fa-gift"></i>
+                            <h2 class="account-panel-title">GIFT CARDS & VOUCHERS</h2>
+                        </div>
+                    </div>
+
+                    <div class="account-empty-state gift-vouchers-empty">
+                        <div class="account-empty-icon">
+                            <i class="fal fa-gift"></i>
+                        </div>
+                        <h2>YOU HAVE NO VOUCHERS YET</h2>
+                        <p>You currently have no vouchers linked to your account. Get started by redeeming or buying one now.</p>
+                        <div class="gift-actions">
+                            <button type="button" class="account-cta black-btn">ADD GIFT CARD/VOUCHER</button>
+                            <button type="button" class="account-cta green-btn">BUY GIFT VOUCHER</button>
+                        </div>
+                    </div>
+
+                    <div class="account-panel help-card">
+                        <h3 class="help-title">NEED HELP WITH THESE OPTIONS?</h3>
+                        <ul class="help-list">
+                            <li>
+                                <a href="#" class="help-item-header">
+                                    <span>Gift card/voucher FAQs</span>
+                                    <i class="fal fa-copy"></i>
+                                </a>
+                            </li>
+                            <li class="accordion-item">
+                                <button type="button" class="accordion-trigger">
+                                    <span>What is a gift card?</span>
+                                    <i class="fal fa-plus"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <div class="accordion-inner">
+                                        <p>A giftcard is a physical card that you can buy at major retailers.</p>
+                                        <p>The shop will activate it, but you'll then need to redeem it in your ASOS account. Just click 'Redeem voucher' when placing your order. Once your gift card has been added to your account, you'll see the amount ready to spend at the checkout.</p>
+                                        <div class="accordion-links">
+                                            <a href="#">Terms & Conditions</a>
+                                            <a href="#">Gift card FAQ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion-item">
+                                <button type="button" class="accordion-trigger">
+                                    <span>What is a gift voucher?</span>
+                                    <i class="fal fa-plus"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <div class="accordion-inner">
+                                        <p>A gift voucher is an online voucher that can only be purchased on ASOS.com.</p>
+                                        <p>You can buy one as a gift for friends and family, or can redeem one that someone's bought for you. You'll just need to click 'Redeem voucher' when placing your order. Once your gift voucher has been added to your account, you'll see the amount ready to spend at the checkout.</p>
+                                        <div class="accordion-links">
+                                            <a href="#">Terms & Conditions</a>
+                                            <a href="#">Gift voucher FAQ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="account-view" data-account-view="details" hidden>
+                    <div class="account-panel account-details-panel">
+                        <div class="account-panel-header">
+                            <i class="fal fa-address-card"></i>
+                            <h2 class="account-panel-title">MY DETAILS</h2>
+                        </div>
+                        <p class="account-details-copy">
+                            Feel free to edit any of your details below so your account is totally up to date. (* Indicates a required field).
+                        </p>
+
+                        <form id="account-details-form" class="account-details-form">
+                            <label class="account-field">
+                                <span>FIRST NAME*:</span>
+                                <input id="account-first-name" name="firstName" type="text" placeholder="Dare" required>
+                            </label>
+
+                            <label class="account-field">
+                                <span>LAST NAME*:</span>
+                                <input id="account-last-name" name="lastName" type="text" placeholder="Afolayan" required>
+                            </label>
+
+                            <label class="account-field">
+                                <span>EMAIL ADDRESS*:</span>
+                                <input id="account-email" name="email" type="email" placeholder="afolayandare502@gmail.com" required>
+                            </label>
+
+                            <div class="account-field">
+                                <span>DATE OF BIRTH*:</span>
+                                <div class="account-dob-grid">
+                                    <div class="select-wrapper">
+                                        <select id="account-dob-day" name="dobDay" required></select>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <select id="account-dob-month" name="dobMonth" required></select>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <select id="account-dob-year" name="dobYear" required></select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <fieldset class="account-interest-field">
+                                <legend>MOSTLY INTERESTED IN*:</legend>
+                                <div class="interest-options-row">
+                                    <label class="account-radio-option">
+                                        <input type="radio" name="interest" value="Womenswear" checked>
+                                        <span class="radio-custom"></span>
+                                        <span class="radio-label">Womenswear</span>
+                                    </label>
+                                    <div class="radio-divider"></div>
+                                    <label class="account-radio-option">
+                                        <input type="radio" name="interest" value="Menswear">
+                                        <span class="radio-custom"></span>
+                                        <span class="radio-label">Menswear</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+
+                            <button type="submit" class="account-save-button">SAVE CHANGES</button>
+                            <p id="account-details-feedback" class="account-details-feedback" hidden></p>
+                        </form>
+                    </div>
+                </section>
+
+                <section class="account-view" data-account-view="address" hidden>
+                    <div class="account-panel address-book-panel">
+                        <h2 class="account-panel-title">ADD NEW ADDRESS</h2>
+                        
+                        <div class="account-info-callout">
+                            <i class="fal fa-info-circle"></i>
+                            <span>You currently have no saved addresses. Get started by adding one.</span>
+                        </div>
+
+                        <form id="account-address-form" class="account-details-form">
+                            <label class="account-field">
+                                <span>FIRST NAME:</span>
+                                <input id="account-address-first-name" name="addressFirstName" type="text" placeholder="Dare" required>
+                            </label>
+
+                            <label class="account-field">
+                                <span>LAST NAME:</span>
+                                <input id="account-address-last-name" name="addressLastName" type="text" placeholder="Afolayan" required>
+                            </label>
+
+                            <label class="account-field">
+                                <span>MOBILE:</span>
+                                <input id="account-address-mobile" name="mobile" type="tel" inputmode="tel">
+                            </label>
+
+                            <div class="account-field">
+                                <span>COUNTRY:</span>
+                                <div class="account-country-row">
+                                    <div class="account-country-icon-wrapper">
+                                        <i class="fal fa-globe"></i>
+                                    </div>
+                                    <div class="select-wrapper country-select-wrapper">
+                                        <select id="account-address-country" name="country" required>
+                                            <option value="">Please select</option>
+                                            <option value="Azerbaijan">Azerbaijan</option>
+                                            <option value="Nigeria">Nigeria</option>
+                                            <option value="United Kingdom">United Kingdom</option>
+                                            <option value="United States">United States</option>
+                                            <option value="Canada">Canada</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="account-save-button">Save Address</button>
+                            <p id="account-address-feedback" class="account-details-feedback" hidden></p>
+                        </form>
+                    </div>
+                </section>
+
+                <section class="account-view" data-account-view="payment" hidden>
+                    <div class="account-panel">
+                        <div class="account-panel-header">
+                            <i class="fal fa-credit-card"></i>
+                            <h2 class="account-panel-title">ADD PAYMENT METHOD</h2>
+                        </div>
+                    </div>
+
+                    <div id="account-payment-empty" class="account-empty-state payment-empty-card">
+                        <div class="account-empty-icon">
+                            <i class="fal fa-home-alt"></i>
+                        </div>
+                        <h2>YOU NEED A BILLING ADDRESS</h2>
+                        <p>
+                            You currently have no saved address. Without one, you won't be able to add a new payment method.
+                        </p>
+                        <button type="button" id="account-payment-address-cta" class="account-cta black-btn">
+                            ADD NEW ADDRESS
+                        </button>
+                    </div>
+
+                    <div id="account-payment-ready" class="account-payment-ready" hidden>
+                        <h3>Billing Address Ready</h3>
+                        <p id="account-payment-ready-copy"></p>
+                    </div>
+                </section>
+
+                <section class="account-view" data-account-view="contact" hidden>
+                    <div class="account-panel account-contact-title-card">
+                        <div class="account-panel-icon account-contact-title-icon">
+                            <i class="far fa-comment-alt-lines"></i>
+                        </div>
+                        <h2 class="account-panel-title account-details-title account-contact-title">Contact Preferences</h2>
+                    </div>
+
+                    <form id="account-contact-form" class="account-contact-form">
+                        <div class="account-contact-panel">
+                            <div class="account-contact-header">
+                                <div class="account-contact-header-copy">
+                                    <h3>Content Types</h3>
+                                    <p>What would you like to hear about? Select your options below and we'll keep you in the loop.</p>
+                                </div>
+                                <button type="button" id="account-contact-clear" class="account-secondary-button account-contact-clear-button">Clear</button>
+                            </div>
+
+                            <article class="account-contact-row">
+                                <div class="account-contact-icon">
+                                    <i class="far fa-hanger"></i>
+                                </div>
+                                <div class="account-contact-copy">
+                                    <h4>Stock Alerts</h4>
+                                    <p>If that product you're into comes back in stock, get a heads-up so you can add to bag pronto.</p>
+                                </div>
+                                <div class="account-contact-options">
+                                    <label class="account-checkbox-option">
+                                        <input type="checkbox" id="contact-stock-email" name="contactStockEmail">
+                                        <span class="account-checkbox-custom" aria-hidden="true"></span>
+                                        <span class="account-checkbox-label">Email</span>
+                                    </label>
+                                </div>
+                            </article>
+
+                            <article class="account-contact-row">
+                                <div class="account-contact-icon">
+                                    <i class="far fa-bullhorn"></i>
+                                </div>
+                                <div class="account-contact-copy">
+                                    <h4>Exclusive Discounts</h4>
+                                    <p>Be the first in line to grab the stuff you love for less, get exclusive discounts, new drops and personalised offers.</p>
+                                </div>
+                                <div class="account-contact-options">
+                                    <label class="account-checkbox-option">
+                                        <input type="checkbox" id="contact-discounts-email" name="contactDiscountsEmail">
+                                        <span class="account-checkbox-custom" aria-hidden="true"></span>
+                                        <span class="account-checkbox-label">Email</span>
+                                    </label>
+                                    <label class="account-checkbox-option">
+                                        <input type="checkbox" id="contact-discounts-text" name="contactDiscountsText">
+                                        <span class="account-checkbox-custom" aria-hidden="true"></span>
+                                        <span class="account-checkbox-label">Text</span>
+                                    </label>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <p class="account-contact-disclaimer">Changes to your preferences may take up to seven days to take effect.</p>
+                        <p id="account-contact-feedback" class="account-details-feedback account-contact-feedback" hidden></p>
+                        <button type="submit" class="account-contact-confirm-button">Confirm Preferences</button>
+                    </form>
+                </section>
+
+                <section class="account-view" data-account-view="social" hidden>
+                    <div class="account-panel account-social-title-card">
+                        <div class="account-panel-icon account-social-title-icon">
+                            <i class="far fa-users"></i>
+                        </div>
+                        <h2 class="account-panel-title account-details-title account-social-title">Social Accounts</h2>
+                        <p class="account-details-copy account-social-copy">Use your social media accounts to make it even easier to log in.</p>
+                    </div>
+
+                    <div class="account-social-list">
+                        <article class="account-social-row">
+                            <div class="account-social-brand">
+                                <div class="account-social-logo account-social-logo-google">G</div>
+                                <span>Google</span>
+                            </div>
+                            <button type="button" class="account-social-action is-connected" data-social-provider="google">Disconnect</button>
+                        </article>
+
+                        <article class="account-social-row">
+                            <div class="account-social-brand">
+                                <div class="account-social-logo account-social-logo-apple"><i class="fab fa-apple"></i></div>
+                                <span>Apple</span>
+                            </div>
+                            <button type="button" class="account-social-action" data-social-provider="apple">Not connected</button>
+                        </article>
+
+                        <article class="account-social-row">
+                            <div class="account-social-brand">
+                                <div class="account-social-logo account-social-logo-facebook"><i class="fab fa-facebook-f"></i></div>
+                                <span>Facebook</span>
+                            </div>
+                            <button type="button" class="account-social-action" data-social-provider="facebook">Not connected</button>
+                        </article>
+                    </div>
+
+                    <p id="account-social-feedback" class="account-details-feedback" hidden></p>
+                </section>
+            </section>
+        </section>
+    </main>
+</div>
+
+<script src="../JS/user-storage.js"></script>
+<script src="../JS/account-menu.js"></script>
+<script src="../JS/navbar.js"></script>
+<script src="../JS/my-account.js"></script>
+<script src="../JS/search.js"></script>
+</body>
+</html>

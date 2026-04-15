@@ -1,0 +1,82 @@
+[
+    {
+        "id": 4289,
+        "name": "Band Ring Pro",
+        "price": 55,
+        "category": "accessories-rings",
+        "images": [
+            "../images/product/women/rings/Wring1.avif",
+            "../images/product/women/rings/Wring2.avif"
+        ]
+    },
+    {
+        "id": 4290,
+        "name": "Solitaire Ring Pro",
+        "price": 85,
+        "category": "accessories-rings",
+        "images": [
+            "../images/product/women/rings/Wring3.avif",
+            "../images/product/women/rings/Wring4.avif"
+        ]
+    },
+    {
+        "id": 4291,
+        "name": "Cluster Ring Pro",
+        "price": 75,
+        "category": "accessories-rings",
+        "images": [
+            "../images/product/women/rings/Wring5.avif",
+            "../images/product/women/rings/Wring6.avif"
+        ]
+    },
+    {
+        "id": 4292,
+        "name": "Cocktail Ring Pro",
+        "price": 95,
+        "category": "accessories-rings",
+        "images": [
+            "../images/product/women/rings/Wring7.avif",
+            "../images/product/women/rings/Wring8.avif"
+        ]
+    },
+    {
+        "id": 4293,
+        "name": "Statement Ring Pro",
+        "price": 105,
+        "category": "accessories-rings",
+        "images": [
+            "../images/product/women/rings/Wring9.avif",
+            "../images/product/women/rings/Wring10.avif"
+        ]
+    },
+    {
+        "id": 4294,
+        "name": "Designer Ring Pro",
+        "price": 125,
+        "category": "accessories-rings",
+        "images": [
+            "../images/product/women/rings/Wring11.avif",
+            "../images/product/women/rings/Wring12.avif"
+        ]
+    },
+    {
+        "id": 4295,
+        "name": "Luxury Ring Pro",
+        "price": 185,
+        "category": "accessories-rings",
+        "images": [
+            "../images/product/women/rings/Wring13.avif",
+            "../images/product/women/rings/Wring14.avif"
+        ]
+    },
+    {
+        "id": 4296,
+        "name": "Diamond Ring Pro",
+        "price": 245,
+        "category": "accessories-rings",
+        "images": [
+            "../images/product/women/rings/Wring15.avif",
+            "../images/product/women/rings/Wring16.avif"
+        ]
+    }
+]

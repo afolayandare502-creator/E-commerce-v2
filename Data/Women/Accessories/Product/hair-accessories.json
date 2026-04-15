@@ -1,0 +1,84 @@
+[
+    {
+        "id": 4097,
+        "name": "Hair Clips Pro",
+        "price": 25,
+        "category": "accessories-hair-accessories",
+        "images": [
+            "../images/product/women/Hair accessories/Whair1.avif",
+            "../images/product/women/Hair accessories/Whair2.avif"
+        ]
+    },
+    {
+        "id": 4098,
+        "name": "Hair Bands Pro",
+        "price": 18,
+        "category": "accessories-hair-accessories",
+        "images": [
+            "../images/product/women/Hair accessories/Whair3.avif",
+            "../images/product/women/Hair accessories/Whair4.avif"
+        ]
+    },
+    {
+        "id": 4099,
+        "name": "Hair Ties Pro",
+        "price": 15,
+        "category": "accessories-hair-accessories",
+        "images": [
+            "../images/product/women/Hair accessories/Whair5.avif",
+            "../images/product/women/Hair accessories/Whair6.avif"
+        ]
+    },
+    {
+        "id": 4100,
+        "name": "Scrunchies Pro",
+        "price": 22,
+        "category": "accessories-hair-accessories",
+        "images": [
+            "../images/product/women/Hair accessories/Whair7.avif",
+            "../images/product/women/Hair accessories/Whair8.avif"
+        ]
+    },
+    {
+        "id": 4101,
+        "name": "Hair Pins Pro",
+        "price": 28,
+        "category": "accessories-hair-accessories",
+        "images": [
+            "../images/product/women/Hair accessories/Whair9.avif",
+            "../images/product/women/Hair accessories/Whair10.avif"
+        ]
+    },
+    {
+        "id": 4102,
+        "name": "Barrettes Pro",
+        "price": 32,
+        "category": "accessories-hair-accessories",
+        "images": [
+            "../images/product/women/Hair accessories/Whair11.avif",
+            "../images/product/women/Hair accessories/Whair12.avif"
+        ]
+    },
+    {
+        "id": 4103,
+        "name": "Hair Combs Pro",
+        "price": 35,
+        "category": "accessories-hair-accessories",
+        "images": [
+            "../images/product/women/Hair accessories/Whair13.avif",
+            "../images/product/women/Hair accessories/Whair14.avif"
+        ]
+    },
+    {
+        "id": 4104,
+        "name": "Hair Brushes Pro",
+        "price": 42,
+        "category": "accessories-hair-accessories",
+        "images": [
+            "../images/product/women/Hair accessories/Whair13.avif",
+            "../images/product/women/Hair accessories/Whair14.avif",
+            "../images/product/women/Hair accessories/Whair15.avif",
+            "../images/product/women/Hair accessories/Whair16.avif"
+        ]
+    }
+]

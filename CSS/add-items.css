@@ -1,0 +1,340 @@
+.add-items-shell {
+    background: #f7f7f9;
+}
+
+.add-items-main {
+    padding: 0;
+    background: #f7f7f9;
+}
+
+.add-items-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 102px;
+    padding: 24px 48px;
+    background: #ffffff;
+    border-bottom: 1px solid #e8e8eb;
+}
+
+.add-items-header-copy h2 {
+    margin: 0;
+    color: #111111;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.add-items-header-logout {
+    min-width: 132px;
+    height: 54px;
+    border: 0;
+    border-radius: 999px;
+    background: #1f2535;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add-items-content {
+    padding: 42px 48px 56px;
+}
+
+.add-item-form {
+    max-width: 720px;
+}
+
+.add-item-section,
+.add-item-field {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.add-item-label {
+    color: #232323;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.image-upload-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.image-upload-box {
+    position: relative;
+    width: 104px;
+    height: 104px;
+    border: 1px dashed #d9d9df;
+    background: #ffffff;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.image-upload-input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.image-upload-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #9b9daa;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.image-upload-placeholder i {
+    font-size: 24px;
+}
+
+.image-upload-preview {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-upload-box.has-image {
+    border-style: solid;
+    border-color: #cfcfd7;
+}
+
+.image-upload-box.has-image .image-upload-placeholder {
+    display: none;
+}
+
+.image-upload-box.has-image .image-upload-preview {
+    display: block;
+}
+
+.add-item-field-wide input,
+.add-item-field-wide textarea,
+.add-item-meta-row input,
+.add-item-meta-row select {
+    width: 100%;
+    border: 1px solid #dcdce2;
+    background: #ffffff;
+    color: #151515;
+    font-size: 16px;
+    outline: none;
+    box-shadow: none;
+}
+
+.add-item-field-wide input,
+.add-item-meta-row input,
+.add-item-meta-row select {
+    height: 54px;
+    padding: 0 16px;
+}
+
+.add-item-field-wide textarea {
+    min-height: 108px;
+    padding: 16px;
+    resize: vertical;
+}
+
+.add-item-field-wide input:focus,
+.add-item-field-wide textarea:focus,
+.add-item-meta-row input:focus,
+.add-item-meta-row select:focus {
+    border-color: #8f9098;
+}
+
+.add-item-meta-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 180px;
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.size-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.size-chip {
+    min-width: 48px;
+    height: 40px;
+    border: 1px solid #dadbe1;
+    background: #eceef3;
+    color: #444444;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.size-chip-all {
+    min-width: 94px;
+}
+
+.size-chip.is-selected {
+    background: #111111;
+    border-color: #111111;
+    color: #ffffff;
+}
+
+.bestseller-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    color: #2a2a2a;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.bestseller-toggle input {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+}
+
+.add-item-feedback {
+    min-height: 22px;
+    margin: 0 0 20px;
+    color: #4f5565;
+    font-size: 14px;
+}
+
+.add-item-submit {
+    width: 118px;
+    height: 58px;
+    border: 0;
+    background: #000000;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+}
+
+.add-item-toast {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 1200;
+    width: min(100%, 380px);
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 14px 34px rgba(16, 19, 34, 0.14);
+    border-bottom: 5px solid #22c55e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 18px 16px;
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.24s ease, transform 0.24s ease;
+}
+
+.add-item-toast.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.add-item-toast-main {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.add-item-toast-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #16a34a;
+    color: #ffffff;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    font-size: 14px;
+}
+
+.add-item-toast-text {
+    color: #2d2d2d;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.add-item-toast-close {
+    border: 0;
+    background: transparent;
+    color: #a3a3a3;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+}
+
+@media (max-width: 1100px) {
+    .add-item-meta-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .add-item-field-price {
+        grid-column: 1 / -1;
+        max-width: 220px;
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        overflow: auto;
+    }
+
+    .add-items-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .add-items-shell .admin-sidebar {
+        position: static;
+        width: 100%;
+    }
+
+    .add-items-main {
+        grid-column: auto;
+    }
+
+    .add-items-header,
+    .add-items-content {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    .add-items-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .add-item-meta-row {
+        grid-template-columns: 1fr;
+    }
+
+    .add-item-field-price {
+        max-width: none;
+    }
+
+    .image-upload-box {
+        width: calc(50% - 7px);
+        min-width: 130px;
+    }
+}

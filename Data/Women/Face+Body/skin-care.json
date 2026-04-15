@@ -1,0 +1,92 @@
+[
+    {
+        "id": 2049,
+        "name": "Skin Care Cleanser Pro",
+        "price": 38,
+        "category": "skin-care",
+        "images": [
+            "../images/product/women/Skin care/Wskin1.avif",
+            "../images/product/women/Skin care/Wskin2.avif"
+        ]
+    },
+    {
+        "id": 2050,
+        "name": "Skin Care Toner Pro",
+        "price": 42,
+        "category": "skin-care",
+        "images": [
+            "../images/product/women/Skin care/Wskin3.avif",
+            "../images/product/women/Skin care/Wskin4.avif"
+        ]
+    },
+    {
+        "id": 2051,
+        "name": "Skin Care Serum Pro",
+        "price": 58,
+        "category": "skin-care",
+        "images": [
+            "../images/product/women/Skin care/Wskin5.avif",
+            "../images/product/women/Skin care/Wskin6.avif"
+        ]
+    },
+    {
+        "id": 2052,
+        "name": "Skin Care Moisturizer Pro",
+        "price": 65,
+        "category": "skin-care",
+        "images": [
+            "../images/product/women/Skin care/Wskin7.avif",
+            "../images/product/women/Skin care/Wskin8.avif"
+        ]
+    },
+    {
+        "id": 2053,
+        "name": "Skin Care Eye Cream Pro",
+        "price": 48,
+        "category": "skin-care",
+        "images": [
+            "../images/product/women/Skin care/Wskin9.avif",
+            "../images/product/women/Skin care/Wskin10.avif"
+        ]
+    },
+    {
+        "id": 2054,
+        "name": "Skin Care Night Cream Pro",
+        "price": 72,
+        "category": "skin-care",
+        "images": [
+            "../images/product/women/Skin care/Wskin11.avif",
+            "../images/product/women/Skin care/Wskin12.avif"
+        ]
+    },
+    {
+        "id": 2055,
+        "name": "Skin Care Day Cream Pro",
+        "price": 55,
+        "category": "skin-care",
+        "images": [
+            "../images/product/women/Skin care/Wskin13.avif",
+            "../images/product/women/Skin care/Wskin14.avif"
+        ]
+    },
+    {
+        "id": 2056,
+        "name": "Skin Care Mask Pro",
+        "price": 35,
+        "category": "skin-care",
+        "images": [
+            "../images/product/women/Skin care/Wskin15.avif",
+            "../images/product/women/Skin care/Wskin16.avif"
+        ]
+    },
+    {
+        "id": 2057,
+        "name": "Skin Care Exfoliator Pro",
+        "price": 45,
+        "category": "skin-care",
+        "images": [
+            "../images/product/women/Skin care/Wskin17.avif",
+            "../images/product/women/Skin care/Wskin18.avif"
+        ]
+    }
+]

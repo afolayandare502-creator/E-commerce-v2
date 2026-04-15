@@ -1,0 +1,362 @@
+.return-policy-page {
+    background: #fff;
+    color: #1a1a1a;
+}
+
+.return-policy-main {
+    padding: 32px 0 72px;
+}
+
+.return-policy-shell {
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.return-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    color: #8b8b8b;
+}
+
+.return-breadcrumb a {
+    color: #8b8b8b;
+    text-decoration: none;
+}
+
+.return-page-header {
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+.return-page-header h1 {
+    margin: 0;
+    font-size: clamp(36px, 4.2vw, 54px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+.return-card,
+.return-section {
+    margin-bottom: 26px;
+}
+
+.return-card {
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    padding: 28px 30px;
+    border-radius: 4px;
+}
+
+.return-toc h2,
+.return-section h2 {
+    margin: 0 0 18px;
+    font-size: clamp(24px, 2.2vw, 34px);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.return-toc ol {
+    margin: 0;
+    padding-left: 24px;
+}
+
+.return-toc li + li {
+    margin-top: 10px;
+}
+
+.return-toc a {
+    color: #3e8cff;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.return-section > p,
+.refund-copy > p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #4b4b4b;
+}
+
+.return-section strong {
+    color: #111;
+}
+
+.return-rule-box {
+    border: 1px solid #d2d2d2;
+    margin-bottom: 22px;
+}
+
+.return-rule-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 18px;
+    background: #fafafa;
+    border-bottom: 1px solid #dcdcdc;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.return-rule-title i {
+    font-size: 22px;
+}
+
+.return-rule-content {
+    padding: 18px 20px;
+}
+
+.return-rule-content ul,
+.return-note ul,
+.refund-copy ul {
+    margin: 0;
+    padding-left: 24px;
+}
+
+.return-rule-content li,
+.return-note li,
+.refund-copy li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #4b4b4b;
+}
+
+.return-subheading {
+    margin: 24px 0 16px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.return-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.return-step-card {
+    position: relative;
+    padding: 24px 16px 18px;
+    border: 1px solid #ededed;
+    border-radius: 20px;
+    background: #fafafa;
+    text-align: center;
+}
+
+.return-step-number {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 800;
+    background: #fff;
+}
+
+.return-step-icon {
+    width: 120px;
+    height: 120px;
+    margin: 10px auto 18px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+    color: #2a2a2a;
+}
+
+.return-step-card p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #4b4b4b;
+}
+
+.return-instructions {
+    margin: 0 0 24px;
+    padding-left: 26px;
+}
+
+.return-instructions li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #4b4b4b;
+}
+
+.return-note {
+    margin-bottom: 26px;
+}
+
+.return-note h3 {
+    margin: 0 0 12px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.return-action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 220px;
+    padding: 16px 26px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.return-action-btn:hover {
+    background: #222;
+}
+
+.return-table-wrap {
+    overflow-x: auto;
+    border: 1px solid #dcdcdc;
+}
+
+.return-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+}
+
+.return-table th,
+.return-table td {
+    padding: 16px 14px;
+    border-right: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+    font-size: 15px;
+    line-height: 1.6;
+    vertical-align: top;
+}
+
+.return-table th:last-child,
+.return-table td:last-child {
+    border-right: 0;
+}
+
+.return-table thead th {
+    background: #fafafa;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.refund-copy {
+    margin-top: 20px;
+}
+
+.return-policy-page footer {
+    border-top: 1px solid #ececec;
+    margin-top: 56px;
+    padding-top: 34px;
+}
+
+@media (max-width: 1080px) {
+    .return-policy-shell {
+        width: min(100%, calc(100% - 32px));
+    }
+
+    .return-steps-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 799px) {
+    .return-policy-main {
+        padding: 18px 0 40px;
+    }
+
+    .return-policy-shell {
+        width: calc(100% - 24px);
+    }
+
+    .return-breadcrumb {
+        margin-bottom: 14px;
+        font-size: 13px;
+        gap: 8px;
+    }
+
+    .return-page-header {
+        margin-bottom: 22px;
+    }
+
+    .return-page-header h1 {
+        font-size: 34px;
+    }
+
+    .return-card {
+        padding: 20px 16px;
+    }
+
+    .return-toc h2,
+    .return-section h2 {
+        font-size: 26px;
+        margin-bottom: 14px;
+    }
+
+    .return-section > p,
+    .refund-copy > p,
+    .return-rule-content li,
+    .return-note li,
+    .refund-copy li,
+    .return-instructions li {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .return-steps-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .return-step-card {
+        padding: 22px 12px 16px;
+    }
+
+    .return-step-icon {
+        width: 92px;
+        height: 92px;
+        font-size: 40px;
+        margin-bottom: 14px;
+    }
+
+    .return-action-btn {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .return-policy-page footer {
+        margin-top: 38px;
+    }
+}
+
+@media (max-width: 520px) {
+    .return-steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .return-card,
+    .return-section {
+        margin-bottom: 20px;
+    }
+
+    .return-table th,
+    .return-table td {
+        padding: 12px 10px;
+        font-size: 14px;
+    }
+}

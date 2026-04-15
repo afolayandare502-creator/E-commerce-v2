@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1073,
+        "name": "Classic Stilettos",
+        "price": 85,
+        "category": "heels",
+        "images": [
+            "../images/product/women/Heels/WHEELS1.avif",
+            "../images/product/women/Heels/WHEELS2.avif",
+            "../images/product/women/Heels/WHEELS3.avif",
+            "../images/product/women/Heels/WHEELS4.avif"
+        ]
+    },
+    {
+        "id": 1074,
+        "name": "Block Heels",
+        "price": 75,
+        "category": "heels",
+        "images": [
+            "../images/product/women/Heels/WHEELS5.avif",
+            "../images/product/women/Heels/WHEELS6.avif",
+            "../images/product/women/Heels/WHEELS7.avif",
+            "../images/product/women/Heels/WHEELS8.avif"
+        ]
+    },
+    {
+        "id": 1075,
+        "name": "Platform Heels",
+        "price": 95,
+        "category": "heels",
+        "images": [
+            "../images/product/women/Heels/WHEELS9.avif",
+            "../images/product/women/Heels/WHEELS10.avif",
+            "../images/product/women/Heels/WHEELS11.avif",
+            "../images/product/women/Heels/WHEELS12.avif"
+        ]
+    },
+    {
+        "id": 1076,
+        "name": "Peep Toe Heels",
+        "price": 68,
+        "category": "heels",
+        "images": [
+            "../images/product/women/Heels/WHEELS13.avif",
+            "../images/product/women/Heels/WHEELS14.avif",
+            "../images/product/women/Heels/WHEELS15.avif",
+            "../images/product/women/Heels/WHEELS16.avif"
+        ]
+    },
+    {
+        "id": 1077,
+        "name": "Court Heels",
+        "price": 72,
+        "category": "heels",
+        "images": [
+            "../images/product/women/Heels/WHEELS17.avif",
+            "../images/product/women/Heels/WHEELS18.avif",
+            "../images/product/women/Heels/WHEELS19.avif",
+            "../images/product/women/Heels/WHEELS20.avif"
+        ]
+    },
+    {
+        "id": 1078,
+        "name": "Wedge Heels",
+        "price": 82,
+        "category": "heels",
+        "images": [
+            "../images/product/women/Heels/WHEELS21.avif",
+            "../images/product/women/Heels/WHEELS22.avif",
+            "../images/product/women/Heels/WHEELS23.avif",
+            "../images/product/women/Heels/WHEELS24.avif"
+        ]
+    },
+    {
+        "id": 1079,
+        "name": "Strappy Heels",
+        "price": 78,
+        "category": "heels",
+        "images": [
+            "../images/product/women/Heels/WHEELS25.avif",
+            "../images/product/women/Heels/WHEELS26.avif",
+            "../images/product/women/Heels/WHEELS27.avif",
+            "../images/product/women/Heels/WHEELS28.avif"
+        ]
+    },
+    {
+        "id": 1080,
+        "name": "Kitten Heels",
+        "price": 62,
+        "category": "heels",
+        "images": [
+            "../images/product/women/Heels/WHEELS29.avif",
+            "../images/product/women/Heels/WHEELS30.avif",
+            "../images/product/women/Heels/WHEELS31.avif",
+            "../images/product/women/Heels/WHEELS32.avif"
+        ]
+    }
+]

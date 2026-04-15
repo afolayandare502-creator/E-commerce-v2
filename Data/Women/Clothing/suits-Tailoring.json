@@ -1,0 +1,182 @@
+[
+    {
+        "id": 241,
+        "name": "Relaxed Fit Blazer Set",
+        "price": 145,
+        "category": "suits-tailoring",
+        "images": [
+            "../images/product/women/Suits & Tailoring/WSTIM1.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM2.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM3.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM4.avif"
+        ]
+    },
+    {
+        "id": 242,
+        "name": "Double Breasted Power Suit",
+        "price": 168,
+        "category": "suits-tailoring",
+        "images": [
+            "../images/product/women/Suits & Tailoring/WSTIM5.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM6.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM7.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM8.avif"
+        ]
+    },
+    {
+        "id": 243,
+        "name": "Wide Leg Tailored Suit",
+        "price": 172,
+        "category": "suits-tailoring",
+        "images": [
+            "../images/product/women/Suits & Tailoring/WSTIM9.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM10.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM11.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM12.avif"
+        ]
+    },
+    {
+        "id": 244,
+        "name": "Pinstripe Office Suit",
+        "price": 158,
+        "category": "suits-tailoring",
+        "images": [
+            "../images/product/women/Suits & Tailoring/WSTIM13.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM14.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM15.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM16.avif"
+        ]
+    },
+    {
+        "id": 245,
+        "name": "Cropped Blazer Co Ord",
+        "price": 132,
+        "category": "suits-tailoring",
+        "images": [
+            "../images/product/women/Suits & Tailoring/WSTIM17.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM18.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM19.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM20.avif"
+        ]
+    },
+    {
+        "id": 246,
+        "name": "Soft Tailored Trouser Suit",
+        "price": 149,
+        "category": "suits-tailoring",
+        "images": [
+            "../images/product/women/Suits & Tailoring/WSTIM21.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM22.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM23.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM24.avif"
+        ]
+    },
+    {
+        "id": 247,
+        "name": "Belted Blazer Set",
+        "price": 154,
+        "category": "suits-tailoring",
+        "images": [
+            "../images/product/women/Suits & Tailoring/WSTIM25.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM26.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM27.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM28.avif"
+        ]
+    },
+    {
+        "id": 248,
+        "name": "Monochrome Evening Suit",
+        "price": 179,
+        "category": "suits-tailoring",
+        "images": [
+            "../images/product/women/Suits & Tailoring/WSTIM29.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM30.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM31.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM32.avif"
+        ]
+    },
+    {
+        "id": 249,
+        "name": "Waistcoat Tailoring Set",
+        "price": 138,
+        "category": "suits-tailoring",
+        "images": [
+            "../images/product/women/Suits & Tailoring/WSTIM33.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM34.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM35.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM36.avif"
+        ]
+    },
+    {
+        "id": 250,
+        "name": "Minimalist Workwear Suit",
+        "price": 143,
+        "category": "suits-tailoring",
+        "images": [
+            "../images/product/women/Suits & Tailoring/WSTIM37.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM38.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM39.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM40.avif"
+        ]
+    },
+    {
+        "id": 251,
+        "name": "Straight Leg Suit Set",
+        "price": 151,
+        "category": "suits-tailoring",
+        "images": [
+            "../images/product/women/Suits & Tailoring/WSTIM41.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM42.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM43.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM44.avif"
+        ]
+    },
+    {
+        "id": 252,
+        "name": "Textured Tailored Separates",
+        "price": 136,
+        "category": "suits-tailoring",
+        "images": [
+            "../images/product/women/Suits & Tailoring/WSTIM45.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM46.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM47.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM48.avif"
+        ]
+    },
+    {
+        "id": 253,
+        "name": "Tux Inspired Blazer",
+        "price": 165,
+        "category": "suits-tailoring",
+        "images": [
+            "../images/product/women/Suits & Tailoring/WSTIM49.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM50.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM51.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM52.avif"
+        ]
+    },
+    {
+        "id": 254,
+        "name": "Pleated Tailored Set",
+        "price": 147,
+        "category": "suits-tailoring",
+        "images": [
+            "../images/product/women/Suits & Tailoring/WSTIM53.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM54.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM55.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM56.avif"
+        ]
+    },
+    {
+        "id": 255,
+        "name": "Linen Blend Suit",
+        "price": 141,
+        "category": "suits-tailoring",
+        "images": [
+            "../images/product/women/Suits & Tailoring/WSTIM57.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM58.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM59.avif",
+            "../images/product/women/Suits & Tailoring/WSTIM60.avif"
+        ]
+    }
+]

@@ -1,0 +1,82 @@
+[
+    {
+        "id": 4319,
+        "name": "Chain Bracelet Pro",
+        "price": 45,
+        "category": "accessories-bracelets",
+        "images": [
+            "../images/product/women/bracelets/Wbraclet1.avif",
+            "../images/product/women/bracelets/Wbraclet2.avif"
+        ]
+    },
+    {
+        "id": 4320,
+        "name": "Bangle Bracelet Pro",
+        "price": 55,
+        "category": "accessories-bracelets",
+        "images": [
+            "../images/product/women/bracelets/Wbraclet3.avif",
+            "../images/product/women/bracelets/Wbraclet4.avif"
+        ]
+    },
+    {
+        "id": 4321,
+        "name": "Charm Bracelet Pro",
+        "price": 65,
+        "category": "accessories-bracelets",
+        "images": [
+            "../images/product/women/bracelets/Wbraclet5.avif",
+            "../images/product/women/bracelets/Wbraclet6.avif"
+        ]
+    },
+    {
+        "id": 4322,
+        "name": "Cuff Bracelet Pro",
+        "price": 75,
+        "category": "accessories-bracelets",
+        "images": [
+            "../images/product/women/bracelets/Wbraclet7.avif",
+            "../images/product/women/bracelets/Wbraclet8.avif"
+        ]
+    },
+    {
+        "id": 4323,
+        "name": "Tennis Bracelet Pro",
+        "price": 85,
+        "category": "accessories-bracelets",
+        "images": [
+            "../images/product/women/bracelets/Wbraclet9.avif",
+            "../images/product/women/bracelets/Wbraclet10.avif"
+        ]
+    },
+    {
+        "id": 4324,
+        "name": "Designer Bracelet Pro",
+        "price": 95,
+        "category": "accessories-bracelets",
+        "images": [
+            "../images/product/women/bracelets/Wbraclet11.avif",
+            "../images/product/women/bracelets/Wbraclet12.avif"
+        ]
+    },
+    {
+        "id": 4325,
+        "name": "Luxury Bracelet Pro",
+        "price": 125,
+        "category": "accessories-bracelets",
+        "images": [
+            "../images/product/women/bracelets/Wbraclet13.avif",
+            "../images/product/women/bracelets/Wbraclet14.avif"
+        ]
+    },
+    {
+        "id": 4326,
+        "name": "Diamond Bracelet Pro",
+        "price": 185,
+        "category": "accessories-bracelets",
+        "images": [
+            "../images/product/women/bracelets/Wbraclet15.avif",
+            "../images/product/women/bracelets/Wbraclet16.avif"
+        ]
+    }
+]

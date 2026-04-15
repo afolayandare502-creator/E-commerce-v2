@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1001,
+        "name": "Classic Leather Ankle Boots",
+        "price": 89,
+        "category": "boots",
+        "images": [
+            "../images/product/women/Boots/WBOOT1.avif",
+            "../images/product/women/Boots/WBOOT2.avif",
+            "../images/product/women/Boots/WBOOT3.avif",
+            "../images/product/women/Boots/WBOOT4.avif"
+        ]
+    },
+    {
+        "id": 1002,
+        "name": "Combat Style Boots",
+        "price": 95,
+        "category": "boots",
+        "images": [
+            "../images/product/women/Boots/WBOOT5.avif",
+            "../images/product/women/Boots/WBOOT6.avif",
+            "../images/product/women/Boots/WBOOT7.avif",
+            "../images/product/women/Boots/WBOOT8.avif"
+        ]
+    },
+    {
+        "id": 1003,
+        "name": "Chelsea Boots",
+        "price": 79,
+        "category": "boots",
+        "images": [
+            "../images/product/women/Boots/WBOOT9.avif",
+            "../images/product/women/Boots/WBOOT10.avif",
+            "../images/product/women/Boots/WBOOT11.avif",
+            "../images/product/women/Boots/WBOOT12.avif"
+        ]
+    },
+    {
+        "id": 1004,
+        "name": "Knee High Boots",
+        "price": 119,
+        "category": "boots",
+        "images": [
+            "../images/product/women/Boots/WBOOT13.avif",
+            "../images/product/women/Boots/WBOOT14.avif",
+            "../images/product/women/Boots/WBOOT15.avif",
+            "../images/product/women/Boots/WBOOT16.avif"
+        ]
+    },
+    {
+        "id": 1005,
+        "name": "Western Style Boots",
+        "price": 99,
+        "category": "boots",
+        "images": [
+            "../images/product/women/Boots/WBOOT17.avif",
+            "../images/product/women/Boots/WBOOT18.avif",
+            "../images/product/women/Boots/WBOOT19.avif",
+            "../images/product/women/Boots/WBOOT20.avif"
+        ]
+    },
+    {
+        "id": 1006,
+        "name": "Platform Boots",
+        "price": 109,
+        "category": "boots",
+        "images": [
+            "../images/product/women/Boots/WBOOT21.avif",
+            "../images/product/women/Boots/WBOOT22.avif",
+            "../images/product/women/Boots/WBOOT23.avif",
+            "../images/product/women/Boots/WBOOT24.avif"
+        ]
+    },
+    {
+        "id": 1007,
+        "name": "Hiking Boots",
+        "price": 129,
+        "category": "boots",
+        "images": [
+            "../images/product/women/Boots/WBOOT25.avif",
+            "../images/product/women/Boots/WBOOT26.avif",
+            "../images/product/women/Boots/WBOOT27.avif",
+            "../images/product/women/Boots/WBOOT28.avif"
+        ]
+    },
+    {
+        "id": 1008,
+        "name": "Rain Boots",
+        "price": 69,
+        "category": "boots",
+        "images": [
+            "../images/product/women/Boots/WBOOT29.avif",
+            "../images/product/women/Boots/WBOOT30.avif",
+            "../images/product/women/Boots/WBOOT31.avif",
+            "../images/product/women/Boots/WBOOT32.avif"
+        ]
+    },
+    {
+        "id": 1009,
+        "name": "Lace Up Boots",
+        "price": 85,
+        "category": "boots",
+        "images": [
+            "../images/product/women/Boots/WBOOT33.avif",
+            "../images/product/women/Boots/WBOOT34.avif",
+            "../images/product/women/Boots/WBOOT35.avif",
+            "../images/product/women/Boots/WBOOT36.avif"
+        ]
+    }
+]

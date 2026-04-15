@@ -1,0 +1,290 @@
+[
+    {
+        "id": 73,
+        "name": "Women's Skinny Jeans",
+        "price": 75,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM1.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM2.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM3.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM4.avif"
+        ]
+    },
+    {
+        "id": 74,
+        "name": "High Waisted Trousers",
+        "price": 85,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM5.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM6.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM7.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM8.avif"
+        ]
+    },
+    {
+        "id": 75,
+        "name": "Bootcut Jeans",
+        "price": 70,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM9.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM10.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM11.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM12.avif"
+        ]
+    },
+    {
+        "id": 76,
+        "name": "Straight Leg Trousers",
+        "price": 80,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM13.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM14.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM15.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM16.avif"
+        ]
+    },
+    {
+        "id": 77,
+        "name": "Ripped Jeans",
+        "price": 78,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM17.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM18.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM19.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM20.avif"
+        ]
+    },
+    {
+        "id": 78,
+        "name": "Wide Leg Trousers",
+        "price": 90,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM21.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM22.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM23.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM24.avif"
+        ]
+    },
+    {
+        "id": 79,
+        "name": "Boyfriend Jeans",
+        "price": 72,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM25.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM26.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM27.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM28.avif"
+        ]
+    },
+    {
+        "id": 80,
+        "name": "Cropped Trousers",
+        "price": 65,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM29.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM30.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM31.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM32.avif"
+        ]
+    },
+    {
+        "id": 81,
+        "name": "Flare Jeans",
+        "price": 82,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM33.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM34.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM35.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM36.avif"
+        ]
+    },
+    {
+        "id": 82,
+        "name": "Palazzo Trousers",
+        "price": 95,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM37.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM38.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM39.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM40.avif"
+        ]
+    },
+    {
+        "id": 83,
+        "name": "Mom Jeans",
+        "price": 68,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM41.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM42.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM43.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM44.avif"
+        ]
+    },
+    {
+        "id": 84,
+        "name": "Chinos",
+        "price": 75,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM45.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM46.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM47.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM48.avif"
+        ]
+    },
+    {
+        "id": 85,
+        "name": "Cargo Trousers",
+        "price": 88,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM49.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM50.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM51.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM52.avif"
+        ]
+    },
+    {
+        "id": 86,
+        "name": "Paperbag Trousers",
+        "price": 92,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM53.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM54.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM55.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM56.avif"
+        ]
+    },
+    {
+        "id": 87,
+        "name": "Distressed Jeans",
+        "price": 85,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM57.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM58.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM59.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM60.avif"
+        ]
+    },
+    {
+        "id": 88,
+        "name": "Tailored Trousers",
+        "price": 110,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM61.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM62.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM63.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM64.avif"
+        ]
+    },
+    {
+        "id": 89,
+        "name": "Slim Fit Jeans",
+        "price": 72,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM65.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM66.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM67.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM68.avif"
+        ]
+    },
+    {
+        "id": 90,
+        "name": "Relaxed Fit Trousers",
+        "price": 78,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM69.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM70.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM71.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM72.avif"
+        ]
+    },
+    {
+        "id": 91,
+        "name": "Low Rise Jeans",
+        "price": 65,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM73.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM74.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM75.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM76.avif"
+        ]
+    },
+    {
+        "id": 92,
+        "name": "Pleated Trousers",
+        "price": 98,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM77.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM78.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM79.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM80.avif"
+        ]
+    },
+    {
+        "id": 93,
+        "name": "Jeggings",
+        "price": 55,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM81.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM82.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM83.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM84.avif"
+        ]
+    },
+    {
+        "id": 94,
+        "name": "Corduroy Trousers",
+        "price": 82,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM85.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM86.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM87.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM88.avif"
+        ]
+    },
+    {
+        "id": 95,
+        "name": "Linen Trousers",
+        "price": 88,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM89.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM90.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM91.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM92.avif"
+        ]
+    },
+    {
+        "id": 96,
+        "name": "Denim Culottes",
+        "price": 75,
+        "category": "jeans-trousers",
+        "images": [
+            "../images/product/women/Jeans & Trousers/WJTIM93.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM94.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM95.avif",
+            "../images/product/women/Jeans & Trousers/WJTIM96.avif"
+        ]
+    }
+]

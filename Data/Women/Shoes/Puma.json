@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1193,
+        "name": "Puma Classic Sneakers",
+        "price": 75,
+        "category": "puma",
+        "images": [
+            "../images/product/women/Puma/WPUMA1.avif",
+            "../images/product/women/Puma/WPUMA2.avif",
+            "../images/product/women/Puma/WPUMA3.avif",
+            "../images/product/women/Puma/WPUMA4.avif"
+        ]
+    },
+    {
+        "id": 1194,
+        "name": "Puma Running Shoes",
+        "price": 85,
+        "category": "puma",
+        "images": [
+            "../images/product/women/Puma/WPUMA5.avif",
+            "../images/product/women/Puma/WPUMA6.avif",
+            "../images/product/women/Puma/WPUMA7.avif",
+            "../images/product/women/Puma/WPUMA8.avif"
+        ]
+    },
+    {
+        "id": 1195,
+        "name": "Puma RS-X Sneakers",
+        "price": 95,
+        "category": "puma",
+        "images": [
+            "../images/product/women/Puma/WPUMA9.avif",
+            "../images/product/women/Puma/WPUMA10.avif",
+            "../images/product/women/Puma/WPUMA11.avif",
+            "../images/product/women/Puma/WPUMA12.avif"
+        ]
+    },
+    {
+        "id": 1196,
+        "name": "Puma Suede Classic",
+        "price": 88,
+        "category": "puma",
+        "images": [
+            "../images/product/women/Puma/WSBP18.avif",
+            "../images/product/women/Puma/WSBP19.avif",
+            "../images/product/women/Puma/WSBP20.avif",
+            "../images/product/women/Puma/WSBP21.avif"
+        ]
+    },
+    {
+        "id": 1197,
+        "name": "Puma Cali Sneakers",
+        "price": 78,
+        "category": "puma",
+        "images": [
+            "../images/product/women/Puma/WSBP22.avif",
+            "../images/product/women/Puma/WSBP23.avif",
+            "../images/product/women/Puma/WSBP24.avif",
+            "../images/product/women/Puma/WSBP25.avif"
+        ]
+    },
+    {
+        "id": 1198,
+        "name": "Puma Court Sneakers",
+        "price": 82,
+        "category": "puma",
+        "images": [
+            "../images/product/women/Puma/WPUMA3.avif",
+            "../images/product/women/Puma/WPUMA2.avif",
+            "../images/product/women/Puma/WPUMA1.avif",
+            "../images/product/women/Puma/WPUMA4.avif"
+        ]
+    },
+    {
+        "id": 1199,
+        "name": "Puma Platform Sneakers",
+        "price": 92,
+        "category": "puma",
+        "images": [
+            "../images/product/women/Puma/WPUMA5.avif",
+            "../images/product/women/Puma/WPUMA6.avif",
+            "../images/product/women/Puma/WPUMA7.avif",
+            "../images/product/women/Puma/WPUMA8.avif"
+        ]
+    },
+    {
+        "id": 1200,
+        "name": "Puma Basket Sneakers",
+        "price": 85,
+        "category": "puma",
+        "images": [
+            "../images/product/women/Puma/WSBP14.avif",
+            "../images/product/women/Puma/WSBP15.avif",
+            "../images/product/women/Puma/WSBP16.avif",
+            "../images/product/women/Puma/WSBP14.avif"
+        ]
+    }
+]

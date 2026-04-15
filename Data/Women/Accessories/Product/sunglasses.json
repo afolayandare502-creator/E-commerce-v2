@@ -1,0 +1,83 @@
+[
+    {
+        "id": 4001,
+        "name": "Designer Sunglasses Pro",
+        "price": 85,
+        "category": "sunglasses",
+        "images": [
+            "../images/product/women/sunglasses/Wglass1.avif",
+            "../images/product/women/sunglasses/Wglass2.avif"
+        ]
+    },
+    {
+        "id": 4002,
+        "name": "Polarized Sunglasses Pro",
+        "price": 95,
+        "category": "accessories-sunglasses",
+        "images": [
+            "../images/product/women/sunglasses/Wglass3.avif",
+            "../images/product/women/sunglasses/Wglass4.avif"
+        ]
+    },
+    {
+        "id": 4003,
+        "name": "Sport Sunglasses Pro",
+        "price": 75,
+        "category": "accessories-sunglasses",
+        "images": [
+            "../images/product/women/sunglasses/Wglass5.avif",
+            "../images/product/women/sunglasses/Wglass6.avif"
+     
+        ]
+    },
+    {
+        "id": 4004,
+        "name": "Aviator Sunglasses Pro",
+        "price": 88,
+        "category": "accessories-sunglasses",
+        "images": [
+            "../images/product/women/sunglasses/Wglass7.avif",
+            "../images/product/women/sunglasses/Wglass8.avif"
+        ]
+    },
+    {
+        "id": 4005,
+        "name": "Cat Eye Sunglasses Pro",
+        "price": 92,
+        "category": "accessories-sunglasses",
+        "images": [
+            "../images/product/women/sunglasses/Wglass9.avif",
+            "../images/product/women/sunglasses/Wglass10.avif"
+        ]
+    },
+    {
+        "id": 4006,
+        "name": "Round Sunglasses Pro",
+        "price": 78,
+        "category": "accessories-sunglasses",
+        "images": [
+            "../images/product/women/sunglasses/Wglass11.avif",
+            "../images/product/women/sunglasses/Wglass12.avif"
+        ]
+    },
+    {
+        "id": 4007,
+        "name": "Square Sunglasses Pro",
+        "price": 105,
+        "category": "accessories-sunglasses",
+        "images": [
+            "../images/product/women/sunglasses/Wglass13.avif",
+            "../images/product/women/sunglasses/Wglass14.avif"
+        ]
+    },
+    {
+        "id": 4008,
+        "name": "Rectangle Sunglasses Pro",
+        "price": 82,
+        "category": "accessories-sunglasses",
+        "images": [
+            "../images/product/women/sunglasses/Wglass15.avif",
+            "../images/product/women/sunglasses/Wglass16.avif"
+        ]
+    }
+]

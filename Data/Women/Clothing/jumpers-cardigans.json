@@ -1,0 +1,290 @@
+[
+    {
+        "id": 169,
+        "name": "Wool Jumper",
+        "price": 65,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WHIM1.avif",
+            "../images/product/women/Jumpers & Cardigans/WHIM2.avif",
+            "../images/product/women/Jumpers & Cardigans/WHIM3.avif",
+            "../images/product/women/Jumpers & Cardigans/WHIM4.avif"
+        ]
+    },
+    {
+        "id": 170,
+        "name": "Cashmere Sweater",
+        "price": 120,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WJIM25.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM26.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM27.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM28.avif"
+        ]
+    },
+    {
+        "id": 171,
+        "name": "Crew Neck Jumper",
+        "price": 55,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WHIM5.avif",
+            "../images/product/women/Jumpers & Cardigans/WHIM6.avif",
+            "../images/product/women/Jumpers & Cardigans/WHIM7.avif",
+            "../images/product/women/Jumpers & Cardigans/WHIM8.avif"
+        ]
+    },
+    {
+        "id": 172,
+        "name": "V-Neck Sweater",
+        "price": 60,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WJIM29.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM30.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM31.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM32.avif"
+        ]
+    },
+    {
+        "id": 173,
+        "name": "Turtleneck Jumper",
+        "price": 70,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WJIM33.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM34.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM35.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM36.avif"
+        ]
+    },
+    {
+        "id": 174,
+        "name": "Cardigan",
+        "price": 75,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WJIM37.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM38.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM39.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM40.avif"
+        ]
+    },
+    {
+        "id": 175,
+        "name": "Oversized Sweater",
+        "price": 80,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WHIM9.avif",
+            "../images/product/women/Jumpers & Cardigans/WHIM10.avif",
+            "../images/product/women/Jumpers & Cardigans/WHIM11.avif",
+            "../images/product/women/Jumpers & Cardigans/WHIM12.avif"
+        ]
+    },
+    {
+        "id": 176,
+        "name": "Knit Jumper",
+        "price": 58,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WHIM13.avif",
+            "../images/product/women/Jumpers & Cardigans/WHIM14.avif",
+            "../images/product/women/Jumpers & Cardigans/WHIM15.avif",
+            "../images/product/women/Jumpers & Cardigans/WHIM16.avif"
+        ]
+    },
+    {
+        "id": 177,
+        "name": "Cropped Jumper",
+        "price": 45,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WHIM17.avif",
+            "../images/product/women/Jumpers & Cardigans/WHIM18.avif",
+            "../images/product/women/Jumpers & Cardigans/WHIM19.avif",
+            "../images/product/women/Jumpers & Cardigans/WHIM20.avif"
+        ]
+    },
+    {
+        "id": 178,
+        "name": "Striped Sweater",
+        "price": 52,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WJIM41.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM42.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM43.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM44.avif"
+        ]
+    },
+    {
+        "id": 179,
+        "name": "Cable Knit Jumper",
+        "price": 85,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WJIM45.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM46.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM47.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM48.avif"
+        ]
+    },
+    {
+        "id": 180,
+        "name": "Hooded Jumper",
+        "price": 68,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WJIM49.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM50.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM51.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM52.avif"
+        ]
+    },
+    {
+        "id": 181,
+        "name": "Mock Neck Sweater",
+        "price": 62,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WJIM53.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM54.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM55.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM56.avif"
+        ]
+    },
+    {
+        "id": 182,
+        "name": "Boat Neck Jumper",
+        "price": 58,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WJIM57.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM58.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM59.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM60.avif"
+        ]
+    },
+    {
+        "id": 183,
+        "name": "Fair Isle Sweater",
+        "price": 78,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WHIM21.avif",
+            "../images/product/women/Jumpers & Cardigans/WHIM22.avif",
+            "../images/product/women/Jumpers & Cardigans/WHIM23.avif",
+            "../images/product/women/Jumpers & Cardigans/WHIM24.avif"
+        ]
+    },
+    {
+        "id": 184,
+        "name": "Merino Wool Jumper",
+        "price": 95,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WHIM5.avif",
+            "../images/product/women/Jumpers & Cardigans/WHIM6.avif",
+            "../images/product/women/Jumpers & Cardigans/WHIM7.avif",
+            "../images/product/women/Jumpers & Cardigans/WHIM8.avif"
+        ]
+    },
+    {
+        "id": 185,
+        "name": "Lightweight Sweater",
+        "price": 48,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WJIM61.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM62.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM63.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM64.avif"
+        ]
+    },
+    {
+        "id": 186,
+        "name": "Chunky Knit Jumper",
+        "price": 88,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WJIM65.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM66.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM67.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM68.avif"
+        ]
+    },
+    {
+        "id": 187,
+        "name": "Longline Cardigan",
+        "price": 92,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WJIM69.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM70.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM71.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM72.avif"
+        ]
+    },
+    {
+        "id": 188,
+        "name": "Ribbed Jumper",
+        "price": 55,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WJIM73.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM74.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM75.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM76.avif"
+        ]
+    },
+    {
+        "id": 189,
+        "name": "Open Front Cardigan",
+        "price": 72,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WJIM77.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM78.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM79.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM80.avif"
+        ]
+    },
+    {
+        "id": 190,
+        "name": "Bomber Style Jumper",
+        "price": 65,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WJIM81.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM82.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM83.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM84.avif"
+        ]
+    },
+    {
+        "id": 191,
+        "name": "Tie Front Cardigan",
+        "price": 68,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WJIM85.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM86.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM89.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM90.avif"
+        ]
+    },
+    {
+        "id": 192,
+        "name": "Wool Blend Jumper",
+        "price": 75,
+        "category": "jumpers-cardigans",
+        "images": [
+            "../images/product/women/Jumpers & Cardigans/WJIM89.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM90.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM91.avif",
+            "../images/product/women/Jumpers & Cardigans/WJIM92.avif"
+        ]
+    }
+]

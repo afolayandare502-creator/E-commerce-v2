@@ -1,0 +1,194 @@
+[
+    {
+        "id": 313,
+        "name": "Ruched Midi Occasion Dress",
+        "price": 96,
+        "category": "occasion-dresses",
+        "images": [
+            "../images/product/women/occasion Dressses/WOCDE1.avif",
+            "../images/product/women/occasion Dressses/WOCDE2.avif",
+            "../images/product/women/occasion Dressses/WOCDE3.avif",
+            "../images/product/women/occasion Dressses/WOCDE4.avif"
+        ]
+    },
+    {
+        "id": 314,
+        "name": "Satin Halter Occasion Dress",
+        "price": 104,
+        "category": "occasion-dresses",
+        "images": [
+            "../images/product/women/occasion Dressses/WOCDE5.avif",
+            "../images/product/women/occasion Dressses/WOCDE6.avif",
+            "../images/product/women/occasion Dressses/WOCDE7.avif",
+            "../images/product/women/occasion Dressses/WOCDE8.avif"
+        ]
+    },
+    {
+        "id": 315,
+        "name": "Open Back Evening Midi",
+        "price": 112,
+        "category": "occasion-dresses",
+        "images": [
+            "../images/product/women/occasion Dressses/WOCDE9.avif",
+            "../images/product/women/occasion Dressses/WOCDE10.avif",
+            "../images/product/women/occasion Dressses/WOCDE11.avif",
+            "../images/product/women/occasion Dressses/WOCDE12.avif"
+        ]
+    },
+    {
+        "id": 316,
+        "name": "Embellished Party Maxi",
+        "price": 128,
+        "category": "occasion-dresses",
+        "images": [
+            "../images/product/women/occasion Dressses/WOCDE13.avif",
+            "../images/product/women/occasion Dressses/WOCDE14.avif",
+            "../images/product/women/occasion Dressses/WOCDE15.avif",
+            "../images/product/women/occasion Dressses/WOCDE16.avif"
+        ]
+    },
+    {
+        "id": 317,
+        "name": "One Shoulder Event Dress",
+        "price": 118,
+        "category": "occasion-dresses",
+        "images": [
+            "../images/product/women/occasion Dressses/WOCDE17.avif",
+            "../images/product/women/occasion Dressses/WOCDE18.avif",
+            "../images/product/women/occasion Dressses/WOCDE19.avif",
+            "../images/product/women/occasion Dressses/WOCDE20.avif"
+        ]
+    },
+    {
+        "id": 318,
+        "name": "Draped Jersey Occasion Dress",
+        "price": 92,
+        "category": "occasion-dresses",
+        "images": [
+            "../images/product/women/occasion Dressses/WOCDE21.avif",
+            "../images/product/women/occasion Dressses/WOCDE22.avif",
+            "../images/product/women/occasion Dressses/WOCDE23.avif",
+            "../images/product/women/occasion Dressses/WOCDE24.avif"
+        ]
+    },
+    {
+        "id": 319,
+        "name": "Tie Shoulder Occasion Midi",
+        "price": 88,
+        "category": "occasion-dresses",
+        "images": [
+            "../images/product/women/occasion Dressses/WOCDE25.avif",
+            "../images/product/women/occasion Dressses/WOCDE26.avif",
+            "../images/product/women/occasion Dressses/WOCDE27.avif",
+            "../images/product/women/occasion Dressses/WOCDE28.avif"
+        ]
+    },
+    {
+        "id": 320,
+        "name": "Bow Detail Cocktail Dress",
+        "price": 124,
+        "category": "occasion-dresses",
+        "images": [
+            "../images/product/women/occasion Dressses/WOCDE29.avif",
+            "../images/product/women/occasion Dressses/WOCDE30.avif",
+            "../images/product/women/occasion Dressses/WOCDE31.avif",
+            "../images/product/women/occasion Dressses/WOCDE32.avif"
+        ]
+    },
+    {
+        "id": 321,
+        "name": "Pleated Chiffon Event Dress",
+        "price": 98,
+        "category": "occasion-dresses",
+        "images": [
+            "../images/product/women/occasion Dressses/WOCDE33.avif",
+            "../images/product/women/occasion Dressses/WOCDE34.avif",
+            "../images/product/women/occasion Dressses/WOCDE35.avif",
+            "../images/product/women/occasion Dressses/WOCDE36.avif"
+        ]
+    },
+    {
+        "id": 322,
+        "name": "Structured Bandeau Midi",
+        "price": 109,
+        "category": "occasion-dresses",
+        "images": [
+            "../images/product/women/occasion Dressses/WOCDE37.avif",
+            "../images/product/women/occasion Dressses/WOCDE38.avif",
+            "../images/product/women/occasion Dressses/WOCDE39.avif",
+            "../images/product/women/occasion Dressses/WOCDE40.avif"
+        ]
+    },
+    {
+        "id": 323,
+        "name": "High Neck Occasion Dress",
+        "price": 101,
+        "category": "occasion-dresses",
+        "images": [
+            "../images/product/women/occasion Dressses/WWIM1.avif",
+            "../images/product/women/occasion Dressses/WWIM2.avif",
+            "../images/product/women/occasion Dressses/WWIM3.avif",
+            "../images/product/women/occasion Dressses/WWIM4.avif"
+        ]
+    },
+    {
+        "id": 324,
+        "name": "Jacquard Evening Dress",
+        "price": 132,
+        "category": "occasion-dresses",
+        "images": [
+            "../images/product/women/occasion Dressses/WWIM41.avif",
+            "../images/product/women/occasion Dressses/WWIM42.avif",
+            "../images/product/women/occasion Dressses/WWIM43.avif",
+            "../images/product/women/occasion Dressses/WWIM44.avif"
+        ]
+    },
+    {
+        "id": 325,
+        "name": "Slit Front Occasion Maxi",
+        "price": 116,
+        "category": "occasion-dresses",
+        "images": [
+            "../images/product/women/occasion Dressses/WOCDE5.avif",
+            "../images/product/women/occasion Dressses/WOCDE6.avif",
+            "../images/product/women/occasion Dressses/WOCDE7.avif",
+            "../images/product/women/occasion Dressses/WOCDE8.avif"
+        ]
+    },
+    {
+        "id": 326,
+        "name": "Corsage Detail Event Dress",
+        "price": 136,
+        "category": "occasion-dresses",
+        "images": [
+            "../images/product/women/occasion Dressses/WOCDE9.avif",
+            "../images/product/women/occasion Dressses/WOCDE10.avif",
+            "../images/product/women/occasion Dressses/WOCDE11.avif",
+            "../images/product/women/occasion Dressses/WOCDE12.avif"
+        ]
+    },
+    {
+        "id": 327,
+        "name": "Cape Sleeve Occasion Dress",
+        "price": 122,
+        "category": "occasion-dresses",
+        "images": [
+            "../images/product/women/occasion Dressses/WOCDE13.avif",
+            "../images/product/women/occasion Dressses/WOCDE14.avif",
+            "../images/product/women/occasion Dressses/WOCDE15.avif",
+            "../images/product/women/occasion Dressses/WOCDE16.avif"
+        ]
+    },
+    {
+        "id": 328,
+        "name": "Cowl Back Party Dress",
+        "price": 108,
+        "category": "occasion-dresses",
+        "images": [
+            "../images/product/women/occasion Dressses/WOCDE17.avif",
+            "../images/product/women/occasion Dressses/WOCDE18.avif",
+            "../images/product/women/occasion Dressses/WOCDE19.avif",
+            "../images/product/women/occasion Dressses/WOCDE20.avif"
+        ]
+    }
+]

@@ -1,0 +1,293 @@
+[
+    {
+        "id": 97,
+        "name": "Women's Classic Hoodie",
+        "price": 55,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WHIM1.avif",
+            "../images/product/women/Hoddies/WHIM2.avif",
+            "../images/product/women/Hoddies/WHIM3.avif",
+            "../images/product/women/Hoddies/WHIM4.avif"
+        ]
+    },
+    {
+        "id": 98,
+        "name": "Oversized Hoodie",
+        "price": 65,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WHIM5.avif",
+            "../images/product/women/Hoddies/WHIM6.avif",
+            "../images/product/women/Hoddies/WHIM7.avif",
+            "../images/product/women/Hoddies/WHIM8.avif"
+        ]
+    },
+    {
+        "id": 99,
+        "name": "Zip Up Hoodie",
+        "price": 60,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WHIM9.avif",
+            "../images/product/women/Hoddies/WHIM10.avif",
+            "../images/product/women/Hoddies/WHIM11.avif",
+            "../images/product/women/Hoddies/WHIM12.avif"
+        ]
+    },
+    {
+        "id": 100,
+        "name": "Pullover Hoodie",
+        "price": 52,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WHIM3.avif",
+            "../images/product/women/Hoddies/WHIM4.avif",
+            "../images/product/women/Hoddies/WHIM2.avif",
+            "../images/product/women/Hoddies/WHIM1.avif"
+        ]
+    },
+    {
+        "id": 101,
+        "name": "Graphic Hoodie",
+        "price": 58,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WHIM17.avif",
+            "../images/product/women/Hoddies/WHIM18.avif",
+            "../images/product/women/Hoddies/WHIM19.avif",
+            "../images/product/women/Hoddies/WHIM20.avif"
+        ]
+    },
+    {
+        "id": 102,
+        "name": "Cropped Hoodie",
+        "price": 48,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WHIM21.avif",
+            "../images/product/women/Hoddies/WHIM22.avif",
+            "../images/product/women/Hoddies/WHIM23.avif",
+            "../images/product/women/Hoddies/WHIM24.avif"
+        ]
+    },
+    {
+        "id": 103,
+        "name": "Fleece Hoodie",
+        "price": 72,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WHIM25.avif",
+            "../images/product/women/Hoddies/WHIM26.avif",
+            "../images/product/women/Hoddies/WHIM27.avif",
+            "../images/product/women/Hoddies/WHIM28.avif"
+        ]
+    },
+    {
+        "id": 104,
+        "name": "French Terry Hoodie",
+        "price": 68,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WHIM29.avif",
+            "../images/product/women/Hoddies/WHIM30.avif",
+            "../images/product/women/Hoddies/WHIM31.avif",
+            "../images/product/women/Hoddies/WHIM32.avif"
+        ]
+    },
+    {
+        "id": 105,
+        "name": "Athletic Hoodie",
+        "price": 75,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WTIM89.avif",
+            "../images/product/women/Hoddies/WTIM90.avif",
+            "../images/product/women/Hoddies/WTIM91.avif",
+            "../images/product/women/Hoddies/WTIM92.avif"
+        ]
+    },
+    {
+        "id": 106,
+        "name": "Vintage Hoodie",
+        "price": 62,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WTIM93.avif",
+            "../images/product/women/Hoddies/WTIM94.avif",
+            "../images/product/women/Hoddies/WTIM95.avif",
+            "../images/product/women/Hoddies/WTIM96.avif"
+        ]
+    },
+    {
+        "id": 107,
+        "name": "Tie Dye Hoodie",
+        "price": 55,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WTIM94.avif",
+            "../images/product/women/Hoddies/WTIM93.avif",
+            "../images/product/women/Hoddies/WTIM95.avif",
+            "../images/product/women/Hoddies/WTIM96.avif"
+        ]
+    },
+    {
+        "id": 108,
+        "name": "Kangaroo Pocket Hoodie",
+        "price": 59,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WDIM94.avif",
+            "../images/product/women/Hoddies/WDIM93.avif",
+            "../images/product/women/Hoddies/WDIM95.avif",
+            "../images/product/women/Hoddies/WDIM96.avif"
+        ]
+    },
+    {
+        "id": 109,
+        "name": "Lightweight Hoodie",
+        "price": 45,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WTIM69.avif",
+            "../images/product/women/Hoddies/WTIM70.avif",
+            "../images/product/women/Hoddies/WTIM71.avif",
+            "../images/product/women/Hoddies/WTIM72.avif"
+        ]
+    },
+    {
+        "id": 110,
+        "name": "Heavyweight Hoodie",
+        "price": 78,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WTIM73.avif",
+            "../images/product/women/Hoddies/WTIM74.avif",
+            "../images/product/women/Hoddies/WTIM75.avif",
+            "../images/product/women/Hoddies/WTIM76.avif"
+        ]
+    },
+    {
+        "id": 111,
+        "name": "Logo Hoodie",
+        "price": 65,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WTIM77.avif",
+            "../images/product/women/Hoddies/WTIM78.avif",
+            "../images/product/women/Hoddies/WTIM79.avif",
+            "../images/product/women/Hoddies/WTIM80.avif"
+        ]
+    },
+    {
+        "id": 112,
+        "name": "Striped Hoodie",
+        "price": 58,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WHIM1.avif",
+            "../images/product/women/Hoddies/WHIM2.avif",
+            "../images/product/women/Hoddies/WHIM3.avif",
+            "../images/product/women/Hoddies/WHIM4.avif"
+        ]
+    },
+    {
+        "id": 113,
+        "name": "Color Block Hoodie",
+        "price": 62,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WHIM5.avif",
+            "../images/product/women/Hoddies/WHIM6.avif",
+            "../images/product/women/Hoddies/WHIM7.avif",
+            "../images/product/women/Hoddies/WHIM8.avif"
+        ]
+    },
+    {
+        "id": 114,
+        "name": "Distressed Hoodie",
+        "price": 68,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WHIM23.avif",
+            "../images/product/women/Hoddies/WHIM24.avif",
+            "../images/product/women/Hoddies/WHIM21.avif",
+            "../images/product/women/Hoddies/WHIM22.avif"
+        ]
+    },
+    {
+        "id": 115,
+        "name": "Sherpa Hoodie",
+        "price": 85,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WHIM13.avif",
+            "../images/product/women/Hoddies/WHIM14.avif",
+            "../images/product/women/Hoddies/WHIM15.avif",
+            "../images/product/women/Hoddies/WHIM16.avif"
+        ]
+    },
+    {
+        "id": 116,
+        "name": "Windbreaker Hoodie",
+        "price": 72,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WHIM17.avif",
+            "../images/product/women/Hoddies/WHIM18.avif",
+            "../images/product/women/Hoddies/WHIM19.avif",
+            "../images/product/women/Hoddies/WHIM20.avif"
+        ]
+    },
+    {
+        "id": 117,
+        "name": "Sleeveless Hoodie",
+        "price": 42,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WHIM29.avif",
+            "../images/product/women/Hoddies/WHIM30.avif",
+            "../images/product/women/Hoddies/WHIM31.avif",
+            "../images/product/women/Hoddies/WHIM32.avif"
+        ]
+    },
+    {
+        "id": 118,
+        "name": "Hooded Sweatshirt",
+        "price": 52,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WHIM25.avif",
+            "../images/product/women/Hoddies/WHIM28.avif",
+            "../images/product/women/Hoddies/WHIM26.avif",
+            "../images/product/women/Hoddies/WHIM27.avif"
+        ]
+    },
+    {
+        "id": 119,
+        "name": "Embroidered Hoodie",
+        "price": 78,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WTIM89.avif",
+            "../images/product/women/Hoddies/WTIM90.avif",
+            "../images/product/women/Hoddies/WTIM91.avif",
+            "../images/product/women/Hoddies/WTIM92.avif"
+        ]
+    },
+    {
+        "id": 120,
+        "name": "Eco Hoodie",
+        "price": 70,
+        "category": "hoodies",
+        "images": [
+            "../images/product/women/Hoddies/WTIM75.avif",
+            "../images/product/women/Hoddies/WTIM76.avif",
+            "../images/product/women/Hoddies/WTIM74.avif",
+            "../images/product/women/Hoddies/WTIM73.avif"
+        ]
+    }
+]
+
+
+

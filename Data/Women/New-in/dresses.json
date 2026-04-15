@@ -1,0 +1,290 @@
+[
+    {
+        "id": 1,
+        "name": "Women's Summer Dress",
+        "price": 45,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM3.avif",
+            "../images/product/women/dresses/WDIM2.avif",
+            "../images/product/women/dresses/WDIM4.avif",
+            "../images/product/women/dresses/WDIM1.avif"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Floral Print Maxi Dress",
+        "price": 65,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM5.avif",
+            "../images/product/women/dresses/WDIM6.avif",
+            "../images/product/women/dresses/WDIM7.avif",
+            "../images/product/women/dresses/WDIM8.avif"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Cocktail Party Dress",
+        "price": 85,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM10.avif",
+            "../images/product/women/dresses/WDIM9.avif",
+            "../images/product/women/dresses/WDIM11.avif",
+            "../images/product/women/dresses/WDIM12.avif"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Casual Sundress",
+        "price": 35,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM13.avif",
+            "../images/product/women/dresses/WDIM14.avif",
+            "../images/product/women/dresses/WDIM15.avif",
+            "../images/product/women/dresses/WDIM16.avif"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Business Formal Dress",
+        "price": 95,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM17.avif",
+            "../images/product/women/dresses/WDIM18.avif",
+            "../images/product/women/dresses/WDIM19.avif",
+            "../images/product/women/dresses/WDIM20.avif"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Boho Chic Dress",
+        "price": 55,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM21.avif",
+            "../images/product/women/dresses/WDIM22.avif",
+            "../images/product/women/dresses/WDIM23.avif",
+            "../images/product/women/dresses/WDIM24.avif"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Evening Gown",
+        "price": 120,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM25.avif",
+            "../images/product/women/dresses/WDIM26.avif",
+            "../images/product/women/dresses/WDIM27.avif",
+            "../images/product/women/dresses/WDIM28.avif"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Beach Cover Up Dress",
+        "price": 40,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM29.avif",
+            "../images/product/women/dresses/WDIM30.avif",
+            "../images/product/women/dresses/WDIM31.avif",
+            "../images/product/women/dresses/WDIM32.avif"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Vintage Style Dress",
+        "price": 70,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM33.avif",
+            "../images/product/women/dresses/WDIM34.avif",
+            "../images/product/women/dresses/WDIM35.avif",
+            "../images/product/women/dresses/WDIM36.avif"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Wrap Dress",
+        "price": 60,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM37.avif",
+            "../images/product/women/dresses/WDIM38.avif",
+            "../images/product/women/dresses/WDIM39.avif",
+            "../images/product/women/dresses/WDIM40.avif"
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Midi Dress",
+        "price": 50,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM41.avif",
+            "../images/product/women/dresses/WDIM42.avif",
+            "../images/product/women/dresses/WDIM43.avif",
+            "../images/product/women/dresses/WDIM44.avif"
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Shift Dress",
+        "price": 45,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM45.avif",
+            "../images/product/women/dresses/WDIM46.avif",
+            "../images/product/women/dresses/WDIM47.avif",
+            "../images/product/women/dresses/WDIM48.avif"
+        ]
+    },
+    {
+        "id": 13,
+        "name": "A-Line Dress",
+        "price": 55,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM49.avif",
+            "../images/product/women/dresses/WDIM50.avif",
+            "../images/product/women/dresses/WDIM51.avif",
+            "../images/product/women/dresses/WDIM52.avif"
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Bodycon Dress",
+        "price": 65,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM53.avif",
+            "../images/product/women/dresses/WDIM54.avif",
+            "../images/product/women/dresses/WDIM55.avif",
+            "../images/product/women/dresses/WDIM56.avif"
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Shirt Dress",
+        "price": 70,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM57.avif",
+            "../images/product/women/dresses/WDIM58.avif",
+            "../images/product/women/dresses/WDIM59.avif",
+            "../images/product/women/dresses/WDIM60.avif"
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Pencil Dress",
+        "price": 80,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM61.avif",
+            "../images/product/women/dresses/WDIM62.avif",
+            "../images/product/women/dresses/WDIM63.avif",
+            "../images/product/women/dresses/WDIM64.avif"
+        ]
+    },
+    {
+        "id": 17,
+        "name": "T-Shirt Dress",
+        "price": 35,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM65.avif",
+            "../images/product/women/dresses/WDIM66.avif",
+            "../images/product/women/dresses/WDIM67.avif",
+            "../images/product/women/dresses/WDIM68.avif"
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Off Shoulder Dress",
+        "price": 55,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM69.avif",
+            "../images/product/women/dresses/WDIM70.avif",
+            "../images/product/women/dresses/WDIM71.avif",
+            "../images/product/women/dresses/WDIM72.avif"
+        ]
+    },
+    {
+        "id": 19,
+        "name": "High Low Dress",
+        "price": 60,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM73.avif",
+            "../images/product/women/dresses/WDIM74.avif",
+            "../images/product/women/dresses/WDIM75.avif",
+            "../images/product/women/dresses/WDIM76.avif"
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Peplum Dress",
+        "price": 65,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM77.avif",
+            "../images/product/women/dresses/WDIM78.avif",
+            "../images/product/women/dresses/WDIM79.avif",
+            "../images/product/women/dresses/WDIM80.avif"
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Ruffle Dress",
+        "price": 75,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM81.avif",
+            "../images/product/women/dresses/WDIM82.avif",
+            "../images/product/women/dresses/WDIM83.avif",
+            "../images/product/women/dresses/WDIM84.avif"
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Lace Dress",
+        "price": 90,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM85.avif",
+            "../images/product/women/dresses/WDIM86.avif",
+            "../images/product/women/dresses/WDIM87.avif",
+            "../images/product/women/dresses/WDIM88.avif"
+        ]
+    },
+    {
+        "id": 23,
+        "name": "Denim Dress",
+        "price": 55,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM89.avif",
+            "../images/product/women/dresses/WDIM90.avif",
+            "../images/product/women/dresses/WDIM91.avif",
+            "../images/product/women/dresses/WDIM92.avif"
+        ]
+    },
+    {
+        "id": 24,
+        "name": "Silk Dress",
+        "price": 110,
+        "category": "dresses",
+        "images": [
+            "../images/product/women/dresses/WDIM93.avif",
+            "../images/product/women/dresses/WDIM94.avif",
+            "../images/product/women/dresses/WDIM95.avif",
+            "../images/product/women/dresses/WDIM96.avif"
+        ]
+    }
+]

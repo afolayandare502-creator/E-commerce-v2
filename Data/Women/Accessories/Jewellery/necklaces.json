@@ -1,0 +1,82 @@
+[
+    {
+        "id": 4265,
+        "name": "Chain Necklace Pro",
+        "price": 65,
+        "category": "accessories-necklaces",
+        "images": [
+            "../images/product/women/necklaces/Wbraclet1.avif",
+            "../images/product/women/necklaces/Wbraclet2.avif"
+        ]
+    },
+    {
+        "id": 4266,
+        "name": "Pendant Necklace Pro",
+        "price": 75,
+        "category": "accessories-necklaces",
+        "images": [
+            "../images/product/women/necklaces/Wbraclet3.avif",
+            "../images/product/women/necklaces/Wbraclet4.avif"
+        ]
+    },
+    {
+        "id": 4267,
+        "name": "Statement Necklace Pro",
+        "price": 85,
+        "category": "accessories-necklaces",
+        "images": [
+            "../images/product/women/necklaces/Wbraclet5.avif",
+            "../images/product/women/necklaces/Wbraclet6.avif"
+        ]
+    },
+    {
+        "id": 4268,
+        "name": "Choker Necklace Pro",
+        "price": 55,
+        "category": "accessories-necklaces",
+        "images": [
+            "../images/product/women/necklaces/Wbraclet7.avif",
+            "../images/product/women/necklaces/Wbraclet8.avif"
+        ]
+    },
+    {
+        "id": 4269,
+        "name": "Lariat Necklace Pro",
+        "price": 95,
+        "category": "accessories-necklaces",
+        "images": [
+            "../images/product/women/necklaces/Wbraclet9.avif",
+            "../images/product/women/necklaces/Wbraclet10.avif"
+        ]
+    },
+    {
+        "id": 4270,
+        "name": "Designer Necklace Pro",
+        "price": 125,
+        "category": "accessories-necklaces",
+        "images": [
+            "../images/product/women/necklaces/Wbraclet11.avif",
+            "../images/product/women/necklaces/Wbraclet12.avif"
+        ]
+    },
+    {
+        "id": 4271,
+        "name": "Luxury Necklace Pro",
+        "price": 185,
+        "category": "accessories-necklaces",
+        "images": [
+            "../images/product/women/necklaces/Wbraclet13.avif",
+            "../images/product/women/necklaces/Wbraclet14.avif"
+        ]
+    },
+    {
+        "id": 4272,
+        "name": "Diamond Necklace Pro",
+        "price": 245,
+        "category": "accessories-necklaces",
+        "images": [
+            "../images/product/women/necklaces/Wbraclet15.avif",
+            "../images/product/women/necklaces/Wbraclet16.avif"
+        ]
+    }
+]
