@@ -5,10 +5,10 @@
         "price": 45,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM3.avif",
-            "../images/product/women/dresses/WDIM2.avif",
-            "../images/product/women/dresses/WDIM4.avif",
-            "../images/product/women/dresses/WDIM1.avif"
+            "../images/product/women/Dresses/WDIM3.avif",
+            "../images/product/women/Dresses/WDIM2.avif",
+            "../images/product/women/Dresses/WDIM4.avif",
+            "../images/product/women/Dresses/WDIM1.avif"
         ]
     },
     {
@@ -17,10 +17,10 @@
         "price": 65,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM5.avif",
-            "../images/product/women/dresses/WDIM6.avif",
-            "../images/product/women/dresses/WDIM7.avif",
-            "../images/product/women/dresses/WDIM8.avif"
+            "../images/product/women/Dresses/WDIM5.avif",
+            "../images/product/women/Dresses/WDIM6.avif",
+            "../images/product/women/Dresses/WDIM7.avif",
+            "../images/product/women/Dresses/WDIM8.avif"
         ]
     },
     {
@@ -29,10 +29,10 @@
         "price": 85,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM10.avif",
-            "../images/product/women/dresses/WDIM9.avif",
-            "../images/product/women/dresses/WDIM11.avif",
-            "../images/product/women/dresses/WDIM12.avif"
+            "../images/product/women/Dresses/WDIM10.avif",
+            "../images/product/women/Dresses/WDIM9.avif",
+            "../images/product/women/Dresses/WDIM11.avif",
+            "../images/product/women/Dresses/WDIM12.avif"
         ]
     },
     {
@@ -41,10 +41,10 @@
         "price": 35,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM13.avif",
-            "../images/product/women/dresses/WDIM14.avif",
-            "../images/product/women/dresses/WDIM15.avif",
-            "../images/product/women/dresses/WDIM16.avif"
+            "../images/product/women/Dresses/WDIM13.avif",
+            "../images/product/women/Dresses/WDIM14.avif",
+            "../images/product/women/Dresses/WDIM15.avif",
+            "../images/product/women/Dresses/WDIM16.avif"
         ]
     },
     {
@@ -53,10 +53,10 @@
         "price": 95,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM17.avif",
-            "../images/product/women/dresses/WDIM18.avif",
-            "../images/product/women/dresses/WDIM19.avif",
-            "../images/product/women/dresses/WDIM20.avif"
+            "../images/product/women/Dresses/WDIM17.avif",
+            "../images/product/women/Dresses/WDIM18.avif",
+            "../images/product/women/Dresses/WDIM19.avif",
+            "../images/product/women/Dresses/WDIM20.avif"
         ]
     },
     {
@@ -65,10 +65,10 @@
         "price": 55,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM21.avif",
-            "../images/product/women/dresses/WDIM22.avif",
-            "../images/product/women/dresses/WDIM23.avif",
-            "../images/product/women/dresses/WDIM24.avif"
+            "../images/product/women/Dresses/WDIM21.avif",
+            "../images/product/women/Dresses/WDIM22.avif",
+            "../images/product/women/Dresses/WDIM23.avif",
+            "../images/product/women/Dresses/WDIM24.avif"
         ]
     },
     {
@@ -77,10 +77,10 @@
         "price": 120,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM25.avif",
-            "../images/product/women/dresses/WDIM26.avif",
-            "../images/product/women/dresses/WDIM27.avif",
-            "../images/product/women/dresses/WDIM28.avif"
+            "../images/product/women/Dresses/WDIM25.avif",
+            "../images/product/women/Dresses/WDIM26.avif",
+            "../images/product/women/Dresses/WDIM27.avif",
+            "../images/product/women/Dresses/WDIM28.avif"
         ]
     },
     {
@@ -89,10 +89,10 @@
         "price": 40,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM29.avif",
-            "../images/product/women/dresses/WDIM30.avif",
-            "../images/product/women/dresses/WDIM31.avif",
-            "../images/product/women/dresses/WDIM32.avif"
+            "../images/product/women/Dresses/WDIM29.avif",
+            "../images/product/women/Dresses/WDIM30.avif",
+            "../images/product/women/Dresses/WDIM31.avif",
+            "../images/product/women/Dresses/WDIM32.avif"
         ]
     },
     {
@@ -101,10 +101,10 @@
         "price": 70,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM33.avif",
-            "../images/product/women/dresses/WDIM34.avif",
-            "../images/product/women/dresses/WDIM35.avif",
-            "../images/product/women/dresses/WDIM36.avif"
+            "../images/product/women/Dresses/WDIM33.avif",
+            "../images/product/women/Dresses/WDIM34.avif",
+            "../images/product/women/Dresses/WDIM35.avif",
+            "../images/product/women/Dresses/WDIM36.avif"
         ]
     },
     {
@@ -113,10 +113,10 @@
         "price": 60,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM37.avif",
-            "../images/product/women/dresses/WDIM38.avif",
-            "../images/product/women/dresses/WDIM39.avif",
-            "../images/product/women/dresses/WDIM40.avif"
+            "../images/product/women/Dresses/WDIM37.avif",
+            "../images/product/women/Dresses/WDIM38.avif",
+            "../images/product/women/Dresses/WDIM39.avif",
+            "../images/product/women/Dresses/WDIM40.avif"
         ]
     },
     {
@@ -125,10 +125,10 @@
         "price": 50,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM41.avif",
-            "../images/product/women/dresses/WDIM42.avif",
-            "../images/product/women/dresses/WDIM43.avif",
-            "../images/product/women/dresses/WDIM44.avif"
+            "../images/product/women/Dresses/WDIM41.avif",
+            "../images/product/women/Dresses/WDIM42.avif",
+            "../images/product/women/Dresses/WDIM43.avif",
+            "../images/product/women/Dresses/WDIM44.avif"
         ]
     },
     {
@@ -137,10 +137,10 @@
         "price": 45,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM45.avif",
-            "../images/product/women/dresses/WDIM46.avif",
-            "../images/product/women/dresses/WDIM47.avif",
-            "../images/product/women/dresses/WDIM48.avif"
+            "../images/product/women/Dresses/WDIM45.avif",
+            "../images/product/women/Dresses/WDIM46.avif",
+            "../images/product/women/Dresses/WDIM47.avif",
+            "../images/product/women/Dresses/WDIM48.avif"
         ]
     },
     {
@@ -149,10 +149,10 @@
         "price": 55,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM49.avif",
-            "../images/product/women/dresses/WDIM50.avif",
-            "../images/product/women/dresses/WDIM51.avif",
-            "../images/product/women/dresses/WDIM52.avif"
+            "../images/product/women/Dresses/WDIM49.avif",
+            "../images/product/women/Dresses/WDIM50.avif",
+            "../images/product/women/Dresses/WDIM51.avif",
+            "../images/product/women/Dresses/WDIM52.avif"
         ]
     },
     {
@@ -161,10 +161,10 @@
         "price": 65,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM53.avif",
-            "../images/product/women/dresses/WDIM54.avif",
-            "../images/product/women/dresses/WDIM55.avif",
-            "../images/product/women/dresses/WDIM56.avif"
+            "../images/product/women/Dresses/WDIM53.avif",
+            "../images/product/women/Dresses/WDIM54.avif",
+            "../images/product/women/Dresses/WDIM55.avif",
+            "../images/product/women/Dresses/WDIM56.avif"
         ]
     },
     {
@@ -173,10 +173,10 @@
         "price": 70,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM57.avif",
-            "../images/product/women/dresses/WDIM58.avif",
-            "../images/product/women/dresses/WDIM59.avif",
-            "../images/product/women/dresses/WDIM60.avif"
+            "../images/product/women/Dresses/WDIM57.avif",
+            "../images/product/women/Dresses/WDIM58.avif",
+            "../images/product/women/Dresses/WDIM59.avif",
+            "../images/product/women/Dresses/WDIM60.avif"
         ]
     },
     {
@@ -185,10 +185,10 @@
         "price": 80,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM61.avif",
-            "../images/product/women/dresses/WDIM62.avif",
-            "../images/product/women/dresses/WDIM63.avif",
-            "../images/product/women/dresses/WDIM64.avif"
+            "../images/product/women/Dresses/WDIM61.avif",
+            "../images/product/women/Dresses/WDIM62.avif",
+            "../images/product/women/Dresses/WDIM63.avif",
+            "../images/product/women/Dresses/WDIM64.avif"
         ]
     },
     {
@@ -197,10 +197,10 @@
         "price": 35,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM65.avif",
-            "../images/product/women/dresses/WDIM66.avif",
-            "../images/product/women/dresses/WDIM67.avif",
-            "../images/product/women/dresses/WDIM68.avif"
+            "../images/product/women/Dresses/WDIM65.avif",
+            "../images/product/women/Dresses/WDIM66.avif",
+            "../images/product/women/Dresses/WDIM67.avif",
+            "../images/product/women/Dresses/WDIM68.avif"
         ]
     },
     {
@@ -209,10 +209,10 @@
         "price": 55,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM69.avif",
-            "../images/product/women/dresses/WDIM70.avif",
-            "../images/product/women/dresses/WDIM71.avif",
-            "../images/product/women/dresses/WDIM72.avif"
+            "../images/product/women/Dresses/WDIM69.avif",
+            "../images/product/women/Dresses/WDIM70.avif",
+            "../images/product/women/Dresses/WDIM71.avif",
+            "../images/product/women/Dresses/WDIM72.avif"
         ]
     },
     {
@@ -221,10 +221,10 @@
         "price": 60,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM73.avif",
-            "../images/product/women/dresses/WDIM74.avif",
-            "../images/product/women/dresses/WDIM75.avif",
-            "../images/product/women/dresses/WDIM76.avif"
+            "../images/product/women/Dresses/WDIM73.avif",
+            "../images/product/women/Dresses/WDIM74.avif",
+            "../images/product/women/Dresses/WDIM75.avif",
+            "../images/product/women/Dresses/WDIM76.avif"
         ]
     },
     {
@@ -233,10 +233,10 @@
         "price": 65,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM77.avif",
-            "../images/product/women/dresses/WDIM78.avif",
-            "../images/product/women/dresses/WDIM79.avif",
-            "../images/product/women/dresses/WDIM80.avif"
+            "../images/product/women/Dresses/WDIM77.avif",
+            "../images/product/women/Dresses/WDIM78.avif",
+            "../images/product/women/Dresses/WDIM79.avif",
+            "../images/product/women/Dresses/WDIM80.avif"
         ]
     },
     {
@@ -245,10 +245,10 @@
         "price": 75,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM81.avif",
-            "../images/product/women/dresses/WDIM82.avif",
-            "../images/product/women/dresses/WDIM83.avif",
-            "../images/product/women/dresses/WDIM84.avif"
+            "../images/product/women/Dresses/WDIM81.avif",
+            "../images/product/women/Dresses/WDIM82.avif",
+            "../images/product/women/Dresses/WDIM83.avif",
+            "../images/product/women/Dresses/WDIM84.avif"
         ]
     },
     {
@@ -257,10 +257,10 @@
         "price": 90,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM85.avif",
-            "../images/product/women/dresses/WDIM86.avif",
-            "../images/product/women/dresses/WDIM87.avif",
-            "../images/product/women/dresses/WDIM88.avif"
+            "../images/product/women/Dresses/WDIM85.avif",
+            "../images/product/women/Dresses/WDIM86.avif",
+            "../images/product/women/Dresses/WDIM87.avif",
+            "../images/product/women/Dresses/WDIM88.avif"
         ]
     },
     {
@@ -269,10 +269,10 @@
         "price": 55,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM89.avif",
-            "../images/product/women/dresses/WDIM90.avif",
-            "../images/product/women/dresses/WDIM91.avif",
-            "../images/product/women/dresses/WDIM92.avif"
+            "../images/product/women/Dresses/WDIM89.avif",
+            "../images/product/women/Dresses/WDIM90.avif",
+            "../images/product/women/Dresses/WDIM91.avif",
+            "../images/product/women/Dresses/WDIM92.avif"
         ]
     },
     {
@@ -281,10 +281,10 @@
         "price": 110,
         "category": "dresses",
         "images": [
-            "../images/product/women/dresses/WDIM93.avif",
-            "../images/product/women/dresses/WDIM94.avif",
-            "../images/product/women/dresses/WDIM95.avif",
-            "../images/product/women/dresses/WDIM96.avif"
+            "../images/product/women/Dresses/WDIM93.avif",
+            "../images/product/women/Dresses/WDIM94.avif",
+            "../images/product/women/Dresses/WDIM95.avif",
+            "../images/product/women/Dresses/WDIM96.avif"
         ]
     }
 ]
