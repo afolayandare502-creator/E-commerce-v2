@@ -1261,6 +1261,10 @@ body.mobile-nav-open {
     text-decoration: none;
 }
 
+.hero-card.left-card .hero-overlay {
+    display: none;
+}
+
 .hero-card img {
     width: 100%;
     height: 100%;
@@ -2426,7 +2430,7 @@ body.mobile-nav-open {
         letter-spacing: 0.3px;
     }
 
-    /* Hero section mobile - hide left card, show only right card */
+    /* Hero section mobile - hide right card, show only left card */
     .hero-split {
         padding: 8px 0 0;
     }
@@ -2438,15 +2442,16 @@ body.mobile-nav-open {
         max-width: none;
     }
 
-    .hero-card.left-card {
+    .hero-card.right-card {
         display: none;
     }
 
-    .hero-card.right-card {
+    .hero-card.left-card {
+        display: block;
         min-height: 0;
     }
 
-    .hero-card.right-card::after {
+    .hero-card.left-card::after {
         content: '';
         position: absolute;
         inset: 0;
@@ -2458,6 +2463,10 @@ body.mobile-nav-open {
         height: auto;
         aspect-ratio: 0.72;
         object-position: center top;
+    }
+
+    .hero-card.left-card .hero-overlay {
+        display: flex;
     }
 
     .hero-overlay {
