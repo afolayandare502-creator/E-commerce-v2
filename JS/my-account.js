@@ -379,51 +379,71 @@ document.addEventListener('DOMContentLoaded', () => {
         if (layout) layout.classList.remove('view-active');
     }
 
-    const orders = typeof getCurrentUserOrders === 'function'
-        ? getCurrentUserOrders()
-        : [];
-
+    // Fetch orders from the backend API
     const ordersList = document.getElementById('account-orders-list');
     const emptyState = document.getElementById('account-orders-empty');
+    const API_URL = 'https://e-commerce-backend-4rnw.onrender.com/api';
 
-    if (ordersList && emptyState) {
-        if (!orders.length) {
-            emptyState.hidden = false;
-            ordersList.hidden = true;
-        } else {
-            emptyState.hidden = true;
-            ordersList.hidden = false;
-            ordersList.innerHTML = orders.map((order) => {
-                const quantity = Number(order.quantity) || 1;
-                const price = `$${Number(order.price || 0).toFixed(2)}`;
-                const placedAt = order.placedAt
-                    ? new Date(order.placedAt).toLocaleDateString('en-US', {
-                        month: 'short',
-                        day: 'numeric',
-                        year: 'numeric'
-                    })
-                    : 'Recently placed';
+    async function loadUserOrders() {
+        if (!ordersList || !emptyState) return;
 
-                return `
-                    <article class="account-order-card">
-                        <div class="account-order-top">
-                            <div>
-                                <h3>${order.name || 'Order item'}</h3>
-                                <p>Placed on ${placedAt}</p>
+        try {
+            const response = await fetch(`${API_URL}/orders?email=${encodeURIComponent(currentUser)}`);
+            if (!response.ok) throw new Error('Failed to fetch orders');
+
+            const orders = await response.json();
+
+            if (!orders.length) {
+                emptyState.hidden = false;
+                ordersList.hidden = true;
+            } else {
+                emptyState.hidden = true;
+                ordersList.hidden = false;
+
+                ordersList.innerHTML = orders.map((order) => {
+                    const item = order.items && order.items[0] ? order.items[0] : {};
+                    const quantity = Number(item.quantity) || 1;
+                    const price = `$${Number(item.price || order.totalAmount || 0).toFixed(2)}`;
+                    const placedAt = order.placedAt
+                        ? new Date(order.placedAt).toLocaleDateString('en-US', {
+                            month: 'short',
+                            day: 'numeric',
+                            year: 'numeric'
+                        })
+                        : 'Recently placed';
+                    const currentStatus = order.status || 'Order Placed';
+
+                    return `
+                        <article class="account-order-card">
+                            <div class="account-order-top">
+                                <div>
+                                    <h3>${item.name || order.customerName || 'Order item'}</h3>
+                                    <p>Placed on ${placedAt}</p>
+                                </div>
+                                <span class="account-order-status" data-status="${currentStatus}">● ${currentStatus}</span>
                             </div>
-                            <span class="account-order-status">Order placed</span>
-                        </div>
-                        <div class="account-order-meta">
-                            <p>Price: ${price}</p>
-                            <p>Quantity: ${quantity}</p>
-                            <p>Size: ${order.size || 'N/A'}</p>
-                            <p>Payment: ${order.paymentMethod || 'Cash On Delivery'}</p>
-                        </div>
-                    </article>
-                `;
-            }).join('');
+                            <div class="account-order-meta">
+                                <p>Price: ${price}</p>
+                                <p>Quantity: ${quantity}</p>
+                                <p>Size: ${item.size || 'N/A'}</p>
+                                <p>Payment: ${order.paymentMethod || 'Cash On Delivery'}</p>
+                            </div>
+                        </article>
+                    `;
+                }).join('');
+            }
+        } catch (error) {
+            console.error('Error loading orders:', error);
+            if (emptyState) {
+                emptyState.hidden = false;
+                emptyState.querySelector('h2').textContent = 'COULD NOT LOAD ORDERS';
+                emptyState.querySelector('p').textContent = 'Please check your connection and try again.';
+            }
+            if (ordersList) ordersList.hidden = true;
         }
     }
+
+    loadUserOrders();
 
     const signOutButton = document.getElementById('account-signout-button');
     if (signOutButton) {

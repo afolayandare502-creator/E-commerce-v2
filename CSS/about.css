@@ -10,7 +10,7 @@
 .contact-banner {
     margin: 0 8px;
     min-height: 270px;
-    background-image: url("../images/banner.png");
+    background-image: url("../images/Mega3.avif");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -39,6 +39,89 @@
 }
 
 
+/* CONTACT US SECTION */
+.contact-us-section {
+    width: 100%;
+    padding: 60px 0;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.contact-title span {
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
+
+/* MAIN FLEX CONTAINER */
+.contact-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* LEFT IMAGE */
+.contact-img img {
+    width: 600px;
+    height: 430px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* RIGHT SIDE TEXT */
+.contact-details {
+    flex: 1;
+}
+
+.contact-details h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contact-details p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.contact-details h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #111;
+}
+
+.store-info {
+    margin-bottom: 40px;
+}
+
+
+/* BUTTON STYLE */
+.contact-btn {
+    border: 2px solid #222;
+    background: transparent;
+    color: #000;
+    padding: 10px 22px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: #000;
+    color: #fff;
+}
 /* The about second section top image start */
 .who-we-are {
     width: 100%;
@@ -95,92 +178,137 @@
 
 
 
-/* The first home banner after the the home page header*/
-#feature{
-    display: flex;
-    align-items: center;
-    justify-content: center;   /* center instead of space-between */
-    flex-wrap: wrap;           /* allow wrapping */
-    gap: 25px;                 /* control spacing properly */
-    padding: 40px 80px;        /* control top/bottom spacing */
-}
+ /* ============================
+   ABOUT PAGE — RESPONSIVE FIXES
+   ============================ */
 
+@media (max-width: 768px) {
 
-#feature .fe-box{
-    width: 150px;
-    text-align: center;
-    padding: 25px 15px;
-    box-shadow: 20px 20px 34px rgb(0, 0, 0, 0.03);
-    border: 1px solid #cce7d0;
-    border-radius: 4px;
-    margin: 15px 0;
-}
-
-#feature .fe-box:hover{
-    box-shadow: 10px 10px 54px rgb(70, 62, 221, 0.1);
-}
-#feature .fe-box img{
-    width: 100%;
-    margin-bottom: 10px;
-}
-#feature .fe-box h6{
-    display: inline-block;
-    padding: 9px 8px 6px 8px;
-    line-height: 1;
-    border-radius: 4px;
-    color: #088178;
-    background-color: #fddde4;
-}
-
-#feature .fe-box:nth-child(2) h6{
-    background-color: #cdebbc;
-}
-
-#feature .fe-box:nth-child(3) h6{
-    background-color: #d1e8f2;
-}
-
-#feature .fe-box:nth-child(4) h6{
-    background-color: #cdd4f8;
-}
-
-#feature .fe-box:nth-child(5) h6{
-    background-color: #f6dbf6;
-}
-
-#feature .fe-box:nth-child(6) h6{
-    background-color: #fff2ef;
-}
-
-
-@media (max-width: 980px) {
-    .story-row {
-        grid-template-columns: 1fr;
-        gap: 28px;
-        margin-bottom: 64px;
-    }
-}
-
-@media (max-width: 640px) {
-    .contact-banner {
-        margin: 0;
+    /* --- Contact Us section --- */
+    .contact-us-section {
+        padding: 40px 0;
     }
 
-    .contact-banner,
-    .contact-banner-overlay {
-        min-height: 220px;
+    .contact-title {
+        font-size: 22px;
+        margin-bottom: 28px;
     }
 
-    .contact-story {
-        padding-top: 40px;
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        width: 92%;
     }
 
-    .story-copy p {
+    .contact-img {
+        width: 100%;
+    }
+
+    .contact-img img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .contact-details {
+        width: 100%;
+        text-align: left;
+    }
+
+    .contact-details h3 {
         font-size: 17px;
     }
 
-    #feature .fe-box {
+    .contact-details h4 {
+        font-size: 13px;
+    }
+
+    .contact-details p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .store-info {
+        margin-bottom: 28px;
+    }
+
+    .contact-btn {
+        padding: 10px 20px;
+        font-size: 14px;
         width: 100%;
-        min-height: auto;
+        text-align: center;
+    }
+
+    /* --- Who We Are section --- */
+    .who-we-are {
+        padding: 40px 0;
+    }
+
+    .wwa-container {
+        flex-direction: column;   /* ← KEY FIX: stack vertically */
+        align-items: center;
+        width: 92%;
+        padding: 0;
+        gap: 24px;
+    }
+
+    .wwa-image {
+        width: 100%;
+    }
+
+    .wwa-image img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .wwa-text {
+        width: 100%;
+        text-align: left;
+    }
+
+    .wwa-text h2 {
+        font-size: 26px;
+        margin-bottom: 14px;
+    }
+
+    .wwa-text p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+
+    .wwa-text .muted {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Banner */
+    .contact-banner,
+    .contact-banner-overlay {
+        min-height: 200px;
+        margin: 0;
+    }
+
+    .contact-banner-overlay h2 {
+        font-size: 36px;
+    }
+
+    .contact-banner-overlay p {
+        font-size: 14px;
+    }
+
+    /* Who We Are */
+    .wwa-text h2 {
+        font-size: 22px;
+    }
+
+    .wwa-image img {
+        height: 200px;
     }
 }

@@ -90,7 +90,7 @@ function initializeDeliveryForm() {
     const feedback = document.getElementById('delivery-feedback');
     if (!form || !feedback) return;
 
-    form.addEventListener('submit', event => {
+    form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
         if (typeof getCurrentUser === 'function' && !getCurrentUser()) {
@@ -108,21 +108,61 @@ function initializeDeliveryForm() {
 
         const deliveryDetails = Object.fromEntries(new FormData(form).entries());
         const paymentMethod = getSelectedPaymentMethod();
+        const customerEmail = getCurrentUser();
+        const profile = typeof getCurrentUserProfile === 'function' ? getCurrentUserProfile() : {};
+        const customerName = profile ? `${profile.firstName || ''} ${profile.lastName || ''}`.trim() : '';
 
-        const existingOrders = typeof getCurrentUserOrders === 'function' ? getCurrentUserOrders() : [];
-        const newOrders = buildOrdersFromCart(cartItems, deliveryDetails, paymentMethod);
-
-        localStorage.setItem('deliveryDetails', JSON.stringify(deliveryDetails));
-        saveCurrentUserOrders([...newOrders, ...existingOrders]);
-        registerGlobalOrders(newOrders); // Sync to global list for Admin
-        clearCurrentUserCart();
+        const API_URL = 'https://e-commerce-backend-4rnw.onrender.com/api';
 
         feedback.hidden = false;
-        feedback.textContent = 'Order placed successfully.';
+        feedback.textContent = 'Placing your order...';
 
-        setTimeout(() => {
-            window.location.href = 'my-orders.html';
-        }, 250);
+        try {
+            // Create one order document per cart item
+            for (let i = 0; i < cartItems.length; i++) {
+                const item = cartItems[i];
+                const orderData = {
+                    orderId: `ORD-${Date.now()}-${i + 1}`,
+                    customerEmail,
+                    customerName: customerName || customerEmail.split('@')[0],
+                    items: [{
+                        productId: item.id || '',
+                        name: item.name || 'Product',
+                        image: item.image || '',
+                        price: Number(item.price) || 0,
+                        quantity: Number(item.quantity) || 1,
+                        size: item.size || 'N/A',
+                        category: item.category || 'clothing',
+                        gender: item.gender || 'women',
+                    }],
+                    totalAmount: (Number(item.price) || 0) * (Number(item.quantity) || 1),
+                    paymentMethod,
+                    deliveryDetails,
+                    status: 'Order Placed',
+                };
+
+                const response = await fetch(`${API_URL}/orders`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(orderData),
+                });
+
+                if (!response.ok) {
+                    const err = await response.json();
+                    throw new Error(err.message || 'Failed to place order');
+                }
+            }
+
+            clearCurrentUserCart();
+            feedback.textContent = 'Order placed successfully!';
+
+            setTimeout(() => {
+                window.location.href = 'my-orders.html';
+            }, 250);
+        } catch (error) {
+            console.error('Order placement error:', error);
+            feedback.textContent = 'Error placing order: ' + error.message;
+        }
     });
 }
 

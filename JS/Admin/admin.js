@@ -192,101 +192,58 @@ function buildNormalizedOrder(order, index, emailFallback = '') {
     };
 }
 
-function getAllOrders() {
+async function fetchAllOrdersFromAPI() {
     try {
-        const globalOrders = getLocalStorageCollection(ADMIN_ALL_ORDERS_KEY);
-        const scopedOrders = [];
+        const response = await fetch(`${API_BASE_URL}/orders`);
+        if (!response.ok) throw new Error('Failed to fetch orders from API');
+        const apiOrders = await response.json();
 
-        Object.keys(localStorage).forEach((key) => {
-            if (!key.endsWith('_orders')) return;
-            const email = normalizeEmail(key.replace(/_orders$/, ''));
-            const orders = safeParse(localStorage.getItem(key), []);
-            if (!Array.isArray(orders)) return;
-
-            orders.forEach((order) => {
-                const customerEmail = normalizeEmail(getCustomerEmail(order) || email);
-                scopedOrders.push({ ...order, customerEmail });
-            });
-        });
-
-        const combined = [...globalOrders, ...scopedOrders];
-        const seen = new Set();
-        const result = [];
-
-        // Filter duplicates and normalize
-        combined.forEach((rawOrder, index) => {
+        return apiOrders.map((rawOrder, index) => {
             try {
-                const order = buildNormalizedOrder(rawOrder, index);
-                if (!seen.has(order._key)) {
-                    seen.add(order._key);
-                    result.push(order);
-                }
+                return buildNormalizedOrder(rawOrder, index);
             } catch (err) {
                 console.warn('Skipping malformed order:', rawOrder, err);
+                return null;
             }
-        });
-
-        return result.sort((a, b) => {
-            const dateA = new Date(a.placedAt);
-            const dateB = new Date(b.placedAt);
-            const timeA = isNaN(dateA.getTime()) ? 0 : dateA.getTime();
-            const timeB = isNaN(dateB.getTime()) ? 0 : dateB.getTime();
+        }).filter(Boolean).sort((a, b) => {
+            const timeA = new Date(a.placedAt).getTime() || 0;
+            const timeB = new Date(b.placedAt).getTime() || 0;
             return timeB - timeA;
         });
     } catch (error) {
-        console.error('Critical error in getAllOrders:', error);
+        console.error('Error fetching orders from API:', error);
         return [];
     }
 }
 
-function syncGlobalOrdersFromState() {
-    const cleanOrders = state.orders.map((order) => {
-        const nextOrder = { ...order };
-        delete nextOrder._index;
-        delete nextOrder._key;
-        delete nextOrder.customerName;
-        delete nextOrder.itemsLabel;
-        delete nextOrder.totalAmount;
-        return nextOrder;
-    });
-
-    saveAllOrders(cleanOrders);
+async function updateOrderStatusViaAPI(order, nextStatus) {
+    try {
+        const orderId = order._id || order.orderId;
+        const response = await fetch(`${API_BASE_URL}/orders/${orderId}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ status: nextStatus }),
+        });
+        if (!response.ok) throw new Error('Failed to update order status');
+        return await response.json();
+    } catch (error) {
+        console.error('Error updating order status:', error);
+        return null;
+    }
 }
 
-function updateCustomerScopedOrder(order, nextStatus) {
-    const customerEmail = normalizeEmail(order.customerEmail);
-    if (!customerEmail) return;
+async function updateOrderStatusByKey(orderKey, nextStatus) {
+    const targetOrder = state.orders.find(o => o._key === orderKey);
+    if (!targetOrder) return;
 
-    const scopedKey = `${customerEmail}_orders`;
-    const customerOrders = safeParse(localStorage.getItem(scopedKey), []);
-    if (!Array.isArray(customerOrders)) return;
+    await updateOrderStatusViaAPI(targetOrder, nextStatus);
 
-    const updatedOrders = customerOrders.map((customerOrder) => {
-        const sameOrder =
-            (order.orderId && customerOrder.orderId === order.orderId) ||
-            (
-                !order.orderId &&
-                customerOrder.name === order.name &&
-                customerOrder.placedAt === order.placedAt &&
-                String(customerOrder.price) === String(order.price)
-            );
-
-        return sameOrder ? { ...customerOrder, status: nextStatus } : customerOrder;
-    });
-
-    localStorage.setItem(scopedKey, JSON.stringify(updatedOrders));
-}
-
-function updateOrderStatusByKey(orderKey, nextStatus) {
     state.orders = state.orders.map((order) => {
         if (order._key !== orderKey) return order;
-        const updatedOrder = { ...order, status: nextStatus };
-        updateCustomerScopedOrder(updatedOrder, nextStatus);
-        return updatedOrder;
+        return { ...order, status: nextStatus };
     });
 
-    syncGlobalOrdersFromState();
-    hydrateAdminData();
+    state.customers = getCustomersFromOrders();
     renderCurrentView();
 }
 
@@ -434,9 +391,9 @@ function getCustomersFromOrders() {
     }
 }
 
-function hydrateAdminData() {
+async function hydrateAdminData() {
     try {
-        state.orders = getAllOrders();
+        state.orders = await fetchAllOrdersFromAPI();
         state.customers = getCustomersFromOrders();
     } catch (error) {
         console.error('Failed to hydrate admin data:', error);
@@ -924,18 +881,21 @@ function populateStatusFilter() {
     ].join('');
 }
 
-function applyBulkStatusUpdate(nextStatus) {
+async function applyBulkStatusUpdate(nextStatus) {
     if (!state.selectedOrders.size) return;
+
+    const updatePromises = state.orders
+        .filter(order => state.selectedOrders.has(order._key))
+        .map(order => updateOrderStatusViaAPI(order, nextStatus));
+
+    await Promise.all(updatePromises);
 
     state.orders = state.orders.map((order) => {
         if (!state.selectedOrders.has(order._key)) return order;
-        const updatedOrder = { ...order, status: nextStatus };
-        updateCustomerScopedOrder(updatedOrder, nextStatus);
-        return updatedOrder;
+        return { ...order, status: nextStatus };
     });
 
-    syncGlobalOrdersFromState();
-    hydrateAdminData();
+    state.customers = getCustomersFromOrders();
     renderCurrentView();
 }
 
@@ -992,28 +952,29 @@ function handleTableInteractions(event) {
     }
 }
 
-function handleTableChanges(event) {
+async function handleTableChanges(event) {
     const statusSelect = event.target.closest('.admin-order-status');
     const customerStatusSelect = event.target.closest('.admin-customer-status');
 
     if (statusSelect) {
-        updateOrderStatusByKey(statusSelect.dataset.orderKey, statusSelect.value);
+        await updateOrderStatusByKey(statusSelect.dataset.orderKey, statusSelect.value);
         return;
     }
 
     if (customerStatusSelect) {
         const customerEmail = customerStatusSelect.dataset.customerEmail;
-        state.orders
-            .filter((order) => order.customerEmail === customerEmail)
-            .forEach((order) => updateCustomerScopedOrder(order, customerStatusSelect.value));
+        const customerOrders = state.orders.filter((order) => order.customerEmail === customerEmail);
+
+        await Promise.all(
+            customerOrders.map(order => updateOrderStatusViaAPI(order, customerStatusSelect.value))
+        );
 
         state.orders = state.orders.map((order) => {
             if (order.customerEmail !== customerEmail) return order;
             return { ...order, status: customerStatusSelect.value };
         });
 
-        syncGlobalOrdersFromState();
-        hydrateAdminData();
+        state.customers = getCustomersFromOrders();
         renderCurrentView();
     }
 }

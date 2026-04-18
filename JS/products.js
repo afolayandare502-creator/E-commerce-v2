@@ -58,8 +58,6 @@ const categoryFileMap = {
     'sandals': '../Data/Women/Shoes/Sandals.json',
     'heels': '../Data/Women/Shoes/Heels.json',
     'adidas': '../Data/Women/Shoes/addidas.json',
-    'birkenstock': '../Data/Women/Shoes/birkenstock.json',
-    'asos-design': '../Data/Women/Shoes/asos-design.json',
     'balenciaga': '../Data/Women/Shoes/balenciaga.json',
     'puma': '../Data/Women/Shoes/Puma.json',
 
@@ -206,8 +204,6 @@ const shoeCategoryKeys = [
     'sandals',
     'heels',
     'adidas',
-    'birkenstock',
-    'asos-design',
     'balenciaga',
     'puma'
 ];
@@ -383,8 +379,6 @@ const categoryLabelMap = {
     'sandals': 'Sandals',
     'heels': 'Heels',
     'adidas': 'Adidas',
-    'birkenstock': 'Birkenstock',
-    'asos-design': 'Asos Design',
     'balenciaga': 'Balenciaga',
     'puma': 'Puma',
     'facebody': 'Face + Body',
@@ -703,6 +697,7 @@ async function fetchProducts() {
         
         if (isMacro) {
             // Map the macro category to the exact arrays of files that belong to it
+            // Map the macro category to the exact arrays of files that belong to it
             const isMen = gender === 'men';
             const macroFileMap = {
                 'newin': isMen ? allMenNewInFiles : allNewInFiles,
@@ -727,40 +722,22 @@ async function fetchProducts() {
                 return htmlAlias && htmlAlias !== fileName ? `${htmlAlias},${fileName}` : fileName;
             }).filter(Boolean).join(',');
             
-             // Map the macro category to the exact arrays of files that belong to it 
-           
-
-        
-            
+            if (validCategories) {
+                apiUrl += `&category=${encodeURIComponent(validCategories)}`;
+            }
         } else {
             // Specific subcategory: Send both the HTML route and the database filename fallback
             const categoryKeys = searchCatLower === dbCategory ? searchCatLower : `${searchCatLower},${dbCategory}`;
             apiUrl += `&category=${encodeURIComponent(categoryKeys)}`;
         }
         
-        // Note: For complex macro-categories (like 'clothing', 'newin') we could 
-        // implement database-side filtering in the future. For now, since the frontend
-        // has a robust mapping system, we fetch the gender data and filter locally 
-        // if it's a specific subcategory.
         let products = [];
         
         try {
             const apiResponse = await fetchWithRetry(apiUrl);
             
             if (apiResponse.ok) {
-                const apiData = await apiResponse.json();
-                
-                // If it is a direct subcategory string available in the DB, 
-                // or if it's a macro-category, we would filter it.
-                // For demonstration, we simply populate the API data directly if 
-                // it returned successfully. A quick robust check:
-                if (isMacro) {
-                     // The user requested a macro category. Serve all this gender's products. 
-                     products = apiData;
-                } else {
-                     // The backend already strictly filtered this to the given category, so just assign it.
-                     products = apiData;
-                }
+                products = await apiResponse.json();
             } else {
                 console.warn('API returned non-OK status. Did you start the backend server?');
             }

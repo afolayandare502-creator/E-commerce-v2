@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratings & Reviews - Casa</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="../CSS/reviews.css">
+</head>
+<body class="reviews-page">
+    <!-- Navbar placeholder (use JS to dynamically inject or just hardcode topnav for now) -->
+    <header id="sticky-header-container">
+        <section id="header" style="background:#000;">
+            <div class="header-left">
+                <a href="javascript:history.back()" class="logo-link" style="color:#fff; text-decoration:none; display:flex; align-items:center; gap:8px;">
+                    <i class="fas fa-arrow-left"></i> Back to Product
+                </a>
+            </div>
+            <div class="nav-center">
+                <a href="../index.html" class="logo-link">
+                    <img src="../images/Rlogo1.jpeg" class="logo-placeholder" alt="Logo" style="width:80px;">
+                </a>
+            </div>
+            <div class="nav-right"></div>
+        </section>
+    </header>
+
+    <main class="reviews-main">
+        <div id="product-overview-container">
+            <!-- Dynamically loaded product overview -->
+        </div>
+
+        <section class="reviews-header-section">
+            <div class="reviews-title-row">
+                <h1>Ratings & Reviews</h1>
+            </div>
+            
+            <div class="reviews-stats-container">
+                <div class="stats-left">
+                    <div class="big-rating" id="average-rating">--</div>
+                    <div class="out-of">out of 5</div>
+                </div>
+                <div class="stats-middle">
+                    <div class="ratings-count" id="total-ratings-count">0 Ratings</div>
+                </div>
+                <div class="stats-right" id="rating-bars">
+                    <!-- Rating bars dynamic -->
+                </div>
+            </div>
+            
+            <div class="reviews-action-row">
+                <div class="action-left">
+                    <span class="click-to-rate">Click to Rate:</span>
+                    <div class="interactive-stars" id="interactive-stars">
+                        <i class="far fa-star" data-val="1"></i>
+                        <i class="far fa-star" data-val="2"></i>
+                        <i class="far fa-star" data-val="3"></i>
+                        <i class="far fa-star" data-val="4"></i>
+                        <i class="far fa-star" data-val="5"></i>
+                    </div>
+                </div>
+                <div class="action-center">
+                    <button class="write-review-btn" id="open-review-modal"><i class="far fa-edit"></i> Write a Review</button>
+                </div>
+            </div>
+            
+            <div class="sort-row">
+                <span class="sort-text">Sort by Most Helpful <i class="fas fa-chevron-down"></i></span>
+            </div>
+        </section>
+
+        <section class="reviews-grid" id="reviews-grid">
+            <!-- Review Cards loaded dynamically here -->
+            <div class="loading-reviews">Loading reviews...</div>
+        </section>
+    </main>
+
+    <!-- Write Review Modal -->
+    <div class="review-modal-overlay" id="review-modal">
+        <div class="review-modal-content">
+            <div class="modal-header">
+                <h2>Write a Review</h2>
+                <button id="close-review-modal" class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <form id="write-review-form">
+                <div class="form-group mb">
+                    <label>Your Rating</label>
+                    <div class="modal-stars" id="modal-interactive-stars">
+                        <i class="far fa-star" data-val="1"></i>
+                        <i class="far fa-star" data-val="2"></i>
+                        <i class="far fa-star" data-val="3"></i>
+                        <i class="far fa-star" data-val="4"></i>
+                        <i class="far fa-star" data-val="5"></i>
+                    </div>
+                    <input type="hidden" id="review-rating-input" required>
+                </div>
+                <div class="form-group mb">
+                    <label for="review-author">Your Name</label>
+                    <input type="text" id="review-author" placeholder="e.g. John Doe" required>
+                </div>
+                <div class="form-group mb">
+                    <label for="review-title">Title</label>
+                    <input type="text" id="review-title" placeholder="Summarize your review" required>
+                </div>
+                <div class="form-group mb">
+                    <label for="review-comment">Review</label>
+                    <textarea id="review-comment" rows="5" placeholder="What did you like or dislike?" required></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="submit-review-btn" id="submit-review-btn">Submit Review</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../JS/wishlist.js"></script>
+    <script src="../JS/user-storage.js"></script>
+    <script src="../JS/products.js"></script>
+    <script src="../JS/reviews.js"></script>
+</body>
+</html>

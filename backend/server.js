@@ -3,6 +3,8 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const connectDB = require('./config/db');
 const productRoutes = require('./routes/productRoutes');
+const orderRoutes = require('./routes/orderRoutes');
+const reviewRoutes = require('./routes/reviewRoutes');
 
 // Load env variables
 dotenv.config();
@@ -26,6 +28,8 @@ app.get('/', (req, res) => {
 
 // API Routes
 app.use('/api/products', productRoutes);
+app.use('/api/orders', orderRoutes);
+app.use('/api/reviews', reviewRoutes);
 
 // Error handling middleware (fallback)
 app.use((err, req, res, next) => {

@@ -2502,15 +2502,16 @@ body.mobile-nav-open {
     }
 
     .vibe-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         margin-bottom: 16px;
     }
 
     .vibe-header h2 {
         font-size: 20px;
         line-height: 1.1;
+        margin: 0;
     }
 
     .view-all-btn {
@@ -2597,13 +2598,18 @@ body.mobile-nav-open {
 
     .pc-header {
         padding: 0 16px 16px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .pc-slider .arrow {
+        display: none;
     }
 
     .pc-header h2 {
-        font-size: 28px;
+        font-size: 20px;
+        margin: 0;
     }
 
     .pc-item {

@@ -488,7 +488,25 @@ function displayProductDetails(product) {
     const rating = product.rating || 4.5;
     const count  = product.reviewCount || 122;
     renderStars(rating);
-    document.getElementById('rating-count').textContent = `(${count})`;
+    const ratingCountEl = document.getElementById('rating-count');
+    ratingCountEl.textContent = `(${count})`;
+
+    // Link stars to the reviews page
+    const starsContainer = document.getElementById('product-stars');
+    if (starsContainer) {
+        starsContainer.style.cursor = 'pointer';
+        starsContainer.onclick = () => {
+            const productId = product._id || product.id || product.customId;
+            const params = new URLSearchParams(window.location.search);
+            const gender = params.get('gender') || 'women';
+            const cat = product._listingCategory || product.category || params.get('category') || '';
+            window.location.href = `reviews.html?id=${productId}&gender=${gender}&category=${cat}`;
+        };
+    }
+    
+    // Also make rating count clickable
+    ratingCountEl.style.cursor = 'pointer';
+    ratingCountEl.onclick = starsContainer.onclick;
 
     const images = getProductImages(product);
 
@@ -638,7 +656,13 @@ function addProductToCart() {
     if (!currentProduct || !selectedSize) return;
 
     let cart = getCurrentUserCart();
-    const existing = cart.find(i => i.id === currentProduct.id && i.size === selectedSize);
+    
+    const cId = currentProduct._id || currentProduct.id || currentProduct.customId;
+    const existing = cart.find(i => {
+        const iId = i._id || i.id || i.customId;
+        return iId == cId && i.size === selectedSize && i.name === currentProduct.name;
+    });
+    
     const params = new URLSearchParams(window.location.search);
     const gender = params.get('gender') || currentProduct._gender || 'women';
 
@@ -646,7 +670,7 @@ function addProductToCart() {
         existing.quantity += selectedQuantity;
     } else {
         cart.push({
-            id:       currentProduct.id,
+            id:       cId,
             name:     currentProduct.name,
             price:    currentProduct.price,
             image:    Array.isArray(currentProduct.images) ? currentProduct.images[0] : (currentProduct.image || ''),
