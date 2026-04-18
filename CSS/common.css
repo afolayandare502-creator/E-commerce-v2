@@ -2606,15 +2606,32 @@ body.mobile-nav-open {
     .pc-slider .arrow {
         display: none;
     }
+    
+    .pc-slider {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    
+    .pc-slider::-webkit-scrollbar {
+        display: none;
+    }
 
     .pc-header h2 {
         font-size: 20px;
         margin: 0;
     }
 
+    .pc-track {
+        /* Unset any javascript transform override if needed, but since it's inline we might need !important, 
+           or JS won't trigger since buttons are hidden. */
+        transform: none !important;
+        padding-right: 16px; 
+    }
+
     .pc-item {
-        width: 50%;
-        flex: 0 0 50%;
+        width: 60%;
+        flex: 0 0 60%;
     }
 
     .pc-image {
