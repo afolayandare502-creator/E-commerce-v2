@@ -53,7 +53,6 @@ const mobileMenuData = {
         subtitle: 'New products',
         links: [
             { label: 'View all', href: 'products.html?gender=women&category=clothing' },
-            { label: 'New In: Today', href: 'products.html?gender=women&category=clothing&q=new%20in' },
             { label: 'New In: Selling Fast', href: 'products.html?gender=women&category=clothing&q=selling%20fast' },
             { label: 'Dresses', href: 'products.html?gender=women&category=dresses' },
             { label: 'Tops', href: 'products.html?gender=women&category=tops-clothing' },
@@ -89,11 +88,8 @@ const mobileMenuData = {
             { label: 'View all', href: 'products.html?gender=women&category=shoes' },
             { label: 'Boots', href: 'products.html?gender=women&category=boots' },
             { label: 'Ballet Pumps', href: 'products.html?gender=women&category=ballet-pumps' },
-            { label: 'Sandals', href: 'products.html?gender=women&category=sandals' },
             { label: 'Heels', href: 'products.html?gender=women&category=heels' },
             { label: 'Adidas', href: 'products.html?gender=women&category=adidas' },
-            { label: 'Birkenstock', href: 'products.html?gender=women&category=birkenstock' },
-            { label: 'Asos Design', href: 'products.html?gender=women&category=asos-design' },
             { label: 'Balenciaga', href: 'products.html?gender=women&category=balenciaga' },
             { label: 'Puma', href: 'products.html?gender=women&category=puma' }
         ]
