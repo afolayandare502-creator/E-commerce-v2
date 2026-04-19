@@ -2139,7 +2139,14 @@ body.mobile-nav-open {
 .pc-track {
     display: flex;
     gap: 9px;
-    transition: transform 0.5s ease;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.pc-track::-webkit-scrollbar {
+    display: none;
 }
 
 .pc-item {
@@ -2625,9 +2632,6 @@ body.mobile-nav-open {
     }
 
     .pc-track {
-        /* Unset any javascript transform override if needed, but since it's inline we might need !important, 
-           or JS won't trigger since buttons are hidden. */
-        transform: none !important;
         padding-right: 16px; 
     }
 

@@ -269,23 +269,36 @@ function initializeSlider(sectionOrId) {
 
     if (!track || items.length === 0 || !nextBtn || !prevBtn) return;
 
-    let index = 0;
-    const getMaxIndex = () => 3;
-
-    function updateSlider() {
+    function updateDots() {
         const itemWidth = items[0].offsetWidth;
-        const moveX = index * 4 * (itemWidth + 9);
-        track.style.transform = `translateX(-${moveX}px)`;
+        const scrollPosition = track.scrollLeft;
+        const index = Math.round(scrollPosition / ((itemWidth + 9) * 4));
+        
         dots.forEach(d => d.classList.remove('active'));
         if (dots[index]) dots[index].classList.add('active');
     }
 
-    nextBtn.addEventListener('click', () => { if (index < getMaxIndex()) { index++; updateSlider(); } });
-    prevBtn.addEventListener('click', () => { if (index > 0) { index--; updateSlider(); } });
-    dots.forEach((dot, i) => dot.addEventListener('click', () => { index = i; updateSlider(); }));
-    window.addEventListener('resize', () => { if (index > getMaxIndex()) index = getMaxIndex(); updateSlider(); });
+    nextBtn.addEventListener('click', () => { 
+        const itemWidth = items[0].offsetWidth;
+        track.scrollBy({ left: (itemWidth + 9) * 4, behavior: 'smooth' }); 
+    });
+    
+    prevBtn.addEventListener('click', () => { 
+        const itemWidth = items[0].offsetWidth;
+        track.scrollBy({ left: -((itemWidth + 9) * 4), behavior: 'smooth' }); 
+    });
+    
+    dots.forEach((dot, i) => dot.addEventListener('click', () => { 
+        const itemWidth = items[0].offsetWidth;
+        track.scrollTo({ left: i * 4 * (itemWidth + 9), behavior: 'smooth' }); 
+    }));
+    
+    track.addEventListener('scroll', () => {
+        // Debounce or directly update dots based on scroll position
+        updateDots();
+    });
 
-    setTimeout(updateSlider, 100);
+    setTimeout(updateDots, 100);
     section.dataset.sliderInitialized = 'true';
 }
 
