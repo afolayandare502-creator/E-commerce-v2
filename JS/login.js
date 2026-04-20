@@ -72,14 +72,14 @@ function initializeLoginForm() {
         });
     }
 
-    // Switch back to Login (Edit Email)
-    if (editEmailBtn && loginSection && registrationSection) {
-        editEmailBtn.addEventListener('click', () => {
-            if (emailInput && regEmailInput) {
-                emailInput.value = regEmailInput.value;
-            }
+    // Switch back to Login from registration section
+    const backToLoginBtn = document.getElementById('back-to-login-btn');
+    if (backToLoginBtn && loginSection && registrationSection) {
+        backToLoginBtn.addEventListener('click', (e) => {
+            e.preventDefault();
             registrationSection.style.display = 'none';
             loginSection.style.display = 'block';
+            window.scrollTo(0, 0);
         });
     }
 
@@ -99,9 +99,8 @@ function initializeLoginForm() {
     const populateDOB = () => {
         const daySelect = document.querySelector('select[name="dob-day"]');
         const monthSelect = document.querySelector('select[name="dob-month"]');
-        const yearSelect = document.querySelector('select[name="dob-year"]');
 
-        if (!daySelect || !monthSelect || !yearSelect) return;
+        if (!daySelect || !monthSelect) return;
 
         for (let i = 1; i <= 31; i++) {
             daySelect.add(new Option(i, i));
