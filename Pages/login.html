@@ -167,11 +167,6 @@
                     <span class="social-login-icon google-icon"><i class="fab fa-google"></i></span>
                     <span>Continue with Google</span>
                 </button>
-
-                <button type="button" class="social-login-btn apple-login-btn">
-                    <span class="social-login-icon apple-icon"><i class="fab fa-apple"></i></span>
-                    <span>Continue with iCloud</span>
-                </button>
             </div>
 
             <p class="login-terms">
@@ -186,17 +181,16 @@
 
         <section class="login-card registration-card" id="registration-section" style="display: none;">
             <div class="reg-header">
-                <div class="reg-logo">a</div>
+                <div class="reg-logo">
+                    <img src="../images/Rlogo1.jpeg" alt="Casa Logo" style="width:60px; height:60px; border-radius:50%; object-fit:cover;">
+                </div>
                 <h2>We love new faces :)</h2>
             </div>
 
             <form id="registration-form" class="login-form">
                 <div class="form-group">
                     <label for="reg-email">EMAIL ADDRESS:*</label>
-                    <div class="email-input-row">
-                        <input id="reg-email" name="email" type="email" required>
-                        <button type="button" class="edit-email-btn" id="edit-reg-email">EDIT</button>
-                    </div>
+                    <input id="reg-email" name="email" type="email" required>
                 </div>
 
                 <div class="form-group">
@@ -230,13 +224,10 @@
                             <option value="">Month</option>
                             <!-- JS will populate -->
                         </select>
-                        <select name="dob-year" required>
-                            <option value="">Year</option>
-                            <!-- JS will populate -->
-                        </select>
+                        <input type="number" name="dob-year" placeholder="Year" min="1926" max="2026" required style="flex:1; height:44px; border:1px solid #2a2a2a; padding:0 10px; font-size:16px; background:#fff;">
                     </div>
-                    <p class="input-hint">You need to be 16 or over to use ASOS</p>
-                    <button type="submit" class="login-continue-btn join-btn dob-join-btn">JOIN ASOS</button>
+                    <p class="input-hint">You need to be 16 or over to use Casa</p>
+                    <button type="submit" class="login-continue-btn join-btn dob-join-btn">JOIN Casa</button>
                 </div>
             
             <p id="reg-feedback" class="login-feedback" hidden></p>

@@ -254,8 +254,7 @@
     border-radius: 2px;
 }
 
-.add-to-cart-btn:hover { background: #333; }
-.add-to-cart-btn.success { background: #2e7d32; }
+.add-to-cart-btn:hover { background: #040404; }
 
 /* Trust badges */
 .product-features {

@@ -16,7 +16,7 @@ function initializeLoginForm() {
     const loginForm = document.getElementById('login-form');
     const registrationForm = document.getElementById('registration-form');
     const createAccountBtn = document.getElementById('create-account-btn');
-    const editEmailBtn = document.getElementById('edit-reg-email');
+    const editEmailBtn = null; // EDIT button removed from UI
     const feedback = document.getElementById('login-feedback');
     const regFeedback = document.getElementById('reg-feedback');
     const emailInput = document.getElementById('login-identifier');
@@ -113,9 +113,7 @@ function initializeLoginForm() {
         });
 
         const currentYear = new Date().getFullYear();
-        for (let i = currentYear; i >= currentYear - 100; i--) {
-            yearSelect.add(new Option(i, i));
-        }
+        // Year is now an <input type="number">, no need to populate
     };
     populateDOB();
 
