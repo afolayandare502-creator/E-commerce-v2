@@ -129,8 +129,8 @@
 
     <main class="login-main">
         <section class="login-card" id="login-section">
-            <h1>Sign In/Register</h1>
-            <p class="login-protected"><i class="far fa-lock-alt"></i> Your data is protected.</p>
+            <h1>Sign In</h1>
+            <p class="login-protected"><i class="far fa-lock-alt"></i> Sign in with your email and password.</p>
 
             <form id="login-form" class="login-form">
                 <div class="form-group">
@@ -138,18 +138,15 @@
                     <input id="login-identifier" name="identifier" type="email" placeholder="Email" required>
                 </div>
 
-                <div class="form-group">
-                    <div class="label-row">
-                        <label for="login-password">Password:</label>
-                        <a href="#" class="forgot-password">Forgot password?</a>
-                    </div>
-                    <div class="password-input-wrapper">
-                        <input id="login-password" name="password" type="password" placeholder="Enter your password" required>
-                        <i class="far fa-eye toggle-password" id="togglePassword"></i>
+                <div class="form-group password-group">
+                    <label for="login-password">Password:</label>
+                    <div class="password-input-container" style="position: relative;">
+                        <input id="login-password" name="password" type="password" required style="width: 100%; padding-right: 40px;">
+                        <i class="fas fa-eye toggle-password" id="togglePassword" style="position: absolute; right: 10px; top: 12px; cursor: pointer; color: #666;"></i>
                     </div>
                 </div>
 
-                <button type="submit" class="login-continue-btn">SIGN IN</button>
+                <button type="submit" id="login-continue-btn" class="login-continue-btn">SIGN IN</button>
                 
                 <p class="create-account-text">
                     Don't have an account? <a href="#" id="create-account-btn">Create account</a>
@@ -172,8 +169,6 @@
             <p class="login-terms">
                 By continuing, you agree to our
                 <a href="return-policy.html">Privacy &amp; Cookie Policy</a>
-                and
-                <a href="return-policy.html">Terms &amp; Conditions</a>.
             </p>
 
             <p id="login-feedback" class="login-feedback" hidden></p>
@@ -185,6 +180,7 @@
                     <img src="../images/Rlogo1.jpeg" alt="Casa Logo" style="width:60px; height:60px; border-radius:50%; object-fit:cover;">
                 </div>
                 <h2>We love new faces :)</h2>
+                <p>No password needed. We'll send a code to your email.</p>
             </div>
 
             <form id="registration-form" class="login-form">
@@ -203,38 +199,43 @@
                     <input id="reg-last-name" name="lastName" type="text" required>
                 </div>
 
-                <div class="form-group">
-                    <p class="join-text">join</p>
+                <div class="form-group password-group">
                     <label for="reg-password">PASSWORD:*</label>
-                    <div class="password-input-wrapper">
-                        <input id="reg-password" name="password" type="password" required>
-                        <i class="far fa-eye toggle-password" id="toggleRegPassword"></i>
+                    <div class="password-input-container" style="position: relative;">
+                        <input id="reg-password" name="password" type="password" minlength="10" required style="width: 100%; padding-right: 40px;">
+                        <i class="fas fa-eye toggle-password" id="toggleRegPassword" style="position: absolute; right: 10px; top: 12px; cursor: pointer; color: #666;"></i>
                     </div>
-                    <p class="input-hint">Must be 10 or more characters</p>
                 </div>
 
                 <div class="form-group">
-                    <label>DATE OF BIRTH:*</label>
-                    <div class="dob-row">
-                        <select name="dob-day" required>
-                            <option value="">Day</option>
-                            <!-- JS will populate -->
-                        </select>
-                        <select name="dob-month" required>
-                            <option value="">Month</option>
-                            <!-- JS will populate -->
-                        </select>
-                        <input type="number" name="dob-year" placeholder="Year" min="1926" max="2026" required style="flex:1; height:44px; border:1px solid #2a2a2a; padding:0 10px; font-size:16px; background:#fff;">
-                    </div>
-                    <p class="input-hint">You need to be 16 or over to use Casa</p>
-                    <button type="submit" class="login-continue-btn join-btn dob-join-btn">JOIN Casa</button>
+                    <button type="submit" id="reg-continue-btn" class="login-continue-btn join-btn">SEND REGISTRATION CODE</button>
                 </div>
                 
                 <p class="create-account-text">
                     Already have an account? <a href="#" id="back-to-login-btn">Sign in</a>
                 </p>
-            
+            </form>
             <p id="reg-feedback" class="login-feedback" hidden></p>
+        </section>
+
+        <section class="login-card" id="otp-section" style="display: none;">
+            <h1>Verify Code</h1>
+            <p class="login-protected">We sent a 6-digit code to <strong id="otp-email-display">your email</strong>.</p>
+
+            <form id="otp-form" class="login-form">
+                <div class="form-group">
+                    <label for="otp-code">6-Digit Code:</label>
+                    <input id="otp-code" name="otp" type="text" placeholder="e.g. 123456" maxlength="6" pattern="\d{6}" required style="letter-spacing: 5px; font-size: 20px; text-align: center;">
+                </div>
+
+                <button type="submit" id="otp-verify-btn" class="login-continue-btn">VERIFY & LOGIN</button>
+                
+                <p class="create-account-text">
+                    Didn't receive it? <a href="#" id="resend-code-btn">Resend code</a> or <a href="#" id="change-email-btn">change email</a>.
+                </p>
+            </form>
+
+            <p id="otp-feedback" class="login-feedback" hidden></p>
         </section>
     </main>
 </div>

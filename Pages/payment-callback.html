@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifying Payment - E-commerce RE</title>
+    <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .payment-callback-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #fcfcfc;
+            text-align: center;
+            padding: 2rem;
+            font-family: 'Inter', sans-serif;
+        }
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #eaeaea;
+            border-top: 4px solid #111;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 1.5rem;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #111;
+        }
+        p {
+            color: #555;
+            max-width: 400px;
+        }
+        .error-box {
+            display: none;
+            background: #fff0f0;
+            color: #d93025;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ffd4d4;
+            margin-top: 1rem;
+        }
+        .error-action {
+            display: none;
+            margin-top: 1rem;
+            text-decoration: none;
+            background: #111;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .error-action:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="payment-callback-container">
+        <div class="spinner" id="loading-spinner"></div>
+        <h2 id="status-title">Verifying your payment</h2>
+        <p id="status-message">Please hold on while we securely verify your transaction with Paystack. Do not close this window.</p>
+        
+        <div class="error-box" id="error-box"></div>
+        <a href="cart.html" class="error-action" id="error-action">Go back to Cart</a>
+    </div>
+
+    <!-- Storage and Utility scripts -->
+    <script src="../JS/user-storage.js"></script>
+    <script src="../JS/payment-callback.js"></script>
+</body>
+</html>

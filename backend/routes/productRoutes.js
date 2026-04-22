@@ -7,16 +7,18 @@ const {
     updateProduct,
     deleteProduct
 } = require('../controllers/productController');
+const { protect, admin } = require('../middleware/authMiddleware');
 
 // Route: /api/products
 router.route('/')
     .get(getProducts)
-    .post(createProduct);
+    .post(protect, admin, createProduct);
 
+// Route: /api/products/:id
 // Route: /api/products/:id
 router.route('/:id')
     .get(getProductById)
-    .put(updateProduct)
-    .delete(deleteProduct);
+    .put(protect, admin, updateProduct)
+    .delete(protect, admin, deleteProduct);
 
 module.exports = router;

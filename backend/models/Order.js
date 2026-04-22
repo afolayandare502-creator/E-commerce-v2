@@ -50,6 +50,9 @@ const orderSchema = mongoose.Schema(
             type: String,
             default: 'Cash On Delivery',
         },
+        paystackReference: {
+            type: String,
+        },
         deliveryDetails: {
             firstName: { type: String },
             lastName: { type: String },

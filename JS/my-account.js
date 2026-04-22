@@ -388,7 +388,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!ordersList || !emptyState) return;
 
         try {
-            const response = await fetch(`${API_URL}/orders?email=${encodeURIComponent(currentUser)}`);
+            const response = await fetch(`${API_URL}/orders?email=${encodeURIComponent(currentUser)}`, {
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                }
+            });
             if (!response.ok) throw new Error('Failed to fetch orders');
 
             const orders = await response.json();

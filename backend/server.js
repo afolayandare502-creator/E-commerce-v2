@@ -5,6 +5,11 @@ const connectDB = require('./config/db');
 const productRoutes = require('./routes/productRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 const reviewRoutes = require('./routes/reviewRoutes');
+const authRoutes = require('./routes/authRoutes');
+const passport = require('passport');
+
+// Load passport config
+//require('./config/passport');
 
 // Load env variables
 dotenv.config();
@@ -21,15 +26,22 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 // Middleware to handle Cross-Origin Resource Sharing (CORS)
 app.use(cors());
 
+// Initialize passport
+//app.use(passport.initialize());
+
 // Health Check Route
 app.get('/', (req, res) => {
     res.send('API is running...');
 });
 
+const paystackRoutes = require('./routes/paystackRoutes');
+
 // API Routes
 app.use('/api/products', productRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/reviews', reviewRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/paystack', paystackRoutes);
 
 // Error handling middleware (fallback)
 app.use((err, req, res, next) => {

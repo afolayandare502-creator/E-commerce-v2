@@ -112,12 +112,14 @@ function initializeDeliveryForm() {
         const profile = typeof getCurrentUserProfile === 'function' ? getCurrentUserProfile() : {};
         const customerName = profile ? `${profile.firstName || ''} ${profile.lastName || ''}`.trim() : '';
 
-        const API_URL = 'https://e-commerce-backend-4rnw.onrender.com/api';
+        const API_URL = 'http://localhost:5001/api';
 
         feedback.hidden = false;
         feedback.textContent = 'Placing your order...';
 
         try {
+            const createdOrderIds = [];
+            
             // Create one order document per cart item
             for (let i = 0; i < cartItems.length; i++) {
                 const item = cartItems[i];
@@ -143,14 +145,53 @@ function initializeDeliveryForm() {
 
                 const response = await fetch(`${API_URL}/orders`, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${localStorage.getItem('token')}`
+                    },
                     body: JSON.stringify(orderData),
                 });
 
+                const createdOrder = await response.json();
+
                 if (!response.ok) {
-                    const err = await response.json();
-                    throw new Error(err.message || 'Failed to place order');
+                    throw new Error(createdOrder.message || 'Failed to place order');
                 }
+                
+                createdOrderIds.push(createdOrder._id);
+            }
+
+            if (String(paymentMethod).toLowerCase().includes('paystack')) {
+                feedback.textContent = 'Redirecting to secure Paystack checkout...';
+                const subtotal = cartItems.reduce((sum, item) => sum + (Number(item.price) || 0) * (Number(item.quantity) || 0), 0);
+                const shipping = subtotal > 0 ? (typeof DELIVERY_SHIPPING_FEE !== 'undefined' ? DELIVERY_SHIPPING_FEE : 10) : 0;
+                const usdTotal = subtotal + shipping;
+                
+                const exchangeRate = 1600;
+                const ngnTotalStr = (usdTotal * exchangeRate).toFixed(2);
+                const amountKobo = Math.round(Number(ngnTotalStr) * 100);
+                
+                const paystackRes = await fetch(`${API_URL}/paystack/initialize`, {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${localStorage.getItem('token')}`
+                    },
+                    body: JSON.stringify({
+                        email: customerEmail,
+                        amountKobo: amountKobo,
+                        orderIds: createdOrderIds
+                    })
+                });
+                
+                const paystackData = await paystackRes.json();
+
+                if (!paystackRes.ok) {
+                    throw new Error(paystackData.message || 'Failed to initialize payment');
+                }
+                
+                window.location.href = paystackData.authorizationUrl;
+                return;
             }
 
             clearCurrentUserCart();

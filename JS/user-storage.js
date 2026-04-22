@@ -63,6 +63,7 @@ function clearCurrentUserSession() {
     localStorage.removeItem(CURRENT_USER_STORAGE_KEY);
     localStorage.removeItem(LOGIN_IDENTIFIER_STORAGE_KEY);
     localStorage.removeItem(REDIRECT_URL_STORAGE_KEY);
+    localStorage.removeItem('token');
 }
 
 function readUserScopedCollection(suffix) {

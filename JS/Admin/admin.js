@@ -194,7 +194,9 @@ function buildNormalizedOrder(order, index, emailFallback = '') {
 
 async function fetchAllOrdersFromAPI() {
     try {
-        const response = await fetch(`${API_BASE_URL}/orders`);
+        const response = await fetch(`${API_BASE_URL}/orders`, {
+            headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
+        });
         if (!response.ok) throw new Error('Failed to fetch orders from API');
         const apiOrders = await response.json();
 
@@ -221,7 +223,10 @@ async function updateOrderStatusViaAPI(order, nextStatus) {
         const orderId = order._id || order.orderId;
         const response = await fetch(`${API_BASE_URL}/orders/${orderId}`, {
             method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('token')}`
+            },
             body: JSON.stringify({ status: nextStatus }),
         });
         if (!response.ok) throw new Error('Failed to update order status');
@@ -732,7 +737,10 @@ async function fetchAdminProducts() {
 async function deleteBackendProduct(id) {
     if (!confirm('Are you confirm to delete this product? This action cannot be undone.')) return;
     try {
-        const response = await fetch(`${API_BASE_URL}/products/${id}`, { method: 'DELETE' });
+        const response = await fetch(`${API_BASE_URL}/products/${id}`, { 
+            method: 'DELETE',
+            headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
+        });
         if (!response.ok) throw new Error('Failed to delete product');
         await fetchAdminProducts();
         renderProductsTable();
