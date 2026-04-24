@@ -1158,6 +1158,16 @@ async function fetchAndRenderAdminReviews() {
     tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:30px;color:#999;">Loading reviews...</td></tr>';
 
     try {
+        // Ensure products are loaded so we can resolve product names
+        if (!state.dbProducts || state.dbProducts.length === 0) {
+            try {
+                const prodRes = await fetch(`${API_BASE_URL}/products`);
+                if (prodRes.ok) state.dbProducts = await prodRes.json();
+            } catch (e) {
+                console.error('Failed to load products for reviews mapping');
+            }
+        }
+
         const token = localStorage.getItem('token');
         const res = await fetch(`${API_BASE_URL}/reviews`, {
             headers: { 'Authorization': `Bearer ${token}` }
@@ -1181,8 +1191,11 @@ function renderAdminReviewsTable() {
     const filtered = adminReviews.filter(r => {
         if (!searchTerm) return true;
         const author = r.author || (r.user ? `${r.user.firstName} ${r.user.lastName}` : '');
+        const pMatch = state.dbProducts.find(p => p._id === r.productId || p.customId === r.productId);
+        const pName = pMatch ? pMatch.name : r.productId;
+
         return author.toLowerCase().includes(searchTerm)
-            || (r.productId || '').toLowerCase().includes(searchTerm)
+            || (pName || '').toLowerCase().includes(searchTerm)
             || (r.title || '').toLowerCase().includes(searchTerm)
             || (r.comment || '').toLowerCase().includes(searchTerm);
     });
@@ -1193,23 +1206,56 @@ function renderAdminReviewsTable() {
     }
 
     tbody.innerHTML = filtered.map(r => {
-        const author = r.author || (r.user ? `${r.user.firstName} ${r.user.lastName}` : 'Anonymous');
+        const firstName = r.user && r.user.firstName ? r.user.firstName : (r.author ? r.author.split(' ')[0] : 'Anon');
         const dateStr = r.createdAt ? new Date(r.createdAt).toLocaleDateString() : '';
         const stars = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
-        const commentShort = r.comment && r.comment.length > 60 ? r.comment.substring(0, 60) + '...' : (r.comment || '');
+        const commentShort = r.comment && r.comment.length > 50 ? r.comment.substring(0, 50) + '...' : (r.comment || '');
+        
+        // Find product name
+        const pMatch = state.dbProducts.find(p => String(p._id) === String(r.productId) || String(p.customId) === String(r.productId));
+        const productName = pMatch ? pMatch.name : r.productId;
+
+        // Escape JSON for modal
+        const rJson = encodeURIComponent(JSON.stringify({
+            title: r.title,
+            comment: r.comment,
+            rating: r.rating,
+            author: firstName,
+            productName: productName,
+            date: dateStr
+        }));
+
         return `
             <tr>
-                <td>${author}</td>
-                <td style="font-size:12px;color:#666;">${r.productId || ''}</td>
-                <td style="color:#f4a11b;letter-spacing:2px;">${stars}</td>
-                <td>${r.title || ''}</td>
-                <td style="font-size:13px;color:#555;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${commentShort}</td>
-                <td style="font-size:12px;color:#888;">${dateStr}</td>
+                <td style="font-weight:600;">${firstName}</td>
+                <td style="font-size:13px;color:#555;">${productName}</td>
+                <td style="color:#f4a11b;letter-spacing:1px;font-size:12px;">${stars}</td>
+                <td style="font-size:13px;font-weight:500;">${r.title || ''}</td>
+                <td style="font-size:13px;color:#666;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${commentShort}</td>
+                <td style="font-size:12px;color:#999;">${dateStr}</td>
                 <td>
-                    <button onclick="deleteAdminReview('${r._id}')" style="background:#c53030;color:#fff;border:none;padding:6px 14px;border-radius:6px;font-size:12px;cursor:pointer;font-weight:600;">Delete</button>
+                    <div style="display:flex;gap:6px;">
+                        <button onclick="openAdminReviewModal('${rJson}')" style="background:#eee;color:#333;border:none;padding:5px 12px;border-radius:4px;font-size:12px;cursor:pointer;font-weight:600;">View</button>
+                        <button onclick="deleteAdminReview('${r._id}')" style="background:#fff1f1;color:#c53030;border:1px solid #ffd4d4;padding:5px 12px;border-radius:4px;font-size:12px;cursor:pointer;font-weight:600;">Delete</button>
+                    </div>
                 </td>
             </tr>`;
     }).join('');
+}
+
+function openAdminReviewModal(encodedJson) {
+    try {
+        const data = JSON.parse(decodeURIComponent(encodedJson));
+        document.getElementById('modal-review-title').textContent = data.title || 'Review';
+        document.getElementById('modal-review-stars').textContent = '★'.repeat(data.rating) + '☆'.repeat(5 - data.rating);
+        document.getElementById('modal-review-comment').textContent = data.comment;
+        document.getElementById('modal-review-author').textContent = data.author;
+        document.getElementById('modal-review-product').textContent = data.productName;
+        document.getElementById('modal-review-date').textContent = data.date;
+        document.getElementById('admin-view-review-modal').style.display = 'flex';
+    } catch (e) {
+        console.error('Error opening review modal', e);
+    }
 }
 
 async function deleteAdminReview(reviewId) {

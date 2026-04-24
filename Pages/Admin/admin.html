@@ -315,7 +315,7 @@
                             <thead>
                                 <tr>
                                     <th>User</th>
-                                    <th>Product ID</th>
+                                    <th>Product</th>
                                     <th>Rating</th>
                                     <th>Title</th>
                                     <th>Comment</th>
@@ -370,5 +370,26 @@
     </div>
 
     <script src="../../JS/Admin/admin.js"></script>
+    <!-- Full Review Modal -->
+    <div class="admin-modal-overlay" id="admin-view-review-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center;">
+        <div style="background:#fff; border-radius:12px; width:90%; max-width:500px; padding:30px; position:relative;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px;">
+                <div>
+                    <h3 id="modal-review-title" style="margin:0 0 8px; font-size:18px;"></h3>
+                    <div id="modal-review-stars" style="color:#f4a11b; letter-spacing:2px; font-size:16px;"></div>
+                </div>
+                <button onclick="document.getElementById('admin-view-review-modal').style.display='none'" style="background:none; border:none; font-size:24px; cursor:pointer; color:#777;">&times;</button>
+            </div>
+            
+            <p id="modal-review-comment" style="font-size:15px; color:#444; line-height:1.6; margin-bottom:20px; white-space:pre-wrap;"></p>
+            
+            <div style="border-top:1px solid #eee; padding-top:16px; font-size:13px; color:#666;">
+                <p style="margin:0 0 6px;"><strong>Author:</strong> <span id="modal-review-author"></span></p>
+                <p style="margin:0 0 6px;"><strong>Product:</strong> <span id="modal-review-product"></span></p>
+                <p style="margin:0;"><strong>Date:</strong> <span id="modal-review-date"></span></p>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
