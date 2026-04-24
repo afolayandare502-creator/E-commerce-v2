@@ -342,33 +342,35 @@
                 </button>
             </div>
 
-            <div class="drawer-profile">
-                <div class="drawer-avatar" id="drawer-avatar"></div>
-                <h4 id="drawer-name">Customer Name</h4>
-                <p id="drawer-email">customer@email.com</p>
-                <p style="font-size:13px; color:#666; margin-top:4px;" id="drawer-phone">No phone number</p>
-            </div>
+            <div class="customer-drawer-content">
+                <div class="drawer-profile">
+                    <div class="drawer-avatar" id="drawer-avatar"></div>
+                    <h4 id="drawer-name">Customer Name</h4>
+                    <p id="drawer-email">customer@email.com</p>
+                    <p style="font-size:13px; color:#666; margin-top:4px;" id="drawer-phone">No phone number</p>
+                </div>
 
-            <div style="display:flex; justify-content:space-between; text-align:center; padding:20px; background:#f9fafb; border-radius:12px; margin:0 20px 20px;">
-                <div>
-                    <h5 style="margin:0 0 6px 0; font-size:12px; font-weight:600; color:#888; text-transform:uppercase; letter-spacing:0.5px;">Orders</h5>
-                    <strong style="font-size:18px; color:#111;" id="drawer-orders-count">0</strong>
+                <div style="display:flex; justify-content:space-between; text-align:center; padding:20px 16px; background:#f9fafb; border-radius:12px;">
+                    <div>
+                        <h5 style="margin:0 0 6px 0; font-size:12px; font-weight:500; color:#888; text-transform:uppercase; letter-spacing:0.5px;">Orders</h5>
+                        <strong style="font-size:17px; font-weight:500; color:#333;" id="drawer-orders-count">0</strong>
+                    </div>
+                    <div>
+                        <h5 style="margin:0 0 6px 0; font-size:12px; font-weight:500; color:#888; text-transform:uppercase; letter-spacing:0.5px;">Spent</h5>
+                        <strong style="font-size:17px; font-weight:500; color:#333;" id="drawer-total-spent">$0.00</strong>
+                    </div>
+                    <div>
+                        <h5 style="margin:0 0 6px 0; font-size:12px; font-weight:500; color:#888; text-transform:uppercase; letter-spacing:0.5px;">Joined</h5>
+                        <strong style="font-size:14px; font-weight:500; color:#333; line-height:24px;" id="drawer-join-date">-</strong>
+                    </div>
                 </div>
-                <div>
-                    <h5 style="margin:0 0 6px 0; font-size:12px; font-weight:600; color:#888; text-transform:uppercase; letter-spacing:0.5px;">Spent</h5>
-                    <strong style="font-size:18px; color:#111;" id="drawer-total-spent">$0.00</strong>
-                </div>
-                <div>
-                    <h5 style="margin:0 0 6px 0; font-size:12px; font-weight:600; color:#888; text-transform:uppercase; letter-spacing:0.5px;">Joined</h5>
-                    <strong style="font-size:14px; color:#111; line-height:24px;" id="drawer-join-date">-</strong>
-                </div>
-            </div>
 
-            <div class="drawer-section" style="flex:1; overflow-y:auto; padding:0 20px;">
-                <div class="drawer-section-head" style="margin-bottom:14px;">
-                    <h5 style="font-size:15px; font-weight:700; color:#222; margin:0;">Recent Orders</h5>
+                <div class="drawer-section">
+                    <div class="drawer-section-head" style="margin-bottom:14px;">
+                        <h5 style="font-size:15px; font-weight:600; color:#222; margin:0;">Recent Orders</h5>
+                    </div>
+                    <div class="drawer-cart-list" id="drawer-recent-orders-list" style="display:flex; flex-direction:column; gap:12px;"></div>
                 </div>
-                <div class="drawer-cart-list" id="drawer-recent-orders-list" style="display:flex; flex-direction:column; gap:12px;"></div>
             </div>
 
             <div style="padding:20px; display:flex; gap:10px; border-top:1px solid var(--admin-border); background:#fff;">
