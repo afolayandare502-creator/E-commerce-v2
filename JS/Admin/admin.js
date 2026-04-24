@@ -678,26 +678,25 @@ function renderCustomersTable() {
 
     const customers = getFilteredCustomers();
 
-    tbody.innerHTML = customers.length ? customers.map((customer) => `
-        <tr class="customer-row" data-customer-email="${customer.email}">
-            <td>
-                <div class="customer-cell">
-                    ${renderAvatarMarkup(customer.name, customer.image, 'avatar')}
-                    <div class="customer-meta">
-                        <strong>${customer.name}</strong>
-                        <span>${customer.phone}</span>
-                    </div>
+    tbody.innerHTML = customers.length ? customers.map((customer) => {
+        const initials = customer.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+        const firstName = customer.name.split(' ')[0];
+        
+        return `
+        <tr class="customer-row" data-customer-email="${customer.email}" style="cursor:pointer; height:64px;" onclick="renderCustomerDrawer('${customer.email}')">
+            <td style="padding-left:24px;">
+                <div style="display:flex; align-items:center; gap:12px;">
+                    <div style="width:36px; height:36px; border-radius:50%; background:#111; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:14px;">${initials}</div>
+                    <strong style="font-size:14px; color:#222;">${firstName}</strong>
                 </div>
             </td>
-            <td>${customer.email}</td>
-            <td>${customer.orders}</td>
-            <td class="customer-spent">${formatAdminPrice(customer.spent)}</td>
-            <td>${buildCustomerStatusSelect(customer)}</td>
-            <td><button class="row-action-btn" type="button" aria-label="Customer actions"><i class="fas fa-ellipsis-h"></i></button></td>
+            <td><strong style="font-size:14px; color:#555;">${customer.orders}</strong></td>
+            <td class="customer-spent"><strong style="font-size:14px; color:#111;">${formatAdminPrice(customer.spent)}</strong></td>
         </tr>
-    `).join('') : `
+    `;
+    }).join('') : `
         <tr>
-            <td colspan="6"><div class="empty-state">No customers matched your search.</div></td>
+            <td colspan="3"><div class="empty-state">No customers matched your search.</div></td>
         </tr>
     `;
 }
@@ -727,14 +726,11 @@ function renderCustomerDrawer(email) {
     const drawerName = document.getElementById('drawer-name');
     const drawerEmail = document.getElementById('drawer-email');
     const drawerPhone = document.getElementById('drawer-phone');
-    const drawerCartCount = document.getElementById('drawer-cart-count');
-    const drawerCartList = document.getElementById('drawer-cart-list');
-    const drawerTotalPrice = document.getElementById('drawer-total-price');
-
-    const cartItems = Array.isArray(customer.cartItems) ? customer.cartItems : [];
-    const cartTotal = cartItems.reduce((sum, item) => {
-        return sum + (Number(item.price) || 0) * (Number(item.quantity) || 1);
-    }, 0);
+    
+    const drawerOrdersCount = document.getElementById('drawer-orders-count');
+    const drawerTotalSpent = document.getElementById('drawer-total-spent');
+    const drawerJoinDate = document.getElementById('drawer-join-date');
+    const drawerRecentOrdersList = document.getElementById('drawer-recent-orders-list');
 
     if (drawerOrderLabel) drawerOrderLabel.textContent = customer.name;
     if (drawerAvatar) drawerAvatar.innerHTML = customer.image
@@ -743,20 +739,46 @@ function renderCustomerDrawer(email) {
     if (drawerName) drawerName.textContent = customer.name;
     if (drawerEmail) drawerEmail.textContent = customer.email;
     if (drawerPhone) drawerPhone.textContent = customer.phone;
-    if (drawerCartCount) drawerCartCount.textContent = `${cartItems.length} ${cartItems.length === 1 ? 'item' : 'items'}`;
-    if (drawerTotalPrice) drawerTotalPrice.textContent = formatAdminPrice(cartTotal);
 
-    if (drawerCartList) {
-        drawerCartList.innerHTML = cartItems.length ? cartItems.map((item) => `
-            <article class="drawer-cart-item">
-                <img class="drawer-cart-thumb" src="${item.image || '../../images/1.png'}" alt="${item.name || 'Product'}">
-                <div>
-                    <h5>${item.name || 'Product'}</h5>
-                    <p>Qty: ${Number(item.quantity) || 1}</p>
-                    <p>${formatAdminPrice(item.price)}</p>
+    if (drawerOrdersCount) drawerOrdersCount.textContent = String(customer.orders);
+    if (drawerTotalSpent) drawerTotalSpent.textContent = formatAdminPrice(customer.spent);
+    
+    const customerOrders = state.orders.filter(o => o.customerEmail && o.customerEmail.toLowerCase() === customer.email.toLowerCase());
+    const sortedOrders = [...customerOrders].sort((a,b) => new Date(b.placedAt || b.date) - new Date(a.placedAt || a.date));
+    
+    if (drawerJoinDate) {
+        if (sortedOrders.length > 0) {
+            const earliest = sortedOrders[sortedOrders.length - 1];
+            drawerJoinDate.textContent = new Date(earliest.placedAt || earliest.date).toLocaleDateString({ month: 'short', day: 'numeric', year: 'numeric' });
+        } else {
+            drawerJoinDate.textContent = 'Unknown';
+        }
+    }
+
+    if (drawerRecentOrdersList) {
+        const recentOrders = sortedOrders.slice(0, 5);
+        drawerRecentOrdersList.innerHTML = recentOrders.length ? recentOrders.map((order) => {
+            const firstItem = order.items && order.items.length > 0 ? order.items[0] : null;
+            const imgPath = firstItem ? (firstItem.image || (firstItem.images && firstItem.images[0])) : '';
+            const productName = firstItem ? firstItem.name : 'Unknown Product';
+            const quantity = order.items && order.items.length > 1 ? `+${order.items.length - 1}` : '×1';
+
+            return `
+            <article class="drawer-cart-item" style="display:flex; gap:12px; align-items:center; background:#f9fafb; padding:12px; border-radius:8px; border:1px solid #eaeaea;">
+                <img src="${getAdminImagePath(imgPath)}" style="width:40px; height:40px; border-radius:6px; object-fit:cover; border:1px solid #eaeaea;" alt="Product">
+                <div style="flex:1; overflow:hidden;">
+                    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px;">
+                        <h5 style="margin:0; font-size:13px; font-weight:600; color:#222; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;" title="${productName}">${productName} <span style="color:#888; font-size:11px; font-weight:500;">${quantity}</span></h5>
+                        <strong style="font-size:13px; color:#111;">${formatAdminPrice(order.totalAmount || order.amount)}</strong>
+                    </div>
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        ${getOrderStatusBadge(order.status)}
+                        <span style="font-size:11px; color:#888;">${new Date(order.placedAt || order.date).toLocaleDateString()}</span>
+                    </div>
                 </div>
             </article>
-        `).join('') : '<div class="empty-state">This customer has no active items in cart.</div>';
+            `;
+        }).join('') : '<div class="empty-state" style="text-align:center; color:#888; font-size:13px; padding:20px;">No recent orders found.</div>';
     }
 
     setDrawerOpen(true);
