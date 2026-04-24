@@ -1,5 +1,6 @@
-const ADMIN_EMAIL = 'admin@dare.com';
-const ADMIN_PASSWORD = 'Afolayan123@@';
+const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+    ? 'http://localhost:5001/api/auth' 
+    : 'https://e-commerce-backend-4rnw.onrender.com/api/auth';
 
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('admin-login-form');
@@ -9,19 +10,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!form || !emailInput || !passwordInput || !feedback) return;
 
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
         const email = emailInput.value.trim().toLowerCase();
         const password = passwordInput.value;
 
-        if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
-            localStorage.setItem('isAdmin', 'true');
-            window.location.href = 'admin.html';
-            return;
-        }
+        feedback.textContent = 'Logging in...';
+        feedback.style.color = '#333';
 
-        localStorage.removeItem('isAdmin');
-        feedback.textContent = 'Invalid admin credentials.';
+        try {
+            const res = await fetch(`${API_URL}/login`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
+            const data = await res.json();
+
+            if (res.ok && data.token) {
+                if (data.role !== 'admin') {
+                    feedback.textContent = 'Access Denied. You are not an administrator.';
+                    feedback.style.color = 'red';
+                    return;
+                }
+                
+                localStorage.setItem('token', data.token);
+                localStorage.setItem('isAdmin', 'true');
+                window.location.href = 'admin.html';
+            } else {
+                localStorage.removeItem('isAdmin');
+                feedback.textContent = data.message || 'Invalid admin credentials.';
+                feedback.style.color = 'red';
+            }
+        } catch (error) {
+            console.error('Login error', error);
+            feedback.textContent = 'Network error fetching backend.';
+            feedback.style.color = 'red';
+        }
     });
 });
