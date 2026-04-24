@@ -598,7 +598,78 @@
 
             <!-- Loading / Error state -->
             <div id="product-details-status"></div>
-        </main>
+        <!-- ============================================================
+         RATING & REVIEWS SECTION
+         ============================================================ -->
+        <section class="product-reviews-section" id="product-reviews-section" style="display:none;">
+            <div class="reviews-section-header">
+                <h2>Rating & Reviews</h2>
+            </div>
+
+            <div class="reviews-summary-container">
+                <!-- Left: Big average rating -->
+                <div class="reviews-summary-left">
+                    <div class="big-avg-rating" id="pd-average-rating">0</div>
+                    <div class="big-avg-sub">/ 5</div>
+                    <div class="big-avg-count" id="pd-total-reviews">(0 Reviews)</div>
+                </div>
+
+                <!-- Middle: Rating bars -->
+                <div class="reviews-summary-bars" id="pd-rating-bars">
+                    <!-- Filled by JS -->
+                </div>
+
+                <!-- Right: Latest review preview -->
+                <div class="reviews-summary-preview" id="pd-latest-review">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
+
+            <div class="reviews-action-bar">
+                <button class="write-review-btn" id="pd-open-review-modal"><i class="far fa-edit"></i> Write a Review</button>
+            </div>
+
+            <!-- Review cards list -->
+            <div class="reviews-cards-list" id="pd-reviews-list">
+                <!-- Filled by JS -->
+            </div>
+        </section>
+
+        <!-- Write Review Modal -->
+        <div class="review-modal-overlay" id="pd-review-modal">
+            <div class="review-modal-content">
+                <div class="modal-header">
+                    <h2>Write a Review</h2>
+                    <button id="pd-close-review-modal" class="close-modal"><i class="fas fa-times"></i></button>
+                </div>
+                <form id="pd-write-review-form">
+                    <div class="form-group mb">
+                        <label>Your Rating</label>
+                        <div class="modal-stars" id="pd-modal-stars">
+                            <i class="far fa-star" data-val="1"></i>
+                            <i class="far fa-star" data-val="2"></i>
+                            <i class="far fa-star" data-val="3"></i>
+                            <i class="far fa-star" data-val="4"></i>
+                            <i class="far fa-star" data-val="5"></i>
+                        </div>
+                        <input type="hidden" id="pd-review-rating-input">
+                    </div>
+                    <div class="form-group mb">
+                        <label for="pd-review-title">Title</label>
+                        <input type="text" id="pd-review-title" placeholder="Summarize your review" required>
+                    </div>
+                    <div class="form-group mb">
+                        <label for="pd-review-comment">Review</label>
+                        <textarea id="pd-review-comment" rows="5" placeholder="What did you like or dislike?" required></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="submit-review-btn" id="pd-submit-review-btn">Submit Review</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
 
         <!-- ============================================================
          YOU MIGHT ALSO LIKE

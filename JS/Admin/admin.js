@@ -803,6 +803,8 @@ function renderCurrentView() {
             } else {
                 renderProductsTable();
             }
+        } else if (view === 'reviews') {
+            fetchAndRenderAdminReviews();
         }
     } catch (error) {
         console.error(`RENDER ERROR in view "${view}":`, error);
@@ -838,6 +840,18 @@ function setTopbarContent(viewName) {
     if (viewName === 'customers') {
         title.textContent = 'Customers';
         kicker.textContent = 'Management';
+        return;
+    }
+
+    if (viewName === 'products') {
+        title.textContent = 'Products';
+        kicker.textContent = 'Inventory';
+        return;
+    }
+
+    if (viewName === 'reviews') {
+        title.textContent = 'Reviews';
+        kicker.textContent = 'Moderation';
         return;
     }
 
@@ -1130,5 +1144,98 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (innerError) {
             console.error('Fallthrough view failure:', innerError);
         }
+    }
+});
+
+// ============================================================
+// ADMIN REVIEWS MANAGEMENT
+// ============================================================
+let adminReviews = [];
+
+async function fetchAndRenderAdminReviews() {
+    const tbody = document.getElementById('admin-reviews-tbody');
+    if (!tbody) return;
+    tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:30px;color:#999;">Loading reviews...</td></tr>';
+
+    try {
+        const token = localStorage.getItem('token');
+        const res = await fetch(`${API_BASE_URL}/reviews`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+        });
+        if (!res.ok) throw new Error('Failed to fetch reviews');
+        adminReviews = await res.json();
+        renderAdminReviewsTable();
+    } catch (err) {
+        console.error('Error fetching admin reviews:', err);
+        tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:30px;color:#c53030;">Failed to load reviews.</td></tr>';
+    }
+}
+
+function renderAdminReviewsTable() {
+    const tbody = document.getElementById('admin-reviews-tbody');
+    if (!tbody) return;
+
+    const searchInput = document.getElementById('reviews-search');
+    const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+
+    const filtered = adminReviews.filter(r => {
+        if (!searchTerm) return true;
+        const author = r.author || (r.user ? `${r.user.firstName} ${r.user.lastName}` : '');
+        return author.toLowerCase().includes(searchTerm)
+            || (r.productId || '').toLowerCase().includes(searchTerm)
+            || (r.title || '').toLowerCase().includes(searchTerm)
+            || (r.comment || '').toLowerCase().includes(searchTerm);
+    });
+
+    if (filtered.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:30px;color:#999;">No reviews found.</td></tr>';
+        return;
+    }
+
+    tbody.innerHTML = filtered.map(r => {
+        const author = r.author || (r.user ? `${r.user.firstName} ${r.user.lastName}` : 'Anonymous');
+        const dateStr = r.createdAt ? new Date(r.createdAt).toLocaleDateString() : '';
+        const stars = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
+        const commentShort = r.comment && r.comment.length > 60 ? r.comment.substring(0, 60) + '...' : (r.comment || '');
+        return `
+            <tr>
+                <td>${author}</td>
+                <td style="font-size:12px;color:#666;">${r.productId || ''}</td>
+                <td style="color:#f4a11b;letter-spacing:2px;">${stars}</td>
+                <td>${r.title || ''}</td>
+                <td style="font-size:13px;color:#555;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${commentShort}</td>
+                <td style="font-size:12px;color:#888;">${dateStr}</td>
+                <td>
+                    <button onclick="deleteAdminReview('${r._id}')" style="background:#c53030;color:#fff;border:none;padding:6px 14px;border-radius:6px;font-size:12px;cursor:pointer;font-weight:600;">Delete</button>
+                </td>
+            </tr>`;
+    }).join('');
+}
+
+async function deleteAdminReview(reviewId) {
+    if (!confirm('Are you sure you want to delete this review?')) return;
+    try {
+        const token = localStorage.getItem('token');
+        const res = await fetch(`${API_BASE_URL}/reviews/delete/${reviewId}`, {
+            method: 'DELETE',
+            headers: { 'Authorization': `Bearer ${token}` }
+        });
+        if (res.ok) {
+            fetchAndRenderAdminReviews();
+        } else {
+            const data = await res.json();
+            alert(data.message || 'Failed to delete review.');
+        }
+    } catch (err) {
+        console.error('Delete review error:', err);
+        alert('Network error deleting review.');
+    }
+}
+
+// Wire up reviews search
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('reviews-search');
+    if (searchInput) {
+        searchInput.addEventListener('input', () => renderAdminReviewsTable());
     }
 });

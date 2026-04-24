@@ -41,6 +41,9 @@
                     <a href="add-items.html" class="admin-nav-link">
                         <span><i class="fas fa-plus-square"></i> Add Items</span>
                     </a>
+                    <a href="#" class="admin-nav-link" data-admin-view-link="reviews">
+                        <span><i class="fas fa-star"></i> Reviews</span>
+                    </a>
                 </div>
 
                 <div class="admin-nav-group">
@@ -289,6 +292,38 @@
                                 </tr>
                             </thead>
                             <tbody id="admin-products-tbody"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+
+            <section class="admin-view" data-admin-view="reviews">
+                <section class="admin-panel reviews-workspace">
+                    <div class="panel-head panel-head-tight">
+                        <div>
+                            <p class="panel-kicker">Moderation</p>
+                            <h3>Review Management</h3>
+                        </div>
+                        <label class="admin-search section-search">
+                            <i class="far fa-search"></i>
+                            <input id="reviews-search" type="search" placeholder="Search reviews">
+                        </label>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table class="customers-table">
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Product ID</th>
+                                    <th>Rating</th>
+                                    <th>Title</th>
+                                    <th>Comment</th>
+                                    <th>Date</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-reviews-tbody"></tbody>
                         </table>
                     </div>
                 </section>

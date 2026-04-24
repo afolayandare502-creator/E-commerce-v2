@@ -358,6 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeAddToCart();
     updateCartCount();
     initSavedItemsLink();
+    initReviewModal();
 });
 
 // ============================================================
@@ -484,12 +485,16 @@ function displayProductDetails(product) {
         document.getElementById('product-description').innerHTML = `<p>${product.description}</p>`;
     }
 
-    // Rating — use JSON field or fall back to random-ish
-    const rating = product.rating || 4.5;
-    const count  = product.reviewCount || 122;
+    // Rating — use real data from backend
+    const rating = product.rating || 0;
+    const count  = product.numReviews || 0;
     renderStars(rating);
     const ratingCountEl = document.getElementById('rating-count');
     ratingCountEl.textContent = `(${count})`;
+
+    // Load the reviews section
+    const productId = product._id || product.customId || product.id;
+    loadProductReviews(productId);
 
     // Link stars to the reviews page
     const starsContainer = document.getElementById('product-stars');
@@ -921,3 +926,177 @@ document.addEventListener('touchend',   e => {
     const next = thumbs[idx];
     changeMainImage(next.querySelector('img').src, next);
 });
+
+// ============================================================
+// REVIEWS — Fetch, Render, Submit
+// ============================================================
+const REVIEW_API = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+    ? 'http://localhost:5001/api/reviews'
+    : 'https://e-commerce-backend-4rnw.onrender.com/api/reviews';
+
+async function loadProductReviews(productId) {
+    if (!productId) return;
+    try {
+        const res = await fetch(`${REVIEW_API}/${productId}`);
+        if (!res.ok) return;
+        const reviews = await res.json();
+        renderReviewsSummary(reviews);
+        renderReviewCards(reviews);
+        document.getElementById('product-reviews-section').style.display = 'block';
+    } catch (e) {
+        console.error('Error loading reviews:', e);
+        // Still show section with 0 reviews
+        document.getElementById('product-reviews-section').style.display = 'block';
+    }
+}
+
+function getStarsHtml(rating) {
+    let html = '';
+    for (let i = 1; i <= 5; i++) {
+        if (i <= Math.floor(rating)) html += '<i class="fas fa-star" style="color:#f4a11b"></i>';
+        else if (i - rating < 1 && i - rating > 0) html += '<i class="fas fa-star-half-alt" style="color:#f4a11b"></i>';
+        else html += '<i class="far fa-star" style="color:#ddd"></i>';
+    }
+    return html;
+}
+
+function renderReviewsSummary(reviews) {
+    const count = reviews.length;
+    document.getElementById('pd-total-reviews').textContent = `(${count} Review${count !== 1 ? 's' : ''})`;
+
+    if (count === 0) {
+        document.getElementById('pd-average-rating').textContent = '0';
+        document.getElementById('pd-rating-bars').innerHTML = '';
+        document.getElementById('pd-latest-review').innerHTML = '<p style="color:#999;font-size:13px;">No reviews yet. Be the first!</p>';
+        return;
+    }
+
+    const sum = reviews.reduce((s, r) => s + r.rating, 0);
+    const avg = (sum / count).toFixed(1);
+    document.getElementById('pd-average-rating').textContent = avg;
+
+    // Rating bars
+    const counts = [0, 0, 0, 0, 0, 0];
+    reviews.forEach(r => { counts[Math.floor(r.rating)]++; });
+    let barsHtml = '';
+    for (let i = 5; i >= 1; i--) {
+        const pct = (counts[i] / count) * 100;
+        barsHtml += `
+            <div class="rating-bar-row">
+                <span class="bar-label"><i class="fas fa-star" style="color:#f4a11b;font-size:11px;"></i> ${i}</span>
+                <div class="bar-bg"><div class="bar-fill" style="width:${pct}%"></div></div>
+            </div>`;
+    }
+    document.getElementById('pd-rating-bars').innerHTML = barsHtml;
+
+    // Latest review preview
+    const latest = reviews[0];
+    const authorName = latest.author || (latest.user ? `${latest.user.firstName} ${latest.user.lastName}` : 'Anonymous');
+    const dateStr = latest.createdAt ? new Date(latest.createdAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
+    document.getElementById('pd-latest-review').innerHTML = `
+        <div class="preview-card">
+            <div class="preview-header">
+                <strong>${authorName}</strong>
+                <span class="preview-date">${dateStr}</span>
+            </div>
+            <div class="preview-stars">${getStarsHtml(latest.rating)}</div>
+            <p class="preview-comment">"${latest.comment}"</p>
+        </div>`;
+}
+
+function renderReviewCards(reviews) {
+    const container = document.getElementById('pd-reviews-list');
+    if (reviews.length === 0) {
+        container.innerHTML = '<p style="text-align:center;padding:30px;color:#999;">No reviews yet.</p>';
+        return;
+    }
+    container.innerHTML = reviews.map(r => {
+        const authorName = r.author || (r.user ? `${r.user.firstName} ${r.user.lastName}` : 'Anonymous');
+        const dateStr = r.createdAt ? new Date(r.createdAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
+        return `
+            <div class="pd-review-card">
+                <div class="pd-review-top">
+                    <div class="pd-review-stars">${getStarsHtml(r.rating)}</div>
+                    <span class="pd-review-date">${dateStr}</span>
+                </div>
+                <h4 class="pd-review-title">${r.title || ''}</h4>
+                <p class="pd-review-body">${r.comment}</p>
+                <p class="pd-review-author">— ${authorName}</p>
+            </div>`;
+    }).join('');
+}
+
+function initReviewModal() {
+    const modal = document.getElementById('pd-review-modal');
+    const openBtn = document.getElementById('pd-open-review-modal');
+    const closeBtn = document.getElementById('pd-close-review-modal');
+    if (!modal || !openBtn || !closeBtn) return;
+
+    openBtn.addEventListener('click', () => {
+        const token = localStorage.getItem('token');
+        if (!token) {
+            alert('Please sign in to write a review.');
+            window.location.href = 'login.html';
+            return;
+        }
+        modal.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+    modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
+
+    // Star selection inside modal
+    document.querySelectorAll('#pd-modal-stars i').forEach(star => {
+        star.addEventListener('click', () => {
+            const val = star.getAttribute('data-val');
+            document.getElementById('pd-review-rating-input').value = val;
+            document.querySelectorAll('#pd-modal-stars i').forEach(s => {
+                s.className = s.getAttribute('data-val') <= val ? 'fas fa-star' : 'far fa-star';
+            });
+        });
+    });
+
+    // Submit
+    document.getElementById('pd-write-review-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const rating = document.getElementById('pd-review-rating-input').value;
+        const title = document.getElementById('pd-review-title').value;
+        const comment = document.getElementById('pd-review-comment').value;
+        const token = localStorage.getItem('token');
+
+        if (!rating) { alert('Please select a star rating.'); return; }
+
+        const productId = currentProduct ? (currentProduct._id || currentProduct.customId || currentProduct.id) : null;
+        if (!productId) { alert('Product not found.'); return; }
+
+        const btn = document.getElementById('pd-submit-review-btn');
+        btn.textContent = 'Submitting...';
+        btn.disabled = true;
+
+        try {
+            const res = await fetch(REVIEW_API, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
+                body: JSON.stringify({ productId: String(productId), rating: Number(rating), title, comment })
+            });
+            const data = await res.json();
+            if (res.ok) {
+                modal.classList.remove('active');
+                // Reload reviews
+                loadProductReviews(String(productId));
+                // Reset form
+                document.getElementById('pd-write-review-form').reset();
+                document.querySelectorAll('#pd-modal-stars i').forEach(s => s.className = 'far fa-star');
+                document.getElementById('pd-review-rating-input').value = '';
+            } else {
+                alert(data.message || 'Failed to submit review.');
+            }
+        } catch (err) {
+            console.error(err);
+            alert('Network error. Please try again.');
+        } finally {
+            btn.textContent = 'Submit Review';
+            btn.disabled = false;
+        }
+    });
+}
