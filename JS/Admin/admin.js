@@ -29,10 +29,19 @@ const state = {
 function safeParse(value, fallback) {
     try {
         const parsed = JSON.parse(value);
-        return parsed ?? fallback;
-    } catch (error) {
+        return parsed || fallback;
+    } catch {
         return fallback;
     }
+}
+
+function getAdminImagePath(imagePath) {
+    if (!imagePath) return '../../images/1.png';
+    if (imagePath.startsWith('../images/')) {
+        // Since admin.html is at Pages/Admin/, we need one more level up to reach images/
+        return '../' + imagePath; 
+    }
+    return imagePath;
 }
 
 function getLocalStorageCollection(key) {
@@ -492,9 +501,11 @@ function renderTopProducts() {
 
     const topProducts = getTopProducts();
 
-    container.innerHTML = topProducts.length ? topProducts.map((product) => `
+    container.innerHTML = topProducts.length ? topProducts.map((product) => {
+        const imgPath = product.image || (product.images && product.images[0]) || '';
+        return `
         <div class="top-product-item">
-            <img class="top-product-thumb" src="${product.image || '../../images/1.png'}" alt="${product.name}">
+            <img class="top-product-thumb" src="${getAdminImagePath(imgPath)}" alt="${product.name}">
             <div class="top-product-info">
                 <h4>${product.name}</h4>
                 <p>${product.quantity} units sold</p>
@@ -518,12 +529,19 @@ function renderRecentOrders() {
         const statusIcon = statusClass === 'completed' ? 'fa-check-circle' : 'fa-clock';
         // Use amount property directly from order data
         const orderAmount = order.amount || order.totalAmount || 0;
-        const orderId = order.id || order.orderNumber || `ORD-${String(order._index + 1).padStart(5, '0')}`;
+        
+        let itemDisplay = `ORD-${String(order._index || 1).padStart(5, '0')}`;
+        if (order.items && order.items.length > 0 && order.items[0].name) {
+            itemDisplay = order.items.length > 1 
+                ? `${order.items[0].name} +${order.items.length - 1}` 
+                : order.items[0].name;
+        }
+
         const customerName = order.customer || order.customerName || 'Guest User';
         const orderDate = order.date || formatAdminDate(order.placedAt);
         return `
             <tr>
-                <td class="order-id">#${orderId.replace(/^#/, '').replace(/^ORD-/, '')}</td>
+                <td class="order-id" style="max-width:180px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${itemDisplay}">${itemDisplay}</td>
                 <td>${customerName}</td>
                 <td>${orderDate}</td>
                 <td>$${Number(orderAmount).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
@@ -764,7 +782,7 @@ function renderProductsTable() {
         <tr class="product-row" data-product-id="${product._id || product.customId}">
             <td>
                 <div class="avatar" style="border-radius: 8px;">
-                    <img src="${product.images && product.images.length ? product.images[0] : '../../images/1.png'}" alt="Thumb" style="border-radius: 8px;">
+                    <img src="${getAdminImagePath(product.images && product.images.length ? product.images[0] : '')}" alt="Thumb" style="border-radius: 8px;">
                 </div>
             </td>
             <td><strong>${product.name}</strong></td>
