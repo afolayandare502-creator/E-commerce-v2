@@ -512,7 +512,7 @@ function renderTopProducts() {
             </div>
             <div class="top-product-price">${formatAdminPrice(product.revenue)}</div>
         </div>
-    `}).join('') : '<div class="empty-state">No products sold yet.</div>';
+    `).join('') : '<div class="empty-state">No products sold yet.</div>';
 }
 
 function renderRecentOrders() {
