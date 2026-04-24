@@ -586,6 +586,24 @@ function renderDashboard() {
     renderRecentOrders();
 }
 
+function getOrderStatusBadge(status) {
+    const s = (status || '').toLowerCase();
+    let bg = '#FAFAFA';
+    let color = '#333';
+    
+    if (s === 'pending' || s === 'order placed') {
+        bg = '#FFF8E1'; color = '#F57F17'; // Yellow
+    } else if (s === 'packing') {
+        bg = '#E3F2FD'; color = '#1976D2'; // Blue
+    } else if (s === 'shipped' || s === 'out for delivery') {
+        bg = '#F3E5F5'; color = '#7B1FA2'; // Purple
+    } else if (s === 'delivered' || s === 'completed' || s === 'paid') {
+        bg = '#E8F5E9'; color = '#388E3C'; // Green
+    }
+    
+    return `<span style="background:${bg}; color:${color}; padding:6px 12px; border-radius:30px; font-size:12px; font-weight:700; display:inline-block; text-align:center;">${status}</span>`;
+}
+
 function renderOrdersTable() {
     const tbody = document.getElementById('admin-orders-tbody');
     const bulkBar = document.getElementById('orders-bulk-bar');
@@ -595,31 +613,38 @@ function renderOrdersTable() {
 
     const filteredOrders = getFilteredOrders();
 
-    tbody.innerHTML = filteredOrders.length ? filteredOrders.map((order) => `
-        <tr>
+    tbody.innerHTML = filteredOrders.length ? filteredOrders.map((order) => {
+        const firstItem = order.items && order.items.length > 0 ? order.items[0] : null;
+        const imgPath = firstItem ? (firstItem.image || (firstItem.images && firstItem.images[0])) : '';
+        const productName = firstItem ? firstItem.name : 'Unknown Product';
+        const quantity = order.items && order.items.length > 1 ? `+${order.items.length - 1}` : '×1';
+        const firstName = (order.customerName || 'Guest').split(' ')[0];
+
+        return `
+        <tr style="height: 64px;">
             <td>
                 <input type="checkbox" class="order-row-checkbox" data-order-key="${order._key}" ${state.selectedOrders.has(order._key) ? 'checked' : ''}>
             </td>
-            <td><strong>#${order.orderNumber.replace(/^ORD-/, '')}</strong></td>
             <td>
-                <div class="customer-cell">
-                    ${renderAvatarMarkup(order.customerName, '', 'avatar')}
-                    <div class="customer-meta">
-                        <strong>${order.customerName}</strong>
-                        <span>${order.customerEmail}</span>
+                <div style="display:flex; align-items:center; gap:12px; max-width:260px;">
+                    <img src="${getAdminImagePath(imgPath)}" style="width:40px; height:40px; border-radius:6px; object-fit:cover; border:1px solid #eaeaea;">
+                    <div style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-weight:600; font-size:14px; color:#333;" title="${productName}">
+                        ${productName} <span style="color:#888; font-size:12px; margin-left:4px;">${quantity}</span>
                     </div>
                 </div>
             </td>
-            <td>${order.type}</td>
-            <td>${buildOrderStatusSelect(order)}</td>
-            <td><div class="product-summary">${order.itemsLabel}</div></td>
-            <td><strong>${formatAdminPrice(order.totalAmount)}</strong></td>
-            <td>${formatAdminDate(order.placedAt)}</td>
+            <td>
+                <strong style="font-size:14px; color:#444;">${firstName}</strong>
+            </td>
+            <td>${getOrderStatusBadge(order.status)}</td>
+            <td><strong style="font-size:14px; color:#222;">${formatAdminPrice(order.totalAmount || order.amount)}</strong></td>
+            <td style="font-size:13px; color:#777;">${formatAdminDate(order.placedAt || order.date)}</td>
             <td><button class="row-action-btn" type="button" aria-label="Order actions"><i class="fas fa-ellipsis-h"></i></button></td>
         </tr>
-    `).join('') : `
+    `;
+    }).join('') : `
         <tr>
-            <td colspan="9"><div class="empty-state">No orders matched the current filters.</div></td>
+            <td colspan="7"><div class="empty-state">No orders matched the current filters.</div></td>
         </tr>
     `;
 
@@ -1102,6 +1127,15 @@ function initializeControls() {
     }
 
     document.addEventListener('click', (event) => {
+        if (event.target.id === 'bulk-action-apply') {
+            const select = document.getElementById('bulk-action-select');
+            if (select && select.value) {
+                applyBulkStatusUpdate(select.value);
+                select.value = ''; // Reset select after applying
+            }
+            return;
+        }
+
         if (event.target.closest('[data-bulk-status]')) {
             applyBulkStatusUpdate(event.target.closest('[data-bulk-status]').dataset.bulkStatus);
             return;

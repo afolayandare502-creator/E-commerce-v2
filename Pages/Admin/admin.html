@@ -204,9 +204,14 @@
                             <span>selected</span>
                         </div>
                         <div class="bulk-action-buttons">
-                            <button type="button" class="bulk-btn" data-bulk-status="Packing">Mark Packing</button>
-                            <button type="button" class="bulk-btn" data-bulk-status="Shipped">Mark Shipped</button>
-                            <button type="button" class="bulk-btn bulk-btn-dark" data-bulk-status="Delivered">Mark Delivered</button>
+                            <select id="bulk-action-select" class="bulk-select" style="padding: 8px 12px; border-radius: 6px; border: 1px solid var(--admin-border); background: #fff; font-size: 13px; font-weight: 500; cursor: pointer; outline: none;">
+                                <option value="">Bulk Actions</option>
+                                <option value="Packing">Mark Packing</option>
+                                <option value="Shipped">Mark Shipped</option>
+                                <option value="Delivered">Mark Delivered</option>
+                                <option value="Completed">Mark Completed</option>
+                            </select>
+                            <button type="button" class="bulk-btn bulk-btn-dark" id="bulk-action-apply" style="margin-left: 8px;">Apply</button>
                         </div>
                     </div>
 
@@ -217,11 +222,9 @@
                                     <th class="checkbox-col">
                                         <input id="orders-select-all" type="checkbox" aria-label="Select all orders">
                                     </th>
-                                    <th>Order</th>
-                                    <th>Customer</th>
-                                    <th>Type</th>
-                                    <th>Status</th>
                                     <th>Product</th>
+                                    <th>Customer</th>
+                                    <th>Status</th>
                                     <th>Total</th>
                                     <th>Date</th>
                                     <th></th>
