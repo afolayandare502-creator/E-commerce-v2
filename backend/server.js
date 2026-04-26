@@ -8,11 +8,11 @@ const reviewRoutes = require('./routes/reviewRoutes');
 const authRoutes = require('./routes/authRoutes');
 const passport = require('passport');
 
-// Load passport config
-//require('./config/passport');
-
-// Load env variables
+// Load env variables FIRST so passport strategy can read GOOGLE_CLIENT_ID etc.
 dotenv.config();
+
+// Load passport config (Google OAuth strategy)
+require('./config/passport');
 
 // Connect to database
 connectDB();
@@ -27,7 +27,7 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use(cors());
 
 // Initialize passport
-//app.use(passport.initialize());
+app.use(passport.initialize());
 
 // Health Check Route
 app.get('/', (req, res) => {

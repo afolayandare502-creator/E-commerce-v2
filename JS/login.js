@@ -313,8 +313,11 @@ function initializeLoginForm() {
     const appleBtn = document.querySelector('.apple-login-btn');
 
     if (googleBtn) {
+        const BACKEND_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+            ? 'http://localhost:5001'
+            : 'https://e-commerce-backend-4rnw.onrender.com';
         googleBtn.addEventListener('click', () => {
-            window.location.href = 'http://localhost:5001/api/auth/google';
+            window.location.href = `${BACKEND_URL}/api/auth/google`;
         });
     }
 
