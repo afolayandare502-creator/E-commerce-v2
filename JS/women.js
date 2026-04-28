@@ -193,6 +193,7 @@ function initASOSMegaMenu() {
         }
     }
 
+
     function openMenu(category) {
         const customMenus = {
             clothing: clothingMegaMenu,
@@ -222,6 +223,7 @@ function initASOSMegaMenu() {
         if (active) active.classList.add('mega-active');
     }
 
+    
     function closeMenu() {
         [megaMenu, clothingMegaMenu, shoesMegaMenu, faceBodyMegaMenu, accessoriesMegaMenu, activewearMegaMenu]
             .forEach(m => { if (m) m.classList.remove('is-open'); });
