@@ -112,7 +112,10 @@ function initializeDeliveryForm() {
         const profile = typeof getCurrentUserProfile === 'function' ? getCurrentUserProfile() : {};
         const customerName = profile ? `${profile.firstName || ''} ${profile.lastName || ''}`.trim() : '';
 
-        const API_URL = 'http://localhost:5001/api';
+        const API_URL =
+  window.location.hostname === 'localhost'
+    ? 'http://localhost:5001/api'
+    : 'https://e-commerce-backend-4rnw.onrender.com/api';
 
         feedback.hidden = false;
         feedback.textContent = 'Placing your order...';

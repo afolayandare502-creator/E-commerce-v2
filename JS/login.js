@@ -111,7 +111,7 @@ function initializeLoginForm() {
         });
     }
 
-    const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+    const API_URL = window.location.hostname === '' || window.location.hostname === '127.0.0.1' 
         ? 'http://localhost:5001/api/auth' 
         : 'https://e-commerce-backend-4rnw.onrender.com/api/auth';
 

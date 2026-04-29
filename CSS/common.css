@@ -869,7 +869,7 @@ body.mobile-nav-open {
 }
 
 /* ============================================================
-   ASOS MEGA MENU — shared base
+   Shop mega menu — shared base
    ============================================================ */
 .mega-menu {
     position: absolute;
@@ -949,7 +949,7 @@ body.mobile-nav-open {
     color: #000 !important;
 }
 
-.asos-layout {
+.shop-layout {
     display: flex;
     flex: 1;
 }
@@ -2666,7 +2666,7 @@ body.mobile-nav-open {
         padding-bottom: 20px;
     }
 
-    .asos-layout {
+    .shop-layout {
         flex-direction: column;
     }
 

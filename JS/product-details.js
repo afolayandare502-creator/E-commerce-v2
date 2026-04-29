@@ -33,7 +33,6 @@ const categoryFileMap = {
     'heels':          '../Data/Women/Shoes/Heels.json',
     'adidas':         '../Data/Women/Shoes/addidas.json',
     'birkenstock':    '../Data/Women/Shoes/birkenstock.json',
-    'asos-design':    '../Data/Women/Shoes/asos-design.json',
     'balenciaga':     '../Data/Women/Shoes/balenciaga.json',
     'puma':           '../Data/Women/Shoes/Puma.json',
     'facebody-makeup': '../Data/Women/Face+Body/makeup.json',
@@ -159,7 +158,6 @@ const categoryLabelMap = {
     'heels': 'Heels',
     'adidas': 'Adidas',
     'birkenstock': 'Birkenstock',
-    'asos-design': 'Asos Design',
     'balenciaga': 'Balenciaga',
     'puma': 'Puma',
     'facebody': 'Face + Body',
@@ -328,7 +326,6 @@ const categoryStorageKeyMap = {
     'heels': 'heels',
     'adidas': 'adidas',
     'birkenstock': 'birkenstock',
-    'asos-design': 'asos-design',
     'balenciaga': 'balenciaga',
     'puma': 'puma',
     'facebody-makeup': 'facebody-makeup',
@@ -475,7 +472,7 @@ async function findProductInFile(file, productId, forcedCategory) {
 // DISPLAY PRODUCT
 // ============================================================
 function displayProductDetails(product) {
-    document.title = product.name + ' — Brand New';
+    document.title = product.name + ' — Casa';
 
     document.getElementById('product-name').textContent  = product.name;
     document.getElementById('product-price').textContent = `$${Number(product.price).toFixed(2)}`;

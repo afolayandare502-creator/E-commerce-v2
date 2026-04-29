@@ -141,9 +141,9 @@ const mobileMenuData = {
 
 
 // ============================================================
-// ASOS MEGA MENU — Women
+// Shop mega menu — Women
 // ============================================================
-function initASOSMegaMenu() {
+function initShopMegaMenu() {
     const megaMenu = document.getElementById('new-in-mega-menu');
     const clothingMegaMenu = document.getElementById('clothing-mega-menu');
     const shoesMegaMenu = document.getElementById('shoes-mega-menu');
@@ -168,16 +168,16 @@ function initASOSMegaMenu() {
         const data = megaMenuData[category];
         if (!data) return;
 
-        const asosLayout = document.getElementById('asos-layout');
+        const shopLayout = document.getElementById('shop-layout');
         const gridLayout = document.getElementById('grid-layout');
         const womenLayout = document.getElementById('women-layout');
 
         if (category === 'newin') {
-            if (asosLayout) asosLayout.style.display = 'flex';
+            if (shopLayout) shopLayout.style.display = 'flex';
             if (womenLayout) womenLayout.style.display = 'none';
             if (gridLayout) gridLayout.style.display = 'none';
         } else {
-            if (asosLayout) asosLayout.style.display = 'none';
+            if (shopLayout) shopLayout.style.display = 'none';
             if (womenLayout) womenLayout.style.display = 'none';
             if (gridLayout) gridLayout.style.display = 'grid';
 
@@ -576,7 +576,7 @@ window.addEventListener('storage', (e) => {
 // INIT ALL
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
-    initASOSMegaMenu();
+    initShopMegaMenu();
     initMobileDrawer();
     initSidebarCheckout();
     renderHoverCartMenu();

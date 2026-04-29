@@ -485,7 +485,7 @@ const sectionContentMap = {
         sectionLabel: 'New In',
         currentLabel: 'New In: Clothing',
         title: 'New In Clothing for Women',
-        description: "Want to update your wardrobe with the latest styles? Our edit of women's clothing brings together just dropped new-in pieces, all in one place. Shop ASOS DESIGN for everything from staples to standout pieces."
+        description: "Want to update your wardrobe with the latest styles? Our edit of women's clothing brings together just dropped new-in pieces, all in one place. Shop Casa Edit for everything from staples to standout pieces."
     },
     clothing: {
         sectionLabel: 'Clothing',
@@ -1150,7 +1150,7 @@ function applyMenProductsMegaMenus() {
                     <li><a href="products.html?gender=men&category=new-in-jumpers">Jumpers</a></li>
                 </ul>
             </div>
-            <div id="asos-layout" class="asos-layout">
+            <div id="shop-layout" class="shop-layout">
                 <div class="mega-brand-section">
                     <p class="mega-section-title">SUPPORTED BRAND</p>
                     <div class="mega-brand-list">
@@ -1235,7 +1235,7 @@ function applyMenProductsMegaMenus() {
                 <div class="shoes-menu-col">
                     <p class="clothing-section-title">SHOP BY BRAND</p>
                     <ul class="shoes-edit-list">
-                        <li><a href="#" class="shoes-edit-link"><img src="../images/SHOE5.jpeg" alt="ASOS DESIGN"><span>ASOS DESIGN</span></a></li>
+                        <li><a href="#" class="shoes-edit-link"><img src="../images/SHOE5.jpeg" alt="Casa Edit"><span>CASA EDIT</span></a></li>
                         <li><a href="#" class="shoes-edit-link"><img src="../images/SHOES1.jpeg" alt="adidas"><span>adidas</span></a></li>
                         <li><a href="#" class="shoes-edit-link"><img src="../images/SHOE6.avif" alt="Asics"><span>Asics</span></a></li>
                         <li><a href="#" class="shoes-edit-link"><img src="../images/MENSH.avif" alt="On"><span>New Balenciaga</span></a></li>
@@ -1457,7 +1457,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Initialize mega menu for products page
-    initASOSMegaMenu();
+    initShopMegaMenu();
     
     // Initialize chip navigation
     initChipNavigation();

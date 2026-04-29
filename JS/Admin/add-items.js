@@ -27,7 +27,6 @@ const SUBCATEGORY_JSON_FILE_MAP = {
     heels: '../../Data/Women/Shoes/Heels.json',
     adidas: '../../Data/Women/Shoes/addidas.json',
     birkenstock: '../../Data/Women/Shoes/birkenstock.json',
-    'asos-design': '../../Data/Women/Shoes/asos-design.json',
     balenciaga: '../../Data/Women/Shoes/balenciaga.json',
     puma: '../../Data/Women/Shoes/Puma.json',
     'facebody-hottest-drop': '../../Data/Women/Face+Body/makeup.json',
@@ -82,7 +81,6 @@ const CATEGORY_SUBCATEGORY_MAP = {
         { value: 'heels', label: 'Heels' },
         { value: 'adidas', label: 'Adidas' },
         { value: 'birkenstock', label: 'Birkenstock' },
-        { value: 'asos-design', label: 'Asos Design' },
         { value: 'balenciaga', label: 'Balenciaga' },
         { value: 'puma', label: 'Puma' }
     ],
@@ -140,7 +138,6 @@ const SUBCATEGORY_STORAGE_KEY_MAP = {
     heels: 'heels',
     adidas: 'adidas',
     birkenstock: 'birkenstock',
-    'asos-design': 'asos-design',
     balenciaga: 'balenciaga',
     puma: 'puma',
     'facebody-hottest-drop': 'facebody-hottest-drop',

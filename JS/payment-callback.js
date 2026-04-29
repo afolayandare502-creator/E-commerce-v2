@@ -1,5 +1,8 @@
 (async function() {
-    const API_URL = 'http://localhost:5001/api';
+    const API_URL =
+  window.location.hostname === 'localhost'
+    ? 'http://localhost:5001/api'
+    : 'https://e-commerce-backend-4rnw.onrender.com/api';
 
     const spinner = document.getElementById('loading-spinner');
     const title = document.getElementById('status-title');
