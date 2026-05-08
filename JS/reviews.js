@@ -38,13 +38,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (res.ok) {
             reviews = await res.json();
         } else {
-            console.warn('Backend endpoint not found yet (maybe not deployed). Using mock data.');
-            reviews = generateMockFallbackReviews(productId);
+            console.warn('Backend endpoint not found yet (maybe not deployed). Using seeded reviews.');
         }
     } catch (e) {
-        console.warn('Backend fetch failed. Using mock data.', e);
-        reviews = generateMockFallbackReviews(productId);
+        console.warn('Backend fetch failed. Using seeded reviews.', e);
     }
+
+    reviews = typeof window.withSeededProductReviews === 'function'
+        ? window.withSeededProductReviews(productId, reviews)
+        : reviews;
 
     renderReviewsHeader(reviews);
     renderReviews(reviews);
@@ -148,35 +150,6 @@ function renderReviews(reviews) {
     });
 }
 
-function generateMockFallbackReviews(productId) {
-    return [
-        {
-            productId,
-            rating: 5,
-            title: 'Fantastic',
-            author: 'jacklynt',
-            comment: 'This product is exactly what I needed to give this 5 stars. The quality is simply incredible. I would definitely purchase this again and recommend it to anyone.',
-            createdAt: new Date(Date.now() - 365 * 24 * 60 * 60 * 1000).toISOString()
-        },
-        {
-            productId,
-            rating: 4,
-            title: 'Very Good, then all of sudden buggy',
-            author: 'SaisonXiang',
-            comment: 'I’ve used this item for about 1 year. During that time I familiarized myself with its functions. It is generally really good but occasionally it acts up entirely out of nowhere.',
-            createdAt: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString()
-        },
-        {
-            productId,
-            rating: 3,
-            title: 'Less usable with each iteration',
-            author: 'old-man-yelling-at-cloud',
-            comment: 'It serves important functions but the newer designs make it less material and usable. I wish they kept the old classic aesthetic without overcomplicating the fabric choices.',
-            createdAt: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString()
-        }
-    ];
-}
-
 function setupWriteReviewModal(productId, API_BASE_URL) {
     const modal = document.getElementById('review-modal');
     const openBtn = document.getElementById('open-review-modal');
@@ -241,7 +214,7 @@ function setupWriteReviewModal(productId, API_BASE_URL) {
         btn.textContent = 'Submitting...';
 
         try {
-            await fetch(\`\${API_BASE_URL}/api/reviews\`, {
+            await fetch(`${API_BASE_URL}/api/reviews`, {
                 method: 'POST',
                 headers: { 
                     'Content-Type': 'application/json',

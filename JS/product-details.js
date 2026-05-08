@@ -933,17 +933,34 @@ const REVIEW_API = window.location.hostname === 'localhost' || window.location.h
 
 async function loadProductReviews(productId) {
     if (!productId) return;
+    let reviews = [];
     try {
         const res = await fetch(`${REVIEW_API}/${productId}`);
-        if (!res.ok) return;
-        const reviews = await res.json();
-        renderReviewsSummary(reviews);
-        renderReviewCards(reviews);
-        document.getElementById('product-reviews-section').style.display = 'block';
+        if (res.ok) {
+            reviews = await res.json();
+        }
     } catch (e) {
         console.error('Error loading reviews:', e);
-        // Still show section with 0 reviews
-        document.getElementById('product-reviews-section').style.display = 'block';
+    }
+
+    reviews = typeof window.withSeededProductReviews === 'function'
+        ? window.withSeededProductReviews(productId, reviews)
+        : reviews;
+
+    updateProductRatingPreview(reviews);
+    renderReviewsSummary(reviews);
+    renderReviewCards(reviews);
+    document.getElementById('product-reviews-section').style.display = 'block';
+}
+
+function updateProductRatingPreview(reviews) {
+    if (!reviews.length) return;
+    const average = reviews.reduce((sum, review) => sum + Number(review.rating || 0), 0) / reviews.length;
+    renderStars(average);
+
+    const ratingCountEl = document.getElementById('rating-count');
+    if (ratingCountEl) {
+        ratingCountEl.textContent = `(${reviews.length})`;
     }
 }
 
