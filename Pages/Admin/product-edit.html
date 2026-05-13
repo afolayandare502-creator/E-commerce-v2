@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../../JS/Admin/admin-auth.js"></script>
+    <script>
+        if (localStorage.getItem('isAdmin') !== 'true') {
+            window.location.replace('admin-login.html');
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="../../CSS/admin.css">
+    <link rel="stylesheet" href="../../CSS/add-items.css">
+    <link rel="stylesheet" href="../../CSS/product-edit.css">
+</head>
+<body>
+    <div class="admin-shell add-items-shell product-edit-shell">
+        <aside class="admin-sidebar">
+            <div class="admin-brand">
+                <div class="admin-brand-icon"><i class="fas fa-gem"></i></div>
+                <div>
+                    <h1>Admin Panel</h1>
+                </div>
+            </div>
+
+            <nav class="admin-nav">
+                <div class="admin-nav-group">
+                    <p class="admin-nav-label">Navigation</p>
+                    <a href="admin.html" class="admin-nav-link">
+                        <span><i class="fas fa-th-large"></i> Dashboard</span>
+                    </a>
+                    <a href="admin.html?view=orders" class="admin-nav-link">
+                        <span><i class="fas fa-shopping-bag"></i> Orders</span>
+                    </a>
+                    <a href="admin.html?view=customers" class="admin-nav-link">
+                        <span><i class="fas fa-users"></i> Customers</span>
+                    </a>
+                    <a href="admin.html?view=products" class="admin-nav-link is-active">
+                        <span><i class="fas fa-box-open"></i> Products</span>
+                    </a>
+                    <a href="add-items.html" class="admin-nav-link">
+                        <span><i class="fas fa-plus-square"></i> Add Items</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="admin-sidebar-footer">
+                <button id="admin-logout-btn" class="admin-logout-btn" data-admin-logout>
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Log Out</span>
+                </button>
+            </div>
+        </aside>
+
+        <main class="admin-main add-items-main">
+            <header class="add-items-header product-edit-header">
+                <div class="add-items-header-copy">
+                    <p class="admin-eyebrow">Inventory</p>
+                    <h2>Edit Product</h2>
+                </div>
+                <a href="admin.html?view=products" class="product-edit-back">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Products
+                </a>
+            </header>
+
+            <section class="product-edit-content">
+                <div id="product-edit-status" class="product-edit-status">Loading product...</div>
+
+                <form id="product-edit-form" class="product-edit-form" style="display:none;">
+                    <aside class="product-edit-preview">
+                        <img id="product-edit-image" src="../../images/1.png" alt="Product preview">
+                        <div>
+                            <p class="product-edit-preview-label">Preview</p>
+                            <h3 id="product-edit-preview-name">Product</h3>
+                            <div id="product-edit-preview-price" class="product-edit-preview-price">$0.00</div>
+                        </div>
+                    </aside>
+
+                    <div class="product-edit-fields">
+                        <label class="add-item-field add-item-field-wide">
+                            <span class="add-item-label">Product Name</span>
+                            <input type="text" id="edit-product-name" required>
+                        </label>
+
+                        <label class="add-item-field add-item-field-wide">
+                            <span class="add-item-label">Description</span>
+                            <textarea id="edit-product-description" rows="5" placeholder="Product description"></textarea>
+                        </label>
+
+                        <div class="product-edit-grid">
+                            <label class="add-item-field">
+                                <span class="add-item-label">Current Price</span>
+                                <input type="number" id="edit-product-price" min="0" step="0.01" required>
+                            </label>
+
+                            <label class="add-item-field">
+                                <span class="add-item-label">Old Price</span>
+                                <input type="number" id="edit-product-old-price" min="0" step="0.01" placeholder="Optional">
+                            </label>
+
+                            <label class="add-item-field">
+                                <span class="add-item-label">Stock Quantity</span>
+                                <input type="number" id="edit-product-stock" min="0" step="1">
+                            </label>
+                        </div>
+
+                        <div id="product-edit-discount" class="product-edit-discount" aria-live="polite"></div>
+
+                        <label class="product-edit-toggle">
+                            <input type="checkbox" id="edit-product-sold-out">
+                            <span>
+                                <strong>Sold Out</strong>
+                                <small>Show sold-out badges and block cart actions for this product.</small>
+                            </span>
+                        </label>
+
+                        <div class="product-edit-actions">
+                            <button type="submit" class="add-item-submit product-edit-submit">Save</button>
+                            <a href="admin.html?view=products" class="product-edit-cancel">Cancel</a>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="../../JS/Admin/product-edit.js"></script>
+</body>
+</html>

@@ -1,5 +1,19 @@
 const Product = require('../models/Product');
 
+function normalizeOptionalNumber(value) {
+    if (value === undefined) return undefined;
+    if (value === '' || value === null) return null;
+
+    const number = Number(value);
+    return Number.isFinite(number) ? number : value;
+}
+
+function normalizeBoolean(value) {
+    if (value === undefined) return undefined;
+    if (typeof value === 'boolean') return value;
+    return value === 'true' || value === '1' || value === 1;
+}
+
 // @desc    Fetch all products (with optional filtering)
 // @route   GET /api/products
 // @access  Public
@@ -72,6 +86,9 @@ const createProduct = async (req, res) => {
         const {
             name,
             price,
+            oldPrice,
+            stock,
+            soldOut,
             description,
             category,
             subcategory,
@@ -83,7 +100,10 @@ const createProduct = async (req, res) => {
 
         const product = new Product({
             name,
-            price,
+            price: normalizeOptionalNumber(price) ?? 0,
+            oldPrice: normalizeOptionalNumber(oldPrice),
+            stock: normalizeOptionalNumber(stock) ?? 0,
+            soldOut: normalizeBoolean(soldOut) ?? false,
             description,
             category,
             subcategory,
@@ -117,15 +137,18 @@ const updateProduct = async (req, res) => {
         }
 
         if (product) {
-            product.name = req.body.name || product.name;
-            product.price = req.body.price || product.price;
-            product.description = req.body.description || product.description;
-            product.category = req.body.category || product.category;
-            product.subcategory = req.body.subcategory || product.subcategory;
-            product.gender = req.body.gender || product.gender;
-            product.sizes = req.body.sizes || product.sizes;
+            if (req.body.name !== undefined) product.name = req.body.name;
+            if (req.body.price !== undefined) product.price = normalizeOptionalNumber(req.body.price) ?? 0;
+            if (req.body.oldPrice !== undefined) product.oldPrice = normalizeOptionalNumber(req.body.oldPrice);
+            if (req.body.stock !== undefined) product.stock = normalizeOptionalNumber(req.body.stock) ?? 0;
+            if (req.body.soldOut !== undefined) product.soldOut = normalizeBoolean(req.body.soldOut);
+            if (req.body.description !== undefined) product.description = req.body.description;
+            if (req.body.category !== undefined) product.category = req.body.category;
+            if (req.body.subcategory !== undefined) product.subcategory = req.body.subcategory;
+            if (req.body.gender !== undefined) product.gender = req.body.gender;
+            if (req.body.sizes !== undefined) product.sizes = req.body.sizes;
             product.bestseller = req.body.bestseller !== undefined ? req.body.bestseller : product.bestseller;
-            product.images = req.body.images || product.images;
+            if (req.body.images !== undefined) product.images = req.body.images;
 
             const updatedProduct = await product.save();
             res.json(updatedProduct);

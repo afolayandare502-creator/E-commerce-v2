@@ -475,7 +475,8 @@ function displayProductDetails(product) {
     document.title = product.name + ' — Casa';
 
     document.getElementById('product-name').textContent  = product.name;
-    document.getElementById('product-price').textContent = `$${Number(product.price).toFixed(2)}`;
+    document.getElementById('product-price').innerHTML = getStorefrontPriceHtml(product, 'detail');
+    syncSoldOutState(product);
 
     // Description — use JSON field if available
     if (product.description) {
@@ -493,17 +494,13 @@ function displayProductDetails(product) {
     const productId = product._id || product.customId || product.id;
     loadProductReviews(productId);
 
+    const reviewsUrl = getProductReviewsUrl(product);
+
     // Link stars to the reviews page
     const starsContainer = document.getElementById('product-stars');
     if (starsContainer) {
         starsContainer.style.cursor = 'pointer';
-        starsContainer.onclick = () => {
-            const productId = product._id || product.id || product.customId;
-            const params = new URLSearchParams(window.location.search);
-            const gender = params.get('gender') || 'women';
-            const cat = product._listingCategory || product.category || params.get('category') || '';
-            window.location.href = `reviews.html?id=${productId}&gender=${gender}&category=${cat}`;
-        };
+        starsContainer.onclick = () => { window.location.href = reviewsUrl; };
     }
     
     // Also make rating count clickable
@@ -521,6 +518,59 @@ function displayProductDetails(product) {
     displayThumbnails(images);
 
     hideLoading();
+}
+
+function getProductReviewsUrl(product = currentProduct) {
+    const params = new URLSearchParams(window.location.search);
+    const productId = product ? (product._id || product.id || product.customId) : params.get('id');
+    const gender = params.get('gender') || (product && product._gender) || 'women';
+    const category = (product && (product._listingCategory || product.category)) || params.get('category') || '';
+    const reviewParams = new URLSearchParams({ id: productId, gender, category });
+
+    return `reviews.html?${reviewParams.toString()}`;
+}
+
+function goToProductReviews() {
+    window.location.href = getProductReviewsUrl();
+}
+
+function getProductDiscountPercent(product) {
+    const oldPrice = Number(product.oldPrice || 0);
+    const price = Number(product.price || 0);
+    if (!oldPrice || oldPrice <= price) return 0;
+    return Math.round(((oldPrice - price) / oldPrice) * 100);
+}
+
+function getStorefrontPriceHtml(product, scope = 'card') {
+    const price = Number(product.price || 0);
+    const oldPrice = Number(product.oldPrice || 0);
+    const discount = getProductDiscountPercent(product);
+
+    if (discount > 0) {
+        return `
+            <span class="${scope}-old-price">$${oldPrice.toFixed(2)}</span>
+            <span class="${scope}-sale-price">$${price.toFixed(2)}</span>
+            <span class="${scope}-discount">${discount}% OFF</span>
+        `;
+    }
+
+    return `<span class="${scope}-regular-price">$${price.toFixed(2)}</span>`;
+}
+
+function syncSoldOutState(product) {
+    const badge = document.getElementById('product-sold-out-badge');
+    const cartBtn = document.getElementById('add-to-cart-btn');
+    const isSoldOut = Boolean(product.soldOut);
+
+    if (badge) {
+        badge.style.display = isSoldOut ? 'inline-flex' : 'none';
+    }
+
+    if (cartBtn) {
+        cartBtn.disabled = isSoldOut;
+        cartBtn.textContent = isSoldOut ? 'SOLD OUT' : 'ADD TO CART';
+        cartBtn.classList.toggle('is-sold-out', isSoldOut);
+    }
 }
 
 function getProductImages(product) {
@@ -636,6 +686,9 @@ function initializeAddToCart() {
     if (!btn) return;
 
     btn.addEventListener('click', () => {
+        if (currentProduct && currentProduct.soldOut) {
+            return;
+        }
         if (!selectedSize) {
             showSizeWarning();
             return;
@@ -656,6 +709,7 @@ function showSizeWarning() {
 
 function addProductToCart() {
     if (!currentProduct || !selectedSize) return;
+    if (currentProduct.soldOut) return;
 
     let cart = getCurrentUserCart();
     
@@ -805,21 +859,12 @@ function buildRelatedCard(product) {
         ? window.WishlistStore.isSaved({ id: actualId, category: listingCategory, gender })
         : false;
 
-    // Support optional sale price
-    let priceHtml = '';
-    if (product.salePrice) {
-        const discount = Math.round((1 - product.salePrice / product.price) * 100);
-        priceHtml = `
-            <span class="sale-price">$${Number(product.salePrice).toFixed(2)}</span>
-            <span class="discount-pct">(-${discount}%)</span>
-            <span class="original-price">$${Number(product.price).toFixed(2)}</span>`;
-    } else {
-        priceHtml = `<span>$${Number(product.price).toFixed(2)}</span>`;
-    }
+    const priceHtml = getStorefrontPriceHtml(product, 'related');
 
     return `
         <a href="${url}" class="related-product-card">
             <div class="related-img-wrapper">
+                ${product.soldOut ? '<span class="related-sold-out-badge">Sold Out</span>' : ''}
                 <img src="${img}" alt="${product.name}" class="related-product-img"
                      onerror="this.src='../images/f1.jpg'">
                 <button class="wishlist-btn${isSaved ? ' active' : ''}" title="Save"
@@ -950,6 +995,7 @@ async function loadProductReviews(productId) {
     updateProductRatingPreview(reviews);
     renderReviewsSummary(reviews);
     renderReviewCards(reviews);
+    linkReviewPreviewToFullPage();
     document.getElementById('product-reviews-section').style.display = 'block';
 }
 
@@ -977,6 +1023,8 @@ function getStarsHtml(rating) {
 function renderReviewsSummary(reviews) {
     const count = reviews.length;
     document.getElementById('pd-total-reviews').textContent = `(${count} Review${count !== 1 ? 's' : ''})`;
+    document.getElementById('pd-average-rating').onclick = goToProductReviews;
+    document.getElementById('pd-total-reviews').onclick = goToProductReviews;
 
     if (count === 0) {
         document.getElementById('pd-average-rating').textContent = '0';
@@ -1002,6 +1050,7 @@ function renderReviewsSummary(reviews) {
             </div>`;
     }
     document.getElementById('pd-rating-bars').innerHTML = barsHtml;
+    document.getElementById('pd-rating-bars').onclick = goToProductReviews;
 
     // Latest review preview
     const latest = reviews[0];
@@ -1024,11 +1073,11 @@ function renderReviewCards(reviews) {
         container.innerHTML = '<p style="text-align:center;padding:30px;color:#999;">No reviews yet.</p>';
         return;
     }
-    container.innerHTML = reviews.map(r => {
+    container.innerHTML = reviews.slice(0, 2).map(r => {
         const authorName = r.author || (r.user ? `${r.user.firstName} ${r.user.lastName}` : 'Anonymous');
         const dateStr = r.createdAt ? new Date(r.createdAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
         return `
-            <div class="pd-review-card">
+            <div class="pd-review-card" role="link" tabindex="0">
                 <div class="pd-review-top">
                     <div class="pd-review-stars">${getStarsHtml(r.rating)}</div>
                     <span class="pd-review-date">${dateStr}</span>
@@ -1038,6 +1087,24 @@ function renderReviewCards(reviews) {
                 <p class="pd-review-author">— ${authorName}</p>
             </div>`;
     }).join('');
+}
+
+function linkReviewPreviewToFullPage() {
+    [
+        document.querySelector('.reviews-summary-left'),
+        document.getElementById('pd-rating-bars'),
+        document.getElementById('pd-latest-review'),
+        document.getElementById('pd-reviews-list')
+    ].forEach((element) => {
+        if (!element) return;
+        element.onclick = goToProductReviews;
+        element.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                goToProductReviews();
+            }
+        });
+    });
 }
 
 function initReviewModal() {

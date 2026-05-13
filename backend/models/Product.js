@@ -19,6 +19,23 @@ const productSchema = mongoose.Schema(
             type: Number,
             required: true,
             default: 0,
+            min: 0,
+        },
+        oldPrice: {
+            type: Number,
+            required: false,
+            default: null,
+            min: 0,
+        },
+        stock: {
+            type: Number,
+            required: false,
+            default: 0,
+            min: 0,
+        },
+        soldOut: {
+            type: Boolean,
+            default: false,
         },
         category: {
             type: String,

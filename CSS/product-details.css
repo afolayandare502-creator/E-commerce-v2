@@ -75,6 +75,7 @@
 
 /* Main image */
 .main-image-container {
+    position: relative;
     width: 100%;
     aspect-ratio: 3 / 4;
     overflow: hidden;
@@ -136,10 +137,32 @@
 
 /* Price */
 .product-price {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
     font-size: 28px;
     font-weight: 700;
     color: #111;
     margin: 0;
+}
+
+.detail-old-price {
+    color: #8f8f8f;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+.detail-sale-price {
+    color: #111;
+    font-weight: 800;
+}
+
+.detail-discount {
+    color: #b42318;
+    font-size: 14px;
+    font-weight: 800;
 }
 
 /* Description */
@@ -256,6 +279,42 @@
 
 .add-to-cart-btn:hover { background: #040404; }
 
+.add-to-cart-btn:disabled,
+.add-to-cart-btn.is-sold-out {
+    background: #777;
+    cursor: not-allowed;
+}
+
+.product-sold-out-badge,
+.related-sold-out-badge {
+    position: absolute;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #222;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.product-sold-out-badge {
+    top: 18px;
+    right: 18px;
+    min-height: 44px;
+    padding: 0 22px;
+    font-size: 18px;
+}
+
+.related-sold-out-badge {
+    top: 10px;
+    right: 10px;
+    min-height: 30px;
+    padding: 0 12px;
+    font-size: 12px;
+}
+
 /* Trust badges */
 .product-features {
     display: flex;
@@ -356,9 +415,31 @@
     flex-wrap: wrap;
 }
 
-.related-price .sale-price { color: #d32f2f; }
-.related-price .original-price { text-decoration: line-through; color: #999; font-weight: 400; font-size: 13px; }
-.related-price .discount-pct { color: #d32f2f; font-weight: 400; font-size: 13px; }
+.related-price {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.related-sale-price,
+.related-regular-price {
+    color: #111;
+    font-weight: 700;
+}
+
+.related-old-price {
+    color: #999;
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+
+.related-discount {
+    color: #b42318;
+    font-size: 12px;
+    font-weight: 800;
+}
 
 .related-name {
     font-size: 13px;
@@ -549,6 +630,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    cursor: pointer;
 }
 
 .big-avg-rating {
@@ -576,6 +658,7 @@
     flex-direction: column;
     gap: 6px;
     padding-top: 8px;
+    cursor: pointer;
 }
 
 .rating-bar-row {
@@ -614,6 +697,13 @@
     background: #fafafa;
     border-radius: 10px;
     border: 1px solid #eee;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.reviews-summary-preview:hover {
+    background: #fff;
+    border-color: #d8d8d8;
 }
 
 .preview-card {}
@@ -688,6 +778,13 @@
     border: 1px solid #eee;
     border-radius: 8px;
     background: #fff;
+    cursor: pointer;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.pd-review-card:hover {
+    border-color: #d8d8d8;
+    transform: translateY(-1px);
 }
 
 .pd-review-top {
@@ -851,4 +948,3 @@
         font-size: 48px;
     }
 }
-

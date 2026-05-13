@@ -954,6 +954,29 @@ function createCategoryChip(categoryName) {
     return chip;
 }
 
+function getProductDiscountPercent(product) {
+    const oldPrice = Number(product.oldPrice || 0);
+    const price = Number(product.price || 0);
+    if (!oldPrice || oldPrice <= price) return 0;
+    return Math.round(((oldPrice - price) / oldPrice) * 100);
+}
+
+function getProductPriceHtml(product) {
+    const price = Number(product.price || 0);
+    const oldPrice = Number(product.oldPrice || 0);
+    const discount = getProductDiscountPercent(product);
+
+    if (discount > 0) {
+        return `
+            <span class="product-old-price">$${oldPrice.toFixed(2)}</span>
+            <span class="product-sale-price">$${price.toFixed(2)}</span>
+            <span class="product-discount">${discount}% OFF</span>
+        `;
+    }
+
+    return `<span class="product-regular-price">$${price.toFixed(2)}</span>`;
+}
+
 
 //  Image  function swap first and second image 
 function createProductCard(product, currentCategory) {
@@ -982,12 +1005,13 @@ function createProductCard(product, currentCategory) {
                 <img src="${productImage.primary}" alt="${product.name}" class="primary-img" loading="lazy">
                 ${productImage.secondary ? `<img src="${productImage.secondary}" alt="${product.name}" class="secondary-img" loading="lazy">` : ''}
             </a>
+            ${product.soldOut ? '<span class="product-sold-out-badge">Sold Out</span>' : ''}
             <button class="wishlist${isSaved ? ' active' : ''}" aria-label="Add to wishlist">
                 <i class="${isSaved ? 'fas' : 'far'} fa-heart" aria-hidden="true"></i>
             </button>
         </div>
         <h3 class="product-title">${product.name}</h3>
-        <p class="product-price">$${product.price}</p>
+        <p class="product-price">${getProductPriceHtml(product)}</p>
     `;
     
     // Add click handler for product card (excluding wishlist button)

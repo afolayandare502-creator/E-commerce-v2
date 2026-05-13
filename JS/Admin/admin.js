@@ -80,6 +80,36 @@ function formatAdminPrice(value) {
     return '$' + num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
+function getAdminPriceHtml(product) {
+    const oldPrice = Number(product.oldPrice || 0);
+    const price = Number(product.price || 0);
+
+    if (oldPrice > price && price >= 0) {
+        const discount = Math.round(((oldPrice - price) / oldPrice) * 100);
+        return `
+            <div class="admin-product-price-stack">
+                <span class="admin-old-price">${formatAdminPrice(oldPrice)}</span>
+                <strong>${formatAdminPrice(price)}</strong>
+                <span class="admin-discount-pill">${discount}% OFF</span>
+            </div>
+        `;
+    }
+
+    return `<strong>${formatAdminPrice(price)}</strong>`;
+}
+
+function getAdminProductStatusHtml(product) {
+    if (product.soldOut) {
+        return '<span class="admin-product-status is-sold-out">Sold Out</span>';
+    }
+    return '<span class="admin-product-status is-live">Live</span>';
+}
+
+function openProductEditor(productId) {
+    if (!productId) return;
+    window.location.href = `product-edit.html?id=${encodeURIComponent(productId)}`;
+}
+
 function getStatusClassName(status) {
     return String(status || 'Order Placed')
         .trim()
@@ -826,7 +856,7 @@ function renderProductsTable() {
     );
 
     tbody.innerHTML = filteredProducts.length ? filteredProducts.map((product) => `
-        <tr class="product-row" data-product-id="${product._id || product.customId}">
+        <tr class="product-row product-row-clickable" data-product-id="${product._id || product.customId}">
             <td>
                 <div class="avatar" style="border-radius: 8px;">
                     <img src="${getAdminImagePath(product.images && product.images.length ? product.images[0] : '')}" alt="Thumb" style="border-radius: 8px;">
@@ -838,7 +868,9 @@ function renderProductsTable() {
                     ${product.category || 'Uncategorized'}
                 </span>
             </td>
-            <td><strong>${formatAdminPrice(product.price)}</strong></td>
+            <td>${getAdminPriceHtml(product)}</td>
+            <td><strong>${Number(product.stock || 0)}</strong></td>
+            <td>${getAdminProductStatusHtml(product)}</td>
             <td>
                 <button class="row-action-btn edit-product-btn" type="button" aria-label="Edit product"><i class="fas fa-edit"></i></button>
                 <button class="row-action-btn delete-product-btn" type="button" aria-label="Delete product" style="color:#d93025;"><i class="fas fa-trash-alt"></i></button>
@@ -846,7 +878,7 @@ function renderProductsTable() {
         </tr>
     `).join('') : `
         <tr>
-            <td colspan="5"><div class="empty-state">No products found in the database.</div></td>
+            <td colspan="7"><div class="empty-state">No products found in the database.</div></td>
         </tr>
     `;
 }
@@ -1017,25 +1049,19 @@ function handleTableInteractions(event) {
         return;
     }
 
-    // Product Edit Interactions
     const editProductBtn = event.target.closest('.edit-product-btn');
     if (editProductBtn) {
         const productRow = event.target.closest('.product-row');
         if (productRow) {
-            const product = state.dbProducts.find(p => p._id === productRow.dataset.productId || p.customId === productRow.dataset.productId);
-            if (product) {
-                const newPrice = prompt(`Enter new price for ${product.name}:`, product.price);
-                if (newPrice !== null && !isNaN(Number(newPrice))) {
-                    fetch(`${API_BASE_URL}/products/${product._id || product.customId}`, {
-                        method: 'PUT',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ price: Number(newPrice) })
-                    }).then(() => {
-                        fetchAdminProducts().then(() => renderProductsTable());
-                    }).catch(err => alert('Failed to update price.'));
-                }
-            }
+            openProductEditor(productRow.dataset.productId);
         }
+        return;
+    }
+
+    const productRow = event.target.closest('.product-row');
+    if (productRow && state.view === 'products') {
+        openProductEditor(productRow.dataset.productId);
+        return;
     }
 }
 
@@ -1187,7 +1213,7 @@ function initializeControls() {
 function getInitialViewFromURL() {
     const params = new URLSearchParams(window.location.search);
     const view = params.get('view');
-    if (view === 'orders' || view === 'customers') {
+    if (view === 'orders' || view === 'customers' || view === 'products' || view === 'reviews') {
         return view;
     }
     return 'dashboard';

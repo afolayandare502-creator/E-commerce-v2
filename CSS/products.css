@@ -523,6 +523,24 @@
     color: #e63946;
 }
 
+.products-page .product-sold-out-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: 0 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #222;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
 .products-page .product-title {
     margin: 10px 0 4px;
     font-size: 13px;
@@ -537,11 +555,34 @@
 }
 
 .products-page .product-price {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
     margin: 0;
     font-size: 16px;
     font-weight: 600;
     line-height: 1.1;
     color: #0f0f0f;
+}
+
+.products-page .product-old-price {
+    color: #8f8f8f;
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+
+.products-page .product-sale-price,
+.products-page .product-regular-price {
+    color: #0f0f0f;
+    font-weight: 700;
+}
+
+.products-page .product-discount {
+    color: #b42318;
+    font-size: 12px;
+    font-weight: 800;
 }
 
 .products-page .product-tags {

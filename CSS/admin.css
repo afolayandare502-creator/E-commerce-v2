@@ -461,6 +461,55 @@ select {
     white-space: nowrap;
 }
 
+.product-row-clickable {
+    cursor: pointer;
+}
+
+.product-row-clickable:hover {
+    background: #fafafa;
+}
+
+.admin-product-price-stack {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.admin-old-price {
+    color: #909090;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.admin-discount-pill,
+.admin-product-status {
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.admin-discount-pill {
+    background: #fff1f1;
+    color: #c53030;
+}
+
+.admin-product-status.is-live {
+    background: #ecfdf3;
+    color: #027a48;
+}
+
+.admin-product-status.is-sold-out {
+    background: #f2f4f7;
+    color: #475467;
+}
+
 .recent-orders-panel {
     padding: 24px;
 }
