@@ -1103,6 +1103,7 @@ function initializeControls() {
     const selectAll = document.getElementById('orders-select-all');
     const drawerClose = document.getElementById('customer-drawer-close');
     const drawerBackdrop = document.getElementById('customer-drawer-backdrop');
+    const drawerViewOrdersBtn = document.getElementById('drawer-view-orders-btn');
     const drawerTrackBtn = document.getElementById('drawer-track-btn');
     const drawerRefundBtn = document.getElementById('drawer-refund-btn');
 
@@ -1196,6 +1197,14 @@ function initializeControls() {
 
     if (drawerClose) drawerClose.addEventListener('click', closeCustomerDrawer);
     if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeCustomerDrawer);
+    if (drawerViewOrdersBtn) {
+        drawerViewOrdersBtn.addEventListener('click', () => {
+            if (!state.activeCustomerEmail) return;
+            state.filters.search = state.activeCustomerEmail;
+            if (ordersSearch) ordersSearch.value = state.activeCustomerEmail;
+            setAdminView('orders');
+        });
+    }
     if (drawerTrackBtn) {
         drawerTrackBtn.addEventListener('click', () => {
             if (!state.activeCustomerEmail) return;
